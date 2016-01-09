@@ -19,7 +19,7 @@ Get spark repository
 Fork apache spark project to your Github account
 Clone spark to local:
  12$ gi">
-<meta property="og:updated_time" content="2016-01-09T12:42:22.000Z">
+<meta property="og:updated_time" content="2016-01-09T12:43:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reading Spark Souce Code in IntelliJ IDEA">
 <meta name="twitter:description" content="It’s a good choice to read spark souce code in IntelliJ IDEA. This tutorial introduces how to do it.
@@ -104,18 +104,12 @@ Clone spark to local:
 <li><p>Add apache spark remote (to keep up-to-date with apache spark repo): </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add apache https://github.com/apache/spark.git</span><br><span class="line"><span class="comment"># check remote accounts</span></span><br><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol>
 <li><p>Sync repo with apache spark:</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Fetch the branches and their respective commits from the apache repo</span></span><br><span class="line">$ git fetch apache</span><br><span class="line"><span class="comment"># Update codes</span></span><br><span class="line">$ git pull apache master</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol>
 <li><p>Push new updates to your own github account repo:</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol>
 <li><p>Create new develop branch for developing: </p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b develop</span><br></pre></td></tr></table></figure>
 </li>
