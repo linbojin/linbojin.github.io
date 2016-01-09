@@ -9,7 +9,7 @@
 Get spark repository
 Fork apache spark project to your Github account
 Clone spark to local:
- 12$ gi">
+1234567">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Reading Spark Souce Code in IntelliJ IDEA">
 <meta property="og:url" content="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/index.html">
@@ -18,15 +18,15 @@ Clone spark to local:
 Get spark repository
 Fork apache spark project to your Github account
 Clone spark to local:
- 12$ gi">
-<meta property="og:updated_time" content="2016-01-09T12:43:24.000Z">
+1234567">
+<meta property="og:updated_time" content="2016-01-09T12:46:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reading Spark Souce Code in IntelliJ IDEA">
 <meta name="twitter:description" content="It’s a good choice to read spark souce code in IntelliJ IDEA. This tutorial introduces how to do it.
 Get spark repository
 Fork apache spark project to your Github account
 Clone spark to local:
- 12$ gi">
+1234567">
   
     <link rel="alternate" href="/atom.xml" title="AILab" type="application/atom+xml">
   
@@ -99,10 +99,7 @@ Clone spark to local:
 <h3 id="Get_spark_repository"><a href="#Get_spark_repository" class="headerlink" title="Get spark repository"></a>Get spark repository</h3><ol>
 <li>Fork <a href="https://github.com/apache/spark" target="_blank" rel="external">apache spark</a> project to your Github account</li>
 <li><p>Clone spark to local:</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:username/spark.git</span><br><span class="line">$ <span class="built_in">cd</span> spark/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Add apache spark remote (to keep up-to-date with apache spark repo): </p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add apache https://github.com/apache/spark.git</span><br><span class="line"><span class="comment"># check remote accounts</span></span><br><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	$ git <span class="built_in">clone</span> git@github.com:username/spark.git</span><br><span class="line">	$ <span class="built_in">cd</span> spark/</span><br><span class="line">	```	</span><br><span class="line"><span class="number">3</span>. Add apache spark remote (to keep up-to-date with apache spark repo): </span><br><span class="line">	</span><br><span class="line">	```bash </span><br><span class="line">	$ git remote add apache https://github.com/apache/spark.git</span><br><span class="line">	<span class="comment"># check remote accounts</span></span><br><span class="line">	$ git remote -v</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Sync repo with apache spark:</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Fetch the branches and their respective commits from the apache repo</span></span><br><span class="line">$ git fetch apache</span><br><span class="line"><span class="comment"># Update codes</span></span><br><span class="line">$ git pull apache master</span><br></pre></td></tr></table></figure>
