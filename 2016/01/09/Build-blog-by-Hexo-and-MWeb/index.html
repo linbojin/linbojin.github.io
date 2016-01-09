@@ -17,7 +17,7 @@ htt">
 Setup Github
 Create a new repository named username.github.io
 htt">
-<meta property="og:updated_time" content="2016-01-09T10:07:47.000Z">
+<meta property="og:updated_time" content="2016-01-09T10:28:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build blog by Hexo and MWeb">
 <meta name="twitter:description" content="RequirementsGithub account: blog deployed by GitHub PagesHexo: blog framework to generate static blog filesMWeb: Markdown writing tool
@@ -111,6 +111,8 @@ htt">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>Deploy</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>Markdown source files will be inside <code>{blog}/source</code> and this folder will not be tracked by git. So I sync this important folder to cloud:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r &#123;blog&#125;/<span class="built_in">source</span> &#123;Dropbox&#125;/blog/<span class="built_in">source</span></span><br><span class="line">$ vim _config.yml <span class="comment"># point source_dir to the new synced path  </span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Directory</span></span><br><span class="line">    <span class="built_in">source</span>_dir: &#123;Dropbox&#125;/blog/<span class="built_in">source</span></span><br></pre></td></tr></table></figure>
 <p>Ref: <a href="https://hexo.io/docs/index.html" target="_blank" rel="external">Hexo</a>, <a href="http://zh.mweb.im/mweb-1.4-add-floder-octpress-support.html" target="_blank" rel="external">MWeb for Octpress</a> </p>
 
       
