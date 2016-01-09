@@ -62,6 +62,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Build-blog-by-Hexo-and-MWeb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/" class="article-date">
+  <time datetime="2016-01-09T09:56:35.000Z" itemprop="datePublished">2016-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog by Hexo and MWeb</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p><a href="https://github.com/" target="_blank" rel="external">Github account</a>: blog deployed by GitHub Pages<br><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>: blog framework to generate static blog files<br><a href="http://www.mweb.im/" target="_blank" rel="external">MWeb</a>: Markdown writing tool</p>
+<h2 id="Setup_Github"><a href="#Setup_Github" class="headerlink" title="Setup Github"></a>Setup Github</h2><ol>
+<li>Create a new repository named username.github.io</li>
+<li><a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a> will be your personal blog address</li>
+</ol>
+<h2 id="Setup_Hexo"><a href="#Setup_Hexo" class="headerlink" title="Setup Hexo"></a>Setup Hexo</h2><p>Make sure you have installed node.js and git.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli&#10;$ hexo init blog    &#10;$ cd blog&#10;$ hexo new &#34;my first blog&#34;</span><br></pre></td></tr></table></figure>
+<h2 id="Setup_MWeb"><a href="#Setup_MWeb" class="headerlink" title="Setup MWeb"></a>Setup MWeb</h2><ol>
+<li>Install MWeb in App Store</li>
+<li>Lauch MWeb and go into <code>External Mode</code> (Command + E)</li>
+<li>Add new external source: <code>{blog}/source</code>, and choose <code>Media Save Path</code> as <code>Absolute</code> </li>
+<li>Enjoy writing</li>
+</ol>
+<h2 id="Deploy_Blog"><a href="#Deploy_Blog" class="headerlink" title="Deploy Blog"></a>Deploy Blog</h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>Edit <code>{blog}/_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml&#10;&#10;# Deployment&#10;deploy:&#10;&#9;type: git&#10;&#9;repo: git@github.com:username/username.github.io.git&#10;&#9;branch: master</span><br></pre></td></tr></table></figure>
+<p>Deploy</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+<p>Ref: <a href="https://hexo.io/docs/index.html" target="_blank" rel="external">Hexo</a>, <a href="http://zh.mweb.im/mweb-1.4-add-floder-octpress-support.html" target="_blank" rel="external">MWeb for Octpress</a> </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="cij6xwn9j0000qtxvwkqv9cdj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Spark-Introduction-part-1-Coding" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/09/Spark-Introduction-part-1-Coding/" class="article-date">
@@ -94,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cij6xktwc0000oaxvuuq9oza9" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cij6xwna10006qtxvqyeibkwz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -139,7 +197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cij6xktwx0003oaxvg3p5rmhe" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cij6xwn9z0003qtxvlzyml821" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -163,7 +221,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark/">spark</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark/">spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a></li></ul>
     </div>
   </div>
 
@@ -173,7 +231,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/spark/" style="font-size: 10px;">spark</a>
+      <a href="/tags/spark/" style="font-size: 20px;">spark</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
     </div>
   </div>
 
@@ -193,6 +251,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog by Hexo and MWeb</a>
+          </li>
         
           <li>
             <a href="/2016/01/09/Spark-Introduction-part-1-Coding/">Spark Introduction part 1 Coding</a>
