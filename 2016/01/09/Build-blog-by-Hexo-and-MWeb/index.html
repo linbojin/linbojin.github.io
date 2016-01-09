@@ -17,7 +17,7 @@ htt">
 Setup Github
 Create a new repository named username.github.io
 htt">
-<meta property="og:updated_time" content="2016-01-09T11:20:53.000Z">
+<meta property="og:updated_time" content="2016-01-09T15:48:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build blog with Hexo and MWeb">
 <meta name="twitter:description" content="RequirementsGithub account: blog deployed by GitHub PagesHexo: blog framework to generate static blog filesMWeb: Markdown writing tool
@@ -111,21 +111,29 @@ ga('send', 'pageview');
 <li><a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a> will be your personal blog address</li>
 </ol>
 <h2 id="Setup_Hexo"><a href="#Setup_Hexo" class="headerlink" title="Setup Hexo"></a>Setup Hexo</h2><p>Make sure you have installed node.js and git.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init blog    </span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo new <span class="string">"my first blog"</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init blog    </span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo new <span class="string">"my first blog"</span></span><br></pre></td></tr></table></figure>
 <h2 id="Setup_MWeb"><a href="#Setup_MWeb" class="headerlink" title="Setup MWeb"></a>Setup MWeb</h2><ol>
 <li>Install MWeb in App Store</li>
 <li>Lauch MWeb and go into <code>External Mode</code> (Command + E)</li>
 <li>Add new external source: <code>{blog}/source</code>, and choose <code>Media Save Path</code> as <code>Absolute</code> </li>
 <li>Enjoy writing</li>
 </ol>
-<h2 id="Deploy_Blog"><a href="#Deploy_Blog" class="headerlink" title="Deploy Blog"></a>Deploy Blog</h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>Edit <code>{blog}/_config.yml</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>Deploy</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+<h2 id="Deploy_Blog"><a href="#Deploy_Blog" class="headerlink" title="Deploy Blog"></a>Deploy Blog</h2><ol>
+<li><p>Install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Edit <code>{blog}/_config.yml</code></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Deploy after you make any changes</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>You can also test local: <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>Markdown source files will be inside <code>{blog}/source</code> and this folder will not be tracked by git. So I sync this important folder to cloud:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r &#123;blog&#125;/<span class="built_in">source</span> &#123;Dropbox&#125;/blog/<span class="built_in">source</span></span><br><span class="line">$ vim _config.yml <span class="comment"># point source_dir to the new synced path  </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="built_in">source</span>_dir: &#123;Dropbox&#125;/blog/<span class="built_in">source</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r &#123;blog&#125;/<span class="built_in">source</span> &#123;Dropbox&#125;/blog/<span class="built_in">source</span></span><br><span class="line">$ vim _config.yml <span class="comment"># point source_dir to the new synced path  </span></span><br><span class="line">	</span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="built_in">source</span>_dir: &#123;Dropbox&#125;/blog/<span class="built_in">source</span></span><br></pre></td></tr></table></figure>
 <p>Ref: <a href="https://hexo.io/docs/index.html" target="_blank" rel="external">Hexo</a>, <a href="http://zh.mweb.im/mweb-1.4-add-floder-octpress-support.html" target="_blank" rel="external">MWeb for Octpress</a> </p>
 
       
