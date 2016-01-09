@@ -17,7 +17,7 @@ htt">
 Setup Github
 Create a new repository named username.github.io
 htt">
-<meta property="og:updated_time" content="2016-01-09T09:59:14.000Z">
+<meta property="og:updated_time" content="2016-01-09T10:02:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build blog by Hexo and MWeb">
 <meta name="twitter:description" content="RequirementsGithub account: blog deployed by GitHub PagesHexo: blog framework to generate static blog filesMWeb: Markdown writing tool
@@ -98,7 +98,7 @@ htt">
 <li><a href="https://username.github.io" target="_blank" rel="external">https://username.github.io</a> will be your personal blog address</li>
 </ol>
 <h2 id="Setup_Hexo"><a href="#Setup_Hexo" class="headerlink" title="Setup Hexo"></a>Setup Hexo</h2><p>Make sure you have installed node.js and git.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli&#10;$ hexo init blog    &#10;$ cd blog&#10;$ hexo new &#34;my first blog&#34;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init blog    </span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo new <span class="string">"my first blog"</span></span><br></pre></td></tr></table></figure>
 <h2 id="Setup_MWeb"><a href="#Setup_MWeb" class="headerlink" title="Setup MWeb"></a>Setup MWeb</h2><ol>
 <li>Install MWeb in App Store</li>
 <li>Lauch MWeb and go into <code>External Mode</code> (Command + E)</li>
@@ -106,11 +106,11 @@ htt">
 <li>Enjoy writing</li>
 </ol>
 <h2 id="Deploy_Blog"><a href="#Deploy_Blog" class="headerlink" title="Deploy Blog"></a>Deploy Blog</h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>Edit <code>{blog}/_config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml&#10;&#10;# Deployment&#10;deploy:&#10;&#9;type: git&#10;&#9;repo: git@github.com:username/username.github.io.git&#10;&#9;branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line">deploy:</span><br><span class="line">	<span class="built_in">type</span>: git</span><br><span class="line">	repo: git@github.com:username/username.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
 <p>Deploy</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy -g</span><br></pre></td></tr></table></figure>
 <p>Ref: <a href="https://hexo.io/docs/index.html" target="_blank" rel="external">Hexo</a>, <a href="http://zh.mweb.im/mweb-1.4-add-floder-octpress-support.html" target="_blank" rel="external">MWeb for Octpress</a> </p>
 
       
