@@ -62,6 +62,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Reading-Spark-Souce-Code-in-IntelliJ-IDEA" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" class="article-date">
+  <time datetime="2016-01-09T11:20:43.000Z" itemprop="datePublished">2016-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/">Reading Spark Souce Code in IntelliJ IDEA</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It’s a good choice to read spark souce code in IntelliJ IDEA. This tutorial introduces how to do it.</p>
+<h3 id="Get_spark_repository"><a href="#Get_spark_repository" class="headerlink" title="Get spark repository"></a>Get spark repository</h3><ol>
+<li>Fork <a href="https://github.com/apache/spark" target="_blank" rel="external">apache spark</a> project to your Github account</li>
+<li><p>Clone spark to local:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:username/spark.git</span><br><span class="line">$ <span class="built_in">cd</span> spark/</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>Add apache spark remote (to keep up-to-date with apache spark repo): </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add apache https://github.com/apache/spark.git</span><br><span class="line"><span class="comment"># check remote accounts</span></span><br><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>Sync repo with apache spark:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Fetch the branches and their respective commits from the apache repo</span></span><br><span class="line">$ git fetch apache</span><br><span class="line"><span class="comment"># Update codes</span></span><br><span class="line">$ git pull apache master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>Push new updates to your own github account repo:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>Create new develop branch for developing: </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b develop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Push develop branch to your github repo: </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin develop</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Built_spark_in_Intelij_IDEA_15"><a href="#Built_spark_in_Intelij_IDEA_15" class="headerlink" title="Built spark in Intelij IDEA 15"></a>Built spark in Intelij IDEA 15</h3><ol>
+<li>Install <a href="https://www.jetbrains.com/idea/download/" target="_blank" rel="external">IntelliJ IDEA 15</a> as well as <a href="https://plugins.jetbrains.com/plugin/?id=1347" target="_blank" rel="external">IDEA Scala Plugin</a></li>
+<li><p>Make sure your are in your own develop branch:</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout develop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Open spark project in IDEA (directly open <strong>pom.xml</strong> file)<br>Menu -&gt; File -&gt; <strong>Open</strong> -&gt; {spark}/<strong>pom.xml</strong> </p>
+</li>
+<li><p>Modify <code>java.version</code> to your java version inside pom.xml</p>
+ <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pom.xml</span></span><br><span class="line">&lt;java.<span class="property">version</span>&gt;<span class="number">1.8</span>&lt;/java.<span class="property">version</span>&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Build spark by sbt</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ build/sbt assembly</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Validating spark is built successfully</p>
+ <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./bin/spark-shell</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Reading_spark_codes"><a href="#Reading_spark_codes" class="headerlink" title="Reading spark codes"></a>Reading spark codes</h3><p>It’s better to read or change codes on your develop branch and sync with apache spark repo inside master branch. So normally, you can update your develop branch by following commands:</p>
+<pre><code><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout <span class="keyword">master</span></span><br><span class="line"><span class="title">$</span> git pull apache <span class="keyword">master</span></span><br><span class="line"><span class="title">$</span> git checkout develop</span><br><span class="line">$ git merge <span class="literal">master</span></span><br></pre></td></tr></table></figure>
+</code></pre><p>Useful IDEA Shortcuts:</p>
+<pre><code>* command + o: search classes
+* command + b: go to implementation
+* command + [: go back to the previous location
+</code></pre><p>Several important classes:</p>
+<pre><code>SparkContext.scala 
+DAGScheduler.scala
+TaskSchedulerImpl.scala
+BlockManager.scala
+</code></pre><hr>
+<p>Ref: Spark build: <a href="http://spark.apache.org/docs/latest/building-spark.html" target="_blank" rel="external">http://spark.apache.org/docs/latest/building-spark.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="cij73aqyw0008lcdu2wso11rp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Build-blog-by-Hexo-and-MWeb" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/" class="article-date">
@@ -76,7 +174,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog by Hexo and MWeb</a>
+      <a class="article-title" href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog with Hexo and MWeb</a>
     </h1>
   
 
@@ -110,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="cij6xwn9j0000qtxvwkqv9cdj" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="cij73aqx90000lcduzu3cvls8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
@@ -154,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cij6xwna10006qtxvqyeibkwz" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cij73aqyt0006lcdukdkxka1h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -199,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cij6xwn9z0003qtxvlzyml821" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cij73aqyp0003lcdun26ce0gk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -255,7 +353,11 @@
       <ul>
         
           <li>
-            <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog by Hexo and MWeb</a>
+            <a href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/">Reading Spark Souce Code in IntelliJ IDEA</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog with Hexo and MWeb</a>
           </li>
         
           <li>
