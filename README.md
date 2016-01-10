@@ -78,7 +78,7 @@ $ vim _config.yml
 skip_render: README.md
 ```
 	
-### Congratulations, Enjoy Your blog ^-^
+### Congratulations, Enjoy your blog ^-^
 
 
 
