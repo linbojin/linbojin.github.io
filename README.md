@@ -28,42 +28,56 @@ $ hexo new "my first blog"
 4. Enjoy writing
 
 ### Deploy Blog
-Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
+1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
 
-```
-$ npm install hexo-deployer-git --save
-```
+	```bash
+	$ npm install hexo-deployer-git --save
+	```
+2. Edit `{blog}/_config.yml`
 
-Edit `{blog}/_config.yml`
+	```bash
+	$ vim _config.yml
+	
+	# Deployment
+	deploy:
+	  type: git
+	  repo: git@github.com:username/username.github.io.git
+	  branch: master
+	```
+3. Deploy after you make any changes and go to your blog https://username.github.io
 
-```
-$ vim _config.yml
-
-# Deployment
-deploy:
-	type: git
-	repo: git@github.com:username/username.github.io.git
-	branch: master
-```
-Deploy after you make any changes
-
-```
-$ hexo deploy -g
-```
-
-Go to your blog: https://username.github.io
+	```bash
+	$ hexo deploy -g
+	```
+	
+4. You can also test local: http://0.0.0.0:4000/
+	
+	```bash
+	$ hexo server
+	```
 
 ### Tips
-Your markdown source files will be inside `{blog}/source` and this folder will not be tracked by git. You'd better to sync this important folder to cloud:
+#### Back up `source` folder and add **version control**
+Markdown source files will be inside `{blog}/source` and this folder will not be tracked by git. So I sync this important folder to cloud:
 
-```
+```bash
 $ cp -r {blog}/source {Dropbox}/blog/source
 $ vim _config.yml # point source_dir to the new synced path  
-
-  # Directory
-    source_dir: {Dropbox}/blog/source
+	
+# Directory
+source_dir: {Dropbox}/blog/source
 ```
 
+#### Add README.md to repo
+Create README.md inside `{source}` folder and modify `{blog}/_config.yml`
+
+```bash
+$ vim _config.yml
+	
+# Directory
+skip_render: README.md
+```
+	
 ### Congratulations, Enjoy Your blog ^-^
 
 
