@@ -1,10 +1,6 @@
-
-
-linbojin.github.io
--------------
-My Blog: https://linbojin.github.io/
-
-## Build your blog by Hexo and MWeb
+Build blog with Hexo and MWeb
+-------------------------------
+My blog: https://linbojin.github.io/
 
 ### Requirements
 * [Github account](https://github.com/): blog deployed by GitHub Pages
