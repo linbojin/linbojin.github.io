@@ -69,7 +69,7 @@ source_dir: {Dropbox}/blog/source
 ```
 
 #### Add README.md to repo
-Create README.md inside `{source}` folder and modify `{blog}/_config.yml`
+Create README.md inside `{source}` folder and modify `{blog}/_config.yml`, so that **README.md** can introduce your repo on github like this one:
 
 ```bash
 $ vim _config.yml
