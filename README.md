@@ -1,7 +1,4 @@
 ---
-title: README
-date: 2016-01-10 9:56:35
-tags:
 ---
 
 # linbojin.github.io
