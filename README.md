@@ -1,6 +1,7 @@
----
 
-# linbojin.github.io
+
+linbojin.github.io
+-------------
 My Blog: https://linbojin.github.io/
 
 ## Build your blog by Hexo and MWeb
