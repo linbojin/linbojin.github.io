@@ -104,15 +104,15 @@ ga('send', 'pageview');
 <h3 id="Start_Worker_at_8081"><a href="#Start_Worker_at_8081" class="headerlink" title="Start Worker at 8081"></a>Start Worker at 8081</h3><p>onStart() =&gt; registerWithMaster()</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># spark command: java -Xms1g -Xmx1g org.apache.spark.deploy.worker.Worker </span></span><br><span class="line"><span class="comment">#                --webui-port 8081 spark://localhost:7077</span></span><br><span class="line">$ ./start-slave.sh spark://localhost:<span class="number">7077</span></span><br><span class="line"></span><br><span class="line">Output Logs:</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO Worker: Registered signal handlers <span class="keyword">for</span> [TERM, HUP, INT]</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> WARN NativeCodeLoader: Unable to load native-hadoop library <span class="keyword">for</span> your platform... using <span class="built_in">builtin</span>-java classes <span class="built_in">where</span> applicable</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO SecurityManager: Changing view acls to: tony</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO SecurityManager: Changing modify acls to: tony</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(tony); users with modify permissions: Set(tony)</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Utils: Successfully started service <span class="string">'sparkWorker'</span> on port <span class="number">49576</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Starting Spark worker <span class="number">192.168</span>.<span class="number">0.112</span>:<span class="number">49576</span> with <span class="number">4</span> cores, <span class="number">7.0</span> GB RAM</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Running Spark version <span class="number">1.6</span>.<span class="number">0</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Spark home: /usr/<span class="built_in">local</span>/Cellar/apache-spark/<span class="number">1.6</span>.<span class="number">0</span>/libexec</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Utils: Successfully started service <span class="string">'WorkerUI'</span> on port <span class="number">8081</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO WorkerWebUI: Started WorkerWebUI at http://<span class="number">192.168</span>.<span class="number">0.112</span>:<span class="number">8081</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Connecting to master localhost:<span class="number">7077</span>...</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Successfully registered with master spark://localhost:<span class="number">7077</span></span><br></pre></td></tr></table></figure>
 <h3 id="Start_Spark-shell_over_cluster_on_http_3A//localhost_3A4040"><a href="#Start_Spark-shell_over_cluster_on_http_3A//localhost_3A4040" class="headerlink" title="Start Spark-shell over cluster on http://localhost:4040"></a>Start Spark-shell over cluster on <a href="http://localhost:4040" target="_blank" rel="external">http://localhost:4040</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ MASTER=spark://localhost:<span class="number">7077</span> spark-shell</span><br></pre></td></tr></table></figure>
-<p><img src="/media/14526662171327.jpg" alt="spark-shell over cluster"></p>
+<p><img src="/media/14526662171327.jpg" alt="14526662171327"></p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; sc.textFile(<span class="string">"README.md"</span>).filter(_.contains(<span class="string">"Spark"</span>)).count</span><br></pre></td></tr></table></figure>
-<p><img src="/media/14526662553694.jpg" alt="cluster graph"></p>
+<p><img src="/media/14526662553694.jpg" alt="14526662553694"></p>
 <p>sc.textFile(“”)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" data-id="cijcg5v600001dodunuj2392q" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" data-id="cijch7yea0001t1dufwd2wuqq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -203,7 +203,7 @@ BlockManager.scala
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="cijcg5v6b0008dodu70rvlc4k" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="cijch7yen0008t1dutjy0mpmf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -277,7 +277,7 @@ BlockManager.scala
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="cijcg5v6d000adoducx3yq181" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="cijch7yep000at1dupvukzkrw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
@@ -321,7 +321,7 @@ BlockManager.scala
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cijcg5v690006doduxnyurrns" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cijch7yel0006t1dul1g5nr0h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -366,7 +366,7 @@ BlockManager.scala
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cijcg5v670004dodusk9316e9" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cijch7yej0004t1dui1ai4irr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
