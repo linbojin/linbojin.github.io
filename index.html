@@ -75,6 +75,87 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-NPM-Playbook" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/17/NPM-Playbook/" class="article-date">
+  <time datetime="2016-01-17T04:11:52.000Z" itemprop="datePublished">2016-01-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/17/NPM-Playbook/">NPM Playbook</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.npmjs.com/" target="_blank" rel="external">NPM</a> (node package manager) is a package management tool for <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>.<br>Node.js is an <a href="https://github.com/nodejs/node" target="_blank" rel="external">open source</a> JavaScript runtime built on <strong>Chrome’s V8 JavaScript engine</strong>. Node.js uses an <strong>event-driven</strong>, <strong>non-blocking I/O model</strong> that makes it lightweight and efficient. Note that Node.js is a <strong>server side runtime environment rather than a language</strong>. </p>
+<h2 id="Initial_project"><a href="#Initial_project" class="headerlink" title="Initial project"></a>Initial project</h2><p><a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="external"><strong>package.json</strong></a> will be firstly created by <code>npm init</code></p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm init  <span class="comment"># create package.json</span></span><br><span class="line"></span><br><span class="line">$ npm install  <span class="comment"># automatically install dependencies inside packages.json</span></span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>package.json     includes four main parts:</p>
+<ul>
+<li>basic module info</li>
+<li>dependencies</li>
+<li>devDependencies</li>
+<li><p>scripts: </p>
+<ul>
+<li><code>$ npm start</code> to replace <code>$ node xx.js</code></li>
+<li><code>$ npm run xxx</code> for custom commands</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line">	</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"nodexpress"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"app.js"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,</span><br><span class="line">    <span class="string">"start"</span>: <span class="string">"node app.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">"tony"</span>,</span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"express"</span>: <span class="string">"^4.13.3"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.9.0"</span>,</span><br><span class="line">    <span class="string">"gulp-inject"</span>: <span class="string">"^1.5.0"</span>,</span><br><span class="line">    <span class="string">"gulp-jscs"</span>: <span class="string">"^2.0.0"</span>,</span><br><span class="line">    <span class="string">"gulp-jshint"</span>: <span class="string">"^1.11.2"</span>,</span><br><span class="line">    <span class="string">"gulp-nodemon"</span>: <span class="string">"^2.0.6"</span>,</span><br><span class="line">    <span class="string">"jshint-stylish"</span>: <span class="string">"^2.1.0"</span>,</span><br><span class="line">    <span class="string">"wiredep"</span>: <span class="string">"^3.0.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>versioning packages</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"express"</span>: <span class="string">"^4.13.3"</span> =&gt; will install the latest <span class="string">"4.XX.X"</span> verison</span><br><span class="line"><span class="string">"express"</span>: <span class="string">"~4.13.3"</span> =&gt; will install the latest <span class="string">"4.13.X"</span> verison</span><br><span class="line"><span class="string">"express"</span>: <span class="string">"4.13.3"</span>  =&gt; will keep this version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>default settings for package.json</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="built_in">set</span> init-author-name <span class="string">'Tony'</span></span><br><span class="line">$ npm get init-author-name</span><br><span class="line">Tony</span><br><span class="line">$ npm config delete init-author-name</span><br><span class="line">$ cat ~/.npmrc   <span class="comment"># all the default settings will be saved inside this file.</span></span><br><span class="line">init-author-name=Tony</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Install_and_uninstall_packages"><a href="#Install_and_uninstall_packages" class="headerlink" title="Install and uninstall packages"></a>Install and uninstall packages</h2><p>Search nodejs packages: <a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></p>
+<ul>
+<li><p>Install, for shorhands: <a href="https://docs.npmjs.com/misc/config" target="_blank" rel="external">https://docs.npmjs.com/misc/config</a></p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express --save       <span class="comment"># save dependency into package.json</span></span><br><span class="line">$ npm install gulp --save-dev      <span class="comment"># save devDependency into package.json</span></span><br><span class="line">$ npm install bower -g      <span class="comment"># install global, so can call bower inside terminal</span></span><br><span class="line"></span><br><span class="line">$ npm install express@<span class="string">"4.2.x"</span> --save     <span class="comment"># install specific version</span></span><br><span class="line">$ npm install underscore@<span class="string">"&gt;=1.1.0 &lt;1.4.0"</span> --save</span><br><span class="line"></span><br><span class="line">$ npm i express -S    <span class="comment"># Shorthands for --save</span></span><br><span class="line">$ npm i gulp -D      <span class="comment"># for --save-dev</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Remove</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall [-g] underscore --save  <span class="comment"># remove dependency from pkg.json</span></span><br><span class="line">$ npm prune                             <span class="comment"># add extraneous pkg into pkg.json</span></span><br><span class="line">$ npm prune --production                <span class="comment"># rm dev dependencies from pkg.json</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>Upgrade npm</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i npm@latest -g</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="List_installed_packages"><a href="#List_installed_packages" class="headerlink" title="List installed packages"></a>List installed packages</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ npm list --depth <span class="number">0</span> </span><br><span class="line">nodexpress@<span class="number">1.0</span>.<span class="number">0</span> /Users/tony/Hacker/nodexpress</span><br><span class="line">├── express@<span class="number">4.13</span>.<span class="number">3</span></span><br><span class="line">├── gulp@<span class="number">3.9</span>.<span class="number">0</span></span><br><span class="line">├── gulp-inject@<span class="number">1.5</span>.<span class="number">0</span></span><br><span class="line">├── gulp-jscs@<span class="number">2.0</span>.<span class="number">0</span></span><br><span class="line">├── gulp-jshint@<span class="number">1.12</span>.<span class="number">0</span></span><br><span class="line">├── gulp-nodemon@<span class="number">2.0</span>.<span class="number">6</span></span><br><span class="line">├── jshint-stylish@<span class="number">2.1</span>.<span class="number">0</span></span><br><span class="line">└── wiredep@<span class="number">3.0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">$ npm list --depth <span class="number">0</span> --prod <span class="literal">true</span>    <span class="comment"># production dependencies packages only</span></span><br><span class="line">nodexpress@<span class="number">1.0</span>.<span class="number">0</span> /Users/tony/Hacker/nodexpress</span><br><span class="line">└── express@<span class="number">4.13</span>.<span class="number">3</span></span><br><span class="line">  </span><br><span class="line">$ npm list --depth <span class="number">0</span> --dev <span class="literal">true</span>     <span class="comment"># devDependencies packages only</span></span><br><span class="line">nodexpress@<span class="number">1.0</span>.<span class="number">0</span> /Users/tony/Hacker/nodexpress</span><br><span class="line">├── gulp@<span class="number">3.9</span>.<span class="number">0</span></span><br><span class="line">├── gulp-inject@<span class="number">1.5</span>.<span class="number">0</span></span><br><span class="line">├── gulp-jscs@<span class="number">2.0</span>.<span class="number">0</span></span><br><span class="line">├── gulp-jshint@<span class="number">1.12</span>.<span class="number">0</span></span><br><span class="line">├── gulp-nodemon@<span class="number">2.0</span>.<span class="number">6</span></span><br><span class="line">├── jshint-stylish@<span class="number">2.1</span>.<span class="number">0</span></span><br><span class="line">└── wiredep@<span class="number">3.0</span>.<span class="number">0</span></span><br><span class="line"></span><br><span class="line">$ npm list --global <span class="literal">true</span> --depth <span class="number">0</span>  <span class="comment"># global packages</span></span><br><span class="line">/usr/<span class="built_in">local</span>/lib</span><br><span class="line">├── bower@<span class="number">1.7</span>.<span class="number">2</span></span><br><span class="line">├── gulp@<span class="number">3.9</span>.<span class="number">0</span></span><br><span class="line">├── hexo-cli@<span class="number">0.2</span>.<span class="number">0</span></span><br><span class="line">└── npm@<span class="number">3.3</span>.<span class="number">12</span></span><br><span class="line"></span><br><span class="line">$ npm list --depth <span class="number">0</span> --long <span class="literal">true</span>   <span class="comment"># detail info</span></span><br><span class="line">$ npm list --depth <span class="number">0</span> --json <span class="literal">true</span>   <span class="comment"># detail info with json format</span></span><br></pre></td></tr></table></figure>
+<h2 id="Package_official_github_repo"><a href="#Package_official_github_repo" class="headerlink" title="Package official github repo"></a>Package official github repo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm repo underscore   <span class="comment"># Jump to browser and open github repo</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://linbojin.github.io/2016/01/17/NPM-Playbook/" data-id="ciji3wvs5000au0du618y9fxh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Books-of-2016" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/15/Books-of-2016/" class="article-date">
@@ -105,7 +186,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/15/Books-of-2016/" data-id="ciji0uh12000g37dulvyza30b" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/15/Books-of-2016/" data-id="ciji3wvsa000iu0dufc50hpmp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/">reading</a></li></ul>
@@ -149,7 +230,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/" data-id="ciji0uh0y000a37dum2tvkwyq" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/" data-id="ciji3wvs7000du0duaquerbcl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -203,7 +284,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" data-id="ciji0uh0g000137dut1oihn01" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" data-id="ciji3wvrt0001u0duyaqkybb3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -250,7 +331,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="ciji0uh0u000837ducqx6f99s" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="ciji3wvs30008u0du8xh7gwm1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -297,7 +378,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="ciji0uh10000d37du47fponmv" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="ciji3wvs8000fu0duwf431trd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
@@ -340,7 +421,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="ciji0uh0t000637dujjwfiixb" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="ciji3wvs10006u0dukypwj2nl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -385,7 +466,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="ciji0uh0p000437duy9h5cjmy" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="ciji3wvrz0004u0duqpddk574" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -419,7 +500,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/spark/" style="font-size: 20px;">spark</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
+      <a href="/tags/nodejs/" style="font-size: 15px;">nodejs</a> <a href="/tags/reading/" style="font-size: 10px;">reading</a> <a href="/tags/spark/" style="font-size: 20px;">spark</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a>
     </div>
   </div>
 
@@ -441,6 +522,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2016/01/17/NPM-Playbook/">NPM Playbook</a>
+          </li>
+        
+          <li>
             <a href="/2016/01/15/Books-of-2016/">Books of 2016</a>
           </li>
         
@@ -454,10 +539,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/">Reading Spark Souce Code in IntelliJ IDEA</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog with Hexo and MWeb</a>
           </li>
         
       </ul>
