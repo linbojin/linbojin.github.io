@@ -75,6 +75,66 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Hacking-pyspark-in-Jupyter-Notebook" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" class="article-date">
+  <time datetime="2016-01-27T12:42:21.000Z" itemprop="datePublished">2016-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">Hacking pyspark inside Jupyter Notebook</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside <a href="http://jupyter.org/" target="_blank" rel="external">Jupyter Notebook</a> (previous known as <a href="http://ipython.org/" target="_blank" rel="external">IPython</a>), because it allows us to create and share documents that contain live code, equations, visualizations and explanatory text. <a href="http://spark.apache.org/" target="_blank" rel="external">Apache Spark</a> is a fast and general engine for large-scale data processing. <a href="http://spark.apache.org/docs/latest/api/python/pyspark.html" target="_blank" rel="external">PySpark</a> is the Python API for Spark. So it’s a good start point to <strong>write pyspark codes inside jupyter</strong> if you are interested in data science:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:<span class="number">7077</span> --executor-memory <span class="number">7</span>g</span><br></pre></td></tr></table></figure>
+<p><img src="/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png" alt="Hacking pyspark in Jupyter Notebook"></p>
+<h2 id="Install_Jupyter"><a href="#Install_Jupyter" class="headerlink" title="Install Jupyter"></a>Install Jupyter</h2><p>If you are a pythoner, I <strong>highly recommend</strong> installing <a href="https://www.continuum.io" target="_blank" rel="external">Anaconda</a>. Anaconda conveniently installs Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.<br>Go to <a href="https://www.continuum.io/downloads" target="_blank" rel="external">https://www.continuum.io/downloads</a>, find the instructions for downloading and installing Anaconda (jupyter will be included):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://&#123;somewhere&#125;/Anaconda2-<span class="number">2.4</span>.<span class="number">1</span>-MacOSX-x86_64.sh</span><br><span class="line">$ bash Anaconda2-<span class="number">2.4</span>.<span class="number">1</span>-MacOSX-x86_64.sh</span><br><span class="line">$ python</span><br><span class="line">Python <span class="number">2.7</span>.<span class="number">11</span> |Anaconda <span class="number">2.4</span>.<span class="number">1</span> (x86_64)| (default, Dec  <span class="number">6</span> <span class="number">2015</span>, <span class="number">18</span>:<span class="number">57</span>:<span class="number">58</span>)</span><br><span class="line">[GCC <span class="number">4.2</span>.<span class="number">1</span> (Apple Inc. build <span class="number">5577</span>)] on darwin</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">Anaconda is brought to you by Continuum Analytics.</span><br><span class="line">Please check out: http://continuum.io/thanks and https://anaconda.org</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<p>Run Jupyter notebook:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jupyter notebook <span class="preprocessor"># Go to http:<span class="comment">//localhost:8888</span></span></span><br></pre></td></tr></table></figure>
+<p><img src="/media/Screen%20Shot%202016-01-27%20at%2022.08.51.png" alt="jupyter notebook"></p>
+<h2 id="Install_Spark"><a href="#Install_Spark" class="headerlink" title="Install Spark"></a>Install Spark</h2><p>If you are not familiar with spark, you can go to read spark offical documents: </p>
+<ul>
+<li><a href="http://spark.apache.org/docs/latest/" target="_blank" rel="external">Spark Overview</a>:</li>
+<li><a href="http://spark.apache.org/docs/latest/programming-guide.html" target="_blank" rel="external">Spark Programming Guide</a></li>
+</ul>
+<p>Here is a simply installation instruction:</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MacOS</span></span><br><span class="line"><span class="variable">$ </span>brew install apache-spark</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux</span></span><br><span class="line"><span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/d3kbcqa49mib13.cloudfront.net/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>.tgz</span><br><span class="line"><span class="variable">$ </span>tar zxvf spark-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>.tgz</span><br><span class="line"><span class="variable">$ </span>vim .bashrc</span><br><span class="line"> export <span class="constant">PATH</span>=<span class="regexp">/&#123;your_path&#125;/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>/<span class="symbol">sbin:</span><span class="variable">$PATH</span></span><br><span class="line"> export <span class="constant">PATH</span>=<span class="regexp">/&#123;your_path&#125;/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>/<span class="symbol">bin:</span><span class="variable">$PATH</span></span><br><span class="line"><span class="variable">$ </span>source .bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run pyspark shell </span></span><br><span class="line"><span class="variable">$ </span>pyspark</span><br><span class="line"><span class="constant">Welcome</span> to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ <span class="regexp">/__</span><br><span class="line">    _\ \/ _ \/ _ `/</span> __/  <span class="string">'_/</span><br><span class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</span><br><span class="line">      /_/</span><br><span class="line">	</span><br><span class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</span><br><span class="line">SparkContext available as sc, HiveContext available as sqlContext.</span><br><span class="line">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Launch_pyspark_inside_IPython_28jupyter_29"><a href="#Launch_pyspark_inside_IPython_28jupyter_29" class="headerlink" title="Launch pyspark inside IPython(jupyter)"></a>Launch pyspark inside IPython(jupyter)</h2><p>Launch the PySpark shell in <strong>IPython</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ PYSPARK_DRIVER_PYTHON=ipython pyspark</span><br><span class="line">or </span><br><span class="line">$ IPYTHON=<span class="number">1</span> pyspark</span><br><span class="line"></span><br><span class="line"> Welcome to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ /__</span><br><span class="line">    _\ \/ _ \/ _ `/ __/  <span class="string">'_/</span><br><span class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</span><br><span class="line">      /_/</span><br><span class="line"></span><br><span class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</span><br><span class="line">SparkContext available as sc, HiveContext available as sqlContext.</span><br><span class="line"></span><br><span class="line">In [1]:</span></span><br></pre></td></tr></table></figure>
+<p>Launch the PySpark shell in <strong>IPython Notebook</strong>, <a href="http://localhost:8888" target="_blank" rel="external">http://localhost:8888</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS=<span class="string">"notebook"</span> pyspark</span><br><span class="line">or </span><br><span class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark</span><br><span class="line"></span><br><span class="line"><span class="comment"># You can also specify running memory </span></span><br><span class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --executor-memory <span class="number">7</span>g</span><br></pre></td></tr></table></figure>
+<h2 id="Run_pyspark_on_a_cluster_inside_IPython_28jupyter_29"><a href="#Run_pyspark_on_a_cluster_inside_IPython_28jupyter_29" class="headerlink" title="Run pyspark on a cluster inside IPython(jupyter)"></a>Run pyspark on a cluster inside IPython(jupyter)</h2><p>It’s assumed you deployed a spark cluster in standalone mode, and the master ip is <code>localhost</code>. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:<span class="number">7077</span> --executor-memory <span class="number">7</span>g</span><br><span class="line"></span><br><span class="line"><span class="comment"># you can add some python modules</span></span><br><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark  \</span><br><span class="line">--master spark://localhost:<span class="number">7077</span>  \</span><br><span class="line">--executor-memory <span class="number">7</span>g             \</span><br><span class="line">--py-files tensorflow-py2.<span class="number">7</span>.egg</span><br></pre></td></tr></table></figure>
+<p><img src="/media/Screen%20Shot%202016-01-27%20at%2023.24.46.png" alt="pyspark on cluster"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" data-id="cijwzm4km000fbpduiwdgmd31" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-NPM-Playbook" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/17/NPM-Playbook/" class="article-date">
@@ -108,7 +168,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/17/NPM-Playbook/" data-id="ciji3wvs5000au0du618y9fxh" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/17/NPM-Playbook/" data-id="cijwzm4ki000abpduqki50311" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -153,7 +213,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/15/Books-of-2016/" data-id="ciji3wvsa000iu0dufc50hpmp" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/15/Books-of-2016/" data-id="cijwzm4kr000kbpdufer6lwr9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/">reading</a></li></ul>
@@ -197,7 +257,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/" data-id="ciji3wvs7000du0duaquerbcl" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/" data-id="cijwzm4kj000dbpduccqba7s7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
@@ -251,7 +311,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" data-id="ciji3wvrt0001u0duyaqkybb3" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" data-id="cijwzm4k50001bpduy29hpvxn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -298,7 +358,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="ciji3wvs30008u0du8xh7gwm1" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" data-id="cijwzm4kg0008bpduhd6daozf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -345,7 +405,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="ciji3wvs8000fu0duwf431trd" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/" data-id="cijwzm4kp000hbpdu9imgle9h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
@@ -388,7 +448,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="ciji3wvs10006u0dukypwj2nl" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/" data-id="cijwzm4ke0006bpdu0szd3e7a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -433,7 +493,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="ciji3wvrz0004u0duqpddk574" class="article-share-link">Share</a>
+      <a data-url="https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/" data-id="cijwzm4kc0004bpdu26wyuyq4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
@@ -489,6 +549,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">Hacking pyspark inside Jupyter Notebook</a>
+          </li>
+        
+          <li>
             <a href="/2016/01/17/NPM-Playbook/">NPM Playbook</a>
           </li>
         
@@ -502,10 +566,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/">Spark Source Codes 01 Submit and Run Jobs</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/">Reading Spark Souce Code in IntelliJ IDEA</a>
           </li>
         
       </ul>
