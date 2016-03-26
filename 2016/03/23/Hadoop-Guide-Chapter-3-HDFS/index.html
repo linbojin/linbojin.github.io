@@ -68,7 +68,7 @@ Filesystems that manage the storage across a network of m">
 <meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-23%20at%2014.48.08.png">
 <meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-23%20at%2014.48.31.png">
 <meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-23%20at%2014.54.08.png">
-<meta property="og:updated_time" content="2016-03-26T12:41:17.000Z">
+<meta property="og:updated_time" content="2016-03-26T13:48:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem">
 <meta name="twitter:description" content="— HDFS is a filesystem designed for storing very large files with streaming data access patterns, running on clusters of commodity hardware. —
@@ -280,10 +280,6 @@ Filesystems that manage the storage across a network of m">
 <p><img src="/media/Screen%20Shot%202016-03-23%20at%2014.48.31.png" alt="Screen Shot 2016-03-23 at 14.48.31"></p>
 <p>When there are multiple reducers, the map tasks partition their output, each creating one partition for each reduce task. There can be many keys (and their associated values) in each partition, but the records for any given key are all in a single partition. The partitioning can be controlled by a user-defined partitioning function, but normally the default partitioner - which buckets keys using a hash function - works very well.</p>
 <p><img src="/media/Screen%20Shot%202016-03-23%20at%2014.54.08.png" alt="Screen Shot 2016-03-23 at 14.54.08"></p>
-<p>‘sha1:e196b82d1c37:498aa7e6202cc7568fc4d3e88179dd6f30bcde74’</p>
-<p>echo ‘/dev/xvdf /storage ext3 rw,noatime 0 0’ &gt;&gt; /etc/fstab</p>
-<p> sudo mount  /dev/xvdf /storage</p>
-<p> dmesg</p>
 
       
     </div>
