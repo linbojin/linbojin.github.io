@@ -206,6 +206,419 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" itemprop="url">
+                  Spark Source Codes 01 Submit and Run Jobs
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-10T20:29:15+08:00" content="2016-01-10">
+              2016-01-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>standalone mode</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &#123;SPARK_HOME&#125;/libexec/sbin/</span><br></pre></td></tr></table></figure>
+<h3 id="Start_Master_at_8080_2C"><a href="#Start_Master_at_8080_2C" class="headerlink" title="Start Master at 8080,"></a>Start Master at 8080,</h3><p>org.apache.spark.deploy.master.Master<br>onStart()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># spark command: java -Xms1g -Xmx1g org.apache.spark.deploy.master.Master </span></span><br><span class="line"><span class="comment">#                --ip localhost --port 7077 --webui-port 8080</span></span><br><span class="line">$ ./start-master.sh </span><br><span class="line"></span><br><span class="line">Output Logs:</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">23</span> INFO Master: Registered signal handlers <span class="keyword">for</span> [TERM, HUP, INT]</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">23</span> WARN NativeCodeLoader: Unable to load native-hadoop library <span class="keyword">for</span> your platform... using <span class="built_in">builtin</span>-java classes <span class="built_in">where</span> applicable</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO SecurityManager: Changing view acls to: tony</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO SecurityManager: Changing modify acls to: tony</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(tony); users with modify permissions: Set(tony)</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO Utils: Successfully started service <span class="string">'sparkMaster'</span> on port <span class="number">7077</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO Master: Starting Spark master at spark://localhost:<span class="number">7077</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO Master: Running Spark version <span class="number">1.6</span>.<span class="number">0</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO Utils: Successfully started service <span class="string">'MasterUI'</span> on port <span class="number">8080</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO MasterWebUI: Started MasterWebUI at http://<span class="number">192.168</span>.<span class="number">0.112</span>:<span class="number">8080</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO Utils: Successfully started service on port <span class="number">6066</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO StandaloneRestServer: Started REST server <span class="keyword">for</span> submitting applications on port <span class="number">6066</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">45</span>:<span class="number">24</span> INFO Master: I have been elected leader! New state: ALIVE</span><br></pre></td></tr></table></figure>
+<h3 id="Start_Worker_at_8081"><a href="#Start_Worker_at_8081" class="headerlink" title="Start Worker at 8081"></a>Start Worker at 8081</h3><p>onStart() =&gt; registerWithMaster()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># spark command: java -Xms1g -Xmx1g org.apache.spark.deploy.worker.Worker </span></span><br><span class="line"><span class="comment">#                --webui-port 8081 spark://localhost:7077</span></span><br><span class="line">$ ./start-slave.sh spark://localhost:<span class="number">7077</span></span><br><span class="line"></span><br><span class="line">Output Logs:</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO Worker: Registered signal handlers <span class="keyword">for</span> [TERM, HUP, INT]</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> WARN NativeCodeLoader: Unable to load native-hadoop library <span class="keyword">for</span> your platform... using <span class="built_in">builtin</span>-java classes <span class="built_in">where</span> applicable</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO SecurityManager: Changing view acls to: tony</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO SecurityManager: Changing modify acls to: tony</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">45</span> INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(tony); users with modify permissions: Set(tony)</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Utils: Successfully started service <span class="string">'sparkWorker'</span> on port <span class="number">49576</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Starting Spark worker <span class="number">192.168</span>.<span class="number">0.112</span>:<span class="number">49576</span> with <span class="number">4</span> cores, <span class="number">7.0</span> GB RAM</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Running Spark version <span class="number">1.6</span>.<span class="number">0</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Spark home: /usr/<span class="built_in">local</span>/Cellar/apache-spark/<span class="number">1.6</span>.<span class="number">0</span>/libexec</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Utils: Successfully started service <span class="string">'WorkerUI'</span> on port <span class="number">8081</span>.</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO WorkerWebUI: Started WorkerWebUI at http://<span class="number">192.168</span>.<span class="number">0.112</span>:<span class="number">8081</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Connecting to master localhost:<span class="number">7077</span>...</span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">10</span> <span class="number">20</span>:<span class="number">50</span>:<span class="number">46</span> INFO Worker: Successfully registered with master spark://localhost:<span class="number">7077</span></span><br></pre></td></tr></table></figure>
+<h3 id="Start_Spark-shell_over_cluster_on_http_3A//localhost_3A4040"><a href="#Start_Spark-shell_over_cluster_on_http_3A//localhost_3A4040" class="headerlink" title="Start Spark-shell over cluster on http://localhost:4040"></a>Start Spark-shell over cluster on <a href="http://localhost:4040" target="_blank" rel="external">http://localhost:4040</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ MASTER=spark://localhost:<span class="number">7077</span> spark-shell</span><br></pre></td></tr></table></figure>
+<p><img src="/media/14526662171327.jpg" alt="14526662171327"></p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; sc.textFile(<span class="string">"README.md"</span>).filter(_.contains(<span class="string">"Spark"</span>)).count</span><br></pre></td></tr></table></figure>
+<p><img src="/media/14526662553694.jpg" alt="14526662553694"></p>
+<p>sc.textFile(“”)</p>
+<p>RDD Object</p>
+<p>DAGScheduler: error between stages</p>
+<p>==TaskSet===&gt;</p>
+<p>TaskScheduler: error inside stage</p>
+<p>org.apache.spark.scheduler.TaskScheduler</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" itemprop="url">
+                  Reading Spark Souce Code in IntelliJ IDEA
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-09T19:20:43+08:00" content="2016-01-09">
+              2016-01-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>It’s a good choice to read spark souce code in IntelliJ IDEA. This tutorial introduces how to do it.</p>
+<h3 id="Get_spark_repository"><a href="#Get_spark_repository" class="headerlink" title="Get spark repository"></a>Get spark repository</h3><ol>
+<li>Fork <a href="https://github.com/apache/spark">apache spark</a> project to your Github account</li>
+<li><p>Clone spark to local:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github.com:username/spark.git</span><br><span class="line">$ <span class="built_in">cd</span> spark/</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/" itemprop="url">
+                  Build blog with Hexo and MWeb
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-09T17:56:35+08:00" content="2016-01-09">
+              2016-01-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/Build-blog-by-Hexo-and-MWeb/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p><a href="https://github.com/">Github account</a>: blog deployed by GitHub Pages<br><a href="https://hexo.io/">Hexo</a>: blog framework to generate static blog files<br><a href="http://www.mweb.im/">MWeb</a>: Markdown writing tool</p>
+<h2 id="Setup_Github"><a href="#Setup_Github" class="headerlink" title="Setup Github"></a>Setup Github</h2><ol>
+<li>Create a new repository named username.github.io</li>
+<li><a href="https://username.github.io">https://username.github.io</a> will be your personal blog address</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/09/Spark-Introduction-part-1-Coding/" itemprop="url">
+                  Spark Introduction part 1 Coding
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-09T17:22:11+08:00" content="2016-01-09">
+              2016-01-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/09/Spark-Introduction-part-1-Coding/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/Spark-Introduction-part-1-Coding/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Basic_Functions"><a href="#Basic_Functions" class="headerlink" title="Basic Functions"></a>Basic Functions</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sc.parallelize(<span class="type">List</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)).map(_ * <span class="number">2</span>).filter(_ &gt; <span class="number">5</span>).collect()</span><br><span class="line">*** res: <span class="type">Array</span>[<span class="type">Int</span>] = <span class="type">Array</span>(<span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">12</span>) ***</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> rdd = sc.parallelize(<span class="type">List</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>))</span><br><span class="line">rdd.reduce(_+_)</span><br><span class="line">*** res: <span class="type">Int</span> = <span class="number">55</span> ***</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/09/Spark-Introduction-part-1-Coding/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/09/Spark-Introduction-part-1/" itemprop="url">
                   Spark Introduction part 1
                 </a>
@@ -330,7 +743,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -340,7 +753,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

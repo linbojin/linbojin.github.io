@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nodejs," />
+  <meta name="keywords" content="hadoop," />
 
 
 
@@ -57,25 +57,21 @@
 
 
 
-<meta name="description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
-ResourcesLoopback: http://loopback.io/Getting started">
+<meta name="description" content="—— More data usually beats better algorithms. ——
+A Brief History of Apache HadoopHadoop was created by Doug Cutting, the creator of Apache Lucene, the widely used text search library. Hadoop has its o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Loopback API Framework">
-<meta property="og:url" content="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/index.html">
+<meta property="og:title" content="Hadoop Guide Chapter 1: Meet Hadoop">
+<meta property="og:url" content="https://linbojin.github.io/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
-ResourcesLoopback: http://loopback.io/Getting started">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2015.49.45.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2016.09.32.png">
-<meta property="og:image" content="https://linbojin.github.io/media/14527611403060.jpg">
-<meta property="og:image" content="https://linbojin.github.io/media/14527612340194.jpg">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2016.49.38.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2016.50.03.png">
-<meta property="og:updated_time" content="2016-01-14T09:00:27.000Z">
+<meta property="og:description" content="—— More data usually beats better algorithms. ——
+A Brief History of Apache HadoopHadoop was created by Doug Cutting, the creator of Apache Lucene, the widely used text search library. Hadoop has its o">
+<meta property="og:image" content="https://linbojin.github.io/media/14589963307830.jpg">
+<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-26%20at%2019.36.24.png">
+<meta property="og:updated_time" content="2016-03-26T12:45:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Loopback API Framework">
-<meta name="twitter:description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
-ResourcesLoopback: http://loopback.io/Getting started">
+<meta name="twitter:title" content="Hadoop Guide Chapter 1: Meet Hadoop">
+<meta name="twitter:description" content="—— More data usually beats better algorithms. ——
+A Brief History of Apache HadoopHadoop was created by Doug Cutting, the creator of Apache Lucene, the widely used text search library. Hadoop has its o">
 
 
 
@@ -93,7 +89,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
   };
 </script>
 
-  <title> Loopback API Framework | AILab </title>
+  <title> Hadoop Guide Chapter 1: Meet Hadoop | AILab </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -213,7 +209,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
             
             
               
-                Loopback API Framework
+                Hadoop Guide Chapter 1: Meet Hadoop
               
             
           </h1>
@@ -225,8 +221,8 @@ ResourcesLoopback: http://loopback.io/Getting started">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-14T15:02:14+08:00" content="2016-01-14">
-              2016-01-14
+            <time itemprop="dateCreated" datetime="2016-03-22T11:48:14+08:00" content="2016-03-22">
+              2016-03-22
             </time>
           </span>
 
@@ -236,8 +232,8 @@ ResourcesLoopback: http://loopback.io/Getting started">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/14/Loopback-API-Framework/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/14/Loopback-API-Framework/" itemprop="commentsCount"></span>
+                <a href="/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -259,24 +255,42 @@ ResourcesLoopback: http://loopback.io/Getting started">
       
 
       
-        <p>The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.</p>
-<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>Loopback: <a href="http://loopback.io/" target="_blank" rel="external">http://loopback.io/</a><br>Getting started: <a href="http://loopback.io/getting-started/" target="_blank" rel="external">http://loopback.io/getting-started/</a><br>Create a simple API: <a href="https://docs.strongloop.com/display/public/LB/Create+a+simple+API" target="_blank" rel="external">https://docs.strongloop.com/display/public/LB/Create+a+simple+API</a><br>LoopBack core concepts: <a href="https://docs.strongloop.com/display/public/LB/LoopBack+core+concepts" target="_blank" rel="external">https://docs.strongloop.com/display/public/LB/LoopBack+core+concepts</a></p>
-<a id="more"></a>
-<h3 id="Build_an_App_named_loopback-getting-started"><a href="#Build_an_App_named_loopback-getting-started" class="headerlink" title="Build an App named loopback-getting-started"></a>Build an App named loopback-getting-started</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g strongloop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create app</span></span><br><span class="line">$ slc loopback</span><br><span class="line">     _-----_</span><br><span class="line">    |       |    .--------------------------.</span><br><span class="line">    |--(o)--|    |  Let<span class="string">'s create a LoopBack |</span><br><span class="line">   `---------´   |       application!       |</span><br><span class="line">    ( _´U`_ )    '</span>--------------------------<span class="string">'</span><br><span class="line">    /___A___\</span><br><span class="line">     |  ~  |</span><br><span class="line">   __'</span>.___.<span class="string">'__</span><br><span class="line"> ´   `  |° ´ Y `</span><br><span class="line">[?] What'</span>s the name of your application? loopback-getting-started</span><br><span class="line">[?] Enter name of the directory to contain the project: loopback-getting-started</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create model people</span></span><br><span class="line">$ <span class="built_in">cd</span> loopback-getting-started</span><br><span class="line">$ slc loopback:model</span><br><span class="line">[?] Enter the model name: people</span><br><span class="line">[?] Select the data-source to attach people to: db (memory)</span><br><span class="line">[?] Select model<span class="string">'s base class PersistedModel</span><br><span class="line">[?] Expose people via the REST API? Yes</span><br><span class="line">[?] Custom plural form (used to build REST URL):</span><br><span class="line">[?] Common model or server only? common</span><br><span class="line">Let'</span>s add some people properties now.</span><br><span class="line"></span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: firstname</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property <span class="built_in">type</span>: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let<span class="string">'s add another people property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: lastname</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property type: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let'</span>s add another people property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create another model CoffeeShop</span></span><br><span class="line">$ slc loopback:model</span><br><span class="line">[?] Enter the model name: CoffeeShop</span><br><span class="line">[?] Select the data-source to attach CoffeeShop to: db (memory)</span><br><span class="line">[?] Select model<span class="string">'s base class PersistedModel</span><br><span class="line">[?] Expose CoffeeShop via the REST API? Yes</span><br><span class="line">[?] Custom plural form (used to build REST URL):</span><br><span class="line">[?] Common model or server only? common</span><br><span class="line">Let'</span>s add some CoffeeShop properties now.</span><br><span class="line"></span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: name</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property <span class="built_in">type</span>: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let<span class="string">'s add another CoffeeShop property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: city</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property type: string</span><br><span class="line">v Required? Yes</span><br><span class="line"></span><br><span class="line">Let'</span>s add another CoffeeShop property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the application</span></span><br><span class="line">$ node .</span><br><span class="line">Web server listening at: http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">3000</span></span><br><span class="line">Browse your REST API at http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">3000</span>/explorer</span><br></pre></td></tr></table></figure>
-<p><a href="https://docs.strongloop.com/display/public/LB/Project+layout+reference" target="_blank" rel="external">project structure</a></p>
+        <p>—— <strong><em>More data usually beats better algorithms.</em></strong> ——</p>
+<h3 id="A_Brief_History_of_Apache_Hadoop"><a href="#A_Brief_History_of_Apache_Hadoop" class="headerlink" title="A Brief History of Apache Hadoop"></a>A Brief History of Apache Hadoop</h3><p><a href="http://hadoop.apache.org/" target="_blank" rel="external">Hadoop</a> was created by <a href="https://en.wikipedia.org/wiki/Doug_Cutting" target="_blank" rel="external">Doug Cutting</a>, the creator of <a href="http://lucene.apache.org/" target="_blank" rel="external">Apache Lucene</a>, the widely used text search library. Hadoop has its origins in <a href="http://nutch.apache.org/" target="_blank" rel="external">Apache Nutch</a>, an open source web search engine, itself a part of the Lucene project.<br><a id="more"></a><br>Nutch was started in 2002 whose architecture wouldn’t scale to the billions of pages on the Web. In 2003, Google published a paper that described the architecture of Google’s distributed filesystem, called GFS, which would solve their storage needs for the very large files generated as a part of the web crawl and indexing process. In 2004, Nutch’s developers set about writing an open source implementation, the Nutch Distributed Filesystem (NDFS). In 2004, Google published another paper that introduced MapReduce to the world. Early in 2005, the Nutch developers had a working MapReduce implementation in Nutch, and by the middle of that year all the major Nutch algorithms had been ported to run using MapReduce and NDFS. </p>
+<p>NDFS and the MapReduce implementation in Nutch were applicable beyond the realm of search, and in <strong>February 2006</strong> they moved out of Nutch to form an independent subproject of Lucene called <strong>Hadoop</strong>. At around the same time, Doug Cutting joined Yahoo!, which provided a dedicated team and the resources to turn Hadoop into a system that ran at web scale. This was demonstrated in February 2008 when Yahoo! announced that its production search index was being generated by a 10,000-core Hadoop cluster. In <strong>January 2008</strong>, Hadoop was made its <strong>own top-level project at Apache</strong>, confirming its success and its diverse, active community. </p>
+<p>Today, Hadoop is widely used in mainstream enterprises. Hadoop’s role as a general purpose storage and analysis platform for big data has been recognized by the industry. Commercial Hadoop support is available from large, established enterprise vendors, including EMC, IBM, Microsoft, and Oracle, as well as from <strong>specialist Hadoop companies such as Cloudera, Hortonworks, and MapR</strong>. </p>
+<h3 id="Apache_Hadoop_Ecosystem"><a href="#Apache_Hadoop_Ecosystem" class="headerlink" title="Apache Hadoop Ecosystem"></a>Apache Hadoop Ecosystem</h3><p><img src="/media/14589963307830.jpg" alt="Apache Hadoop Ecosystem"></p>
+<h3 id="Data_Storage_and_Analysis"><a href="#Data_Storage_and_Analysis" class="headerlink" title="Data Storage and Analysis"></a>Data Storage and Analysis</h3><p><strong>Although the storage capacities of hard drives have increased massively over the years, access speeds - the rate at which data can be read from drives - have not kept up.</strong> One typical drive from 1990 could store 1370 MB of data and had a transfer speed of 4.4 MB/s, so you could read all the data from a full drive in aroud five minutes. Over 20 years later, 1-terabyte drives are the norm, but the transfer speed is around 100 MB/s, so it takes more than two and a half hours to read all the data oof the disk.</p>
+<p>MapReduce provides <strong>a programming model that abstracts the problem </strong>from disk reads and writes, transforming it into a <strong>computation over sets of keys and values</strong>.</p>
+<p>MapReduce is a <strong>batch query</strong> processor, and the ability to run an ad hoc query against your whole dataset and get the results in a reasonable time is transformative. MapReduce is fundamentally a batch processing system, and is <strong>not suitable for interactive analysis</strong>.</p>
+<h3 id="Beyond_Batch"><a href="#Beyond_Batch" class="headerlink" title="Beyond Batch"></a>Beyond Batch</h3><p>The first component to provide <strong>online access was <a href="https://hbase.apache.org/" target="_blank" rel="external">HBase</a></strong>, a <strong>key-value</strong> store that uses HDFS for its underlying storage. HBase provides <strong>both online read/write access of individual rows and batch operations for reading and writing data in bulk</strong>, making it a good solution for building applications on. </p>
+<p>The real enabler for <strong>new processing models</strong> in Hadoop was the introduction of <strong>YARN</strong> (which stands for <em>Yet Another Resource Negotiator</em>) in Hadoop 2. YARN is a <strong>cluster resource management system</strong>, which allows any distributed program (not just MapReduce) to run on data in a Hadoop cluster. Here are examples: </p>
 <ul>
-<li>server - Node application scripts and configuration files.</li>
-<li>common[server]/models sub-directory contains all model JSON and JavaScript files.</li>
-<li>client - Client JavaScript, HTML, and CSS files.</li>
-<li>common - Files common to client and server. </li>
+<li>Interactive SQL: achive <strong>low-latency responses</strong> for SQL queries on large dataset sizes, <a href="https://hive.apache.org/" target="_blank" rel="external">Hive</a>, Impala.</li>
+<li>Interactive Analytics at Scale: <a href="http://druid.io/" target="_blank" rel="external">Druid</a></li>
+<li>Iterative processing: machine learning, Spark</li>
+<li>Streaming processing: Streaming systems like <strong>Storm</strong>, <strong>Spark Streaming</strong> make it possible to run <strong>realtime</strong>, distributed computations on <strong>unbounded streams</strong> of data and emit results to Hadoop storage or external systems.</li>
+<li>Search: <a href="http://lucene.apache.org/solr/" target="_blank" rel="external">Solr</a></li>
 </ul>
-<p><img src="/media/Screen%20Shot%202016-01-14%20at%2015.49.45.png" alt="loopback project structure"></p>
-<h3 id="Use_API_Explorer"><a href="#Use_API_Explorer" class="headerlink" title="Use API Explorer"></a>Use API Explorer</h3><p>Goto <a href="http://0.0.0.0:3000" target="_blank" rel="external">http://0.0.0.0:3000</a>:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">started</span>":<span class="value"><span class="string">"2016-01-14T08:05:00.339Z"</span></span>,"<span class="attribute">uptime</span>":<span class="value"><span class="number">48.7</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<p>Goto <a href="http://0.0.0.0:3000/explorer" target="_blank" rel="external">http://0.0.0.0:3000/explorer</a>:</p>
-<p><img src="/media/Screen%20Shot%202016-01-14%20at%2016.09.32.png" alt="Loopback API Explorer"></p>
-<h4 id="Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source"><a href="#Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source" class="headerlink" title="Create a new instance of the model and persist it into the data source"></a>Create a new instance of the model and persist it into the data source</h4><p>API: POST  /CoffeeShops<br><img src="/media/14527611403060.jpg" alt="POST API"><br><img src="/media/14527612340194.jpg" alt="application&#39;s response after post data"></p>
-<h4 id="Retrieve_the_data_inside_datasource"><a href="#Retrieve_the_data_inside_datasource" class="headerlink" title="Retrieve the data inside datasource"></a>Retrieve the data inside datasource</h4><p>API: GET  /CoffeeShops<br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.49.38.png" alt="GET API"><br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.50.03.png" alt="get data"></p>
+<h3 id="Comparison_with_Other_Systems"><a href="#Comparison_with_Other_Systems" class="headerlink" title="Comparison with Other Systems"></a>Comparison with Other Systems</h3><h4 id="Relational_Database_Management_Systems"><a href="#Relational_Database_Management_Systems" class="headerlink" title="Relational Database Management Systems"></a>Relational Database Management Systems</h4><p>Seek time is improving more slowly than transfer rate. Seeking is the process of moving the disk’s head to a particular place on the disk to read or write data. It characterizes the latency of a disk operation, whereas the transfer rate corresponds to a disk’s bandwidth. </p>
+<p>If the data access pattern is dominated by seeks, it will take longer to read or write large portions of the dataset than streaming through it, which operates at the transfer rate. On the other hand, for updating a small proportion of records in a database, a traditional B-Tree (the data structure used in relational databases, which is limited by the rate at which it can perform seeks) works well. For updating the majority of a database, a B-Tree is less efficient than MapReduce, which uses Sort/Merge to rebuild the database. Difference between MapReduce and RDBMS:</p>
+<ul>
+<li><strong>MapReduce is a good fit</strong> for problems that need to <strong>analyze the whole dataset in a batch fashion</strong>, particularly for ad hoc analysis. </li>
+<li>An <strong>RDBMS</strong> is <strong>good for point queries or updates</strong>, where <strong>the dataset has been indexed to deliver low-latency retrieval and update times of a relatively small amount of data</strong>.</li>
+<li><p>MapReduce suits applications where the data is <strong>written once and read many times</strong>, whereas a relational database is good for datasets that <strong>continually updated</strong>.</p>
+<p>  <img src="/media/Screen%20Shot%202016-03-26%20at%2019.36.24.png" alt="Screen Shot 2016-03-26 at 19.36.24"></p>
+</li>
+</ul>
+<p>Another difference between Hadoop and an RDBMS is the amount of structure in the datasets on which they operate. There are three kinds of data:</p>
+<ul>
+<li><strong>Structure data</strong> is organized into <strong>entities that have a defined format</strong>, such as XML documents or database tables that conform to a particular predefined schema.</li>
+<li><strong>Semi-structure data</strong> is looser and though there may be a schema which may be used  only as a guide to the structure of the data, for example JSON.</li>
+<li><strong>Unstructured data</strong> does not have any particular internal structure, for example, image data.</li>
+</ul>
+<p><strong>Hadoop works well on unstructure of semi-structured data</strong> because it is designed to <strong>interpret the data at processing time (so called schema-on-read)</strong>. This provides flexibility and <strong>avoids the costly data loading phase of an RDBMS</strong>, since in Hadoop it is just a file copy.</p>
+<h4 id="High-performance_computing_or_Grid_Computing"><a href="#High-performance_computing_or_Grid_Computing" class="headerlink" title="High-performance computing or Grid Computing"></a>High-performance computing or Grid Computing</h4><p>HPC is to <strong>distribute the work across a cluster</strong> of machines, which <strong>access a shared filesystem</strong>, hosted by a storage area network (SAN). This <strong>works well for predominantly compute-intensive jobs</strong>, but it becomes <strong>a problem when nodes need to access larger data volumes</strong> and the <strong>network bandwidth</strong> will be the bottleneck and <strong>compute nodes become idle</strong>.</p>
+<p>Hadoop tries to <strong>co-locate the data</strong> wih the compute nodes, so data access is fast because it is local. This feature, known as <strong>data locality</strong>, is <strong>at the heart of data processing in Hadoop and is the reason for its good performance</strong>.</p>
+<p>Distributed processing frameworks like MapReduce <strong>spare the programmer from having to think about failure</strong>, since the implementation <strong>detects failed tasks and reschedules replacements</strong> on machines that are healthy. MapReduce is able to do this because it is a <strong>shared-nothing architecture</strong>, meaning that tasks have no dependence on the other. By contrast, <strong>Message Passing Interface (MPI) programs have to explicitly manage their own checkpointing and recovery</strong>, which gives more control to the programmer but makes them more difficult to write.</p>
 
       
     </div>
@@ -291,7 +305,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
       
         <div class="post-tags">
           
-            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
+            <a href="/tags/hadoop/" rel="tag">#hadoop</a>
           
         </div>
       
@@ -300,16 +314,16 @@ ResourcesLoopback: http://loopback.io/Getting started">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" rel="next" title="Spark Source Codes 01 Submit and Run Jobs">
-                <i class="fa fa-chevron-left"></i> Spark Source Codes 01 Submit and Run Jobs
+              <a href="/2016/03/22/Hadoop-The-Definitive-Guide-Reading-Notes/" rel="next" title="Hadoop The Definitive Guide Reading Notes">
+                <i class="fa fa-chevron-left"></i> Hadoop The Definitive Guide Reading Notes
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/15/Books-of-2016/" rel="prev" title="Books of 2016">
-                Books of 2016 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/" rel="prev" title="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem">
+                Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -325,10 +339,10 @@ ResourcesLoopback: http://loopback.io/Getting started">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/01/14/Loopback-API-Framework/"
-     data-title="Loopback API Framework"
+        <div class="ds-share flat" data-thread-key="2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/"
+     data-title="Hadoop Guide Chapter 1: Meet Hadoop"
      data-content=""
-     data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/">
+     data-url="https://linbojin.github.io/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -355,8 +369,8 @@ ResourcesLoopback: http://loopback.io/Getting started">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/14/Loopback-API-Framework/"
-           data-title="Loopback API Framework" data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/">
+      <div class="ds-thread" data-thread-key="2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/"
+           data-title="Hadoop Guide Chapter 1: Meet Hadoop" data-url="https://linbojin.github.io/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/">
       </div>
     
   </div>
@@ -477,7 +491,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resources"><span class="nav-number">1.</span> <span class="nav-text">Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build_an_App_named_loopback-getting-started"><span class="nav-number">2.</span> <span class="nav-text">Build an App named loopback-getting-started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use_API_Explorer"><span class="nav-number">3.</span> <span class="nav-text">Use API Explorer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source"><span class="nav-number">3.1.</span> <span class="nav-text">Create a new instance of the model and persist it into the data source</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Retrieve_the_data_inside_datasource"><span class="nav-number">3.2.</span> <span class="nav-text">Retrieve the data inside datasource</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A_Brief_History_of_Apache_Hadoop"><span class="nav-number">1.</span> <span class="nav-text">A Brief History of Apache Hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Apache_Hadoop_Ecosystem"><span class="nav-number">2.</span> <span class="nav-text">Apache Hadoop Ecosystem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data_Storage_and_Analysis"><span class="nav-number">3.</span> <span class="nav-text">Data Storage and Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Beyond_Batch"><span class="nav-number">4.</span> <span class="nav-text">Beyond Batch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparison_with_Other_Systems"><span class="nav-number">5.</span> <span class="nav-text">Comparison with Other Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Relational_Database_Management_Systems"><span class="nav-number">5.1.</span> <span class="nav-text">Relational Database Management Systems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#High-performance_computing_or_Grid_Computing"><span class="nav-number">5.2.</span> <span class="nav-text">High-performance computing or Grid Computing</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nodejs," />
+  <meta name="keywords" content="hadoop," />
 
 
 
@@ -57,25 +57,22 @@
 
 
 
-<meta name="description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
-ResourcesLoopback: http://loopback.io/Getting started">
+<meta name="description" content="— HDFS is a filesystem designed for storing very large files with streaming data access patterns, running on clusters of commodity hardware. —
+Filesystems that manage the storage across a network of m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Loopback API Framework">
-<meta property="og:url" content="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/index.html">
+<meta property="og:title" content="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem">
+<meta property="og:url" content="https://linbojin.github.io/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
-ResourcesLoopback: http://loopback.io/Getting started">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2015.49.45.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2016.09.32.png">
-<meta property="og:image" content="https://linbojin.github.io/media/14527611403060.jpg">
-<meta property="og:image" content="https://linbojin.github.io/media/14527612340194.jpg">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2016.49.38.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2016.50.03.png">
-<meta property="og:updated_time" content="2016-01-14T09:00:27.000Z">
+<meta property="og:description" content="— HDFS is a filesystem designed for storing very large files with streaming data access patterns, running on clusters of commodity hardware. —
+Filesystems that manage the storage across a network of m">
+<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-23%20at%2014.48.08.png">
+<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-23%20at%2014.48.31.png">
+<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-03-23%20at%2014.54.08.png">
+<meta property="og:updated_time" content="2016-03-26T12:41:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Loopback API Framework">
-<meta name="twitter:description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
-ResourcesLoopback: http://loopback.io/Getting started">
+<meta name="twitter:title" content="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem">
+<meta name="twitter:description" content="— HDFS is a filesystem designed for storing very large files with streaming data access patterns, running on clusters of commodity hardware. —
+Filesystems that manage the storage across a network of m">
 
 
 
@@ -93,7 +90,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
   };
 </script>
 
-  <title> Loopback API Framework | AILab </title>
+  <title> Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem | AILab </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -213,7 +210,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
             
             
               
-                Loopback API Framework
+                Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem
               
             
           </h1>
@@ -225,8 +222,8 @@ ResourcesLoopback: http://loopback.io/Getting started">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-14T15:02:14+08:00" content="2016-01-14">
-              2016-01-14
+            <time itemprop="dateCreated" datetime="2016-03-23T15:22:48+08:00" content="2016-03-23">
+              2016-03-23
             </time>
           </span>
 
@@ -236,8 +233,8 @@ ResourcesLoopback: http://loopback.io/Getting started">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/14/Loopback-API-Framework/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/14/Loopback-API-Framework/" itemprop="commentsCount"></span>
+                <a href="/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/23/Hadoop-Guide-Chapter-3-HDFS/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -259,24 +256,34 @@ ResourcesLoopback: http://loopback.io/Getting started">
       
 
       
-        <p>The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.</p>
-<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>Loopback: <a href="http://loopback.io/" target="_blank" rel="external">http://loopback.io/</a><br>Getting started: <a href="http://loopback.io/getting-started/" target="_blank" rel="external">http://loopback.io/getting-started/</a><br>Create a simple API: <a href="https://docs.strongloop.com/display/public/LB/Create+a+simple+API" target="_blank" rel="external">https://docs.strongloop.com/display/public/LB/Create+a+simple+API</a><br>LoopBack core concepts: <a href="https://docs.strongloop.com/display/public/LB/LoopBack+core+concepts" target="_blank" rel="external">https://docs.strongloop.com/display/public/LB/LoopBack+core+concepts</a></p>
-<a id="more"></a>
-<h3 id="Build_an_App_named_loopback-getting-started"><a href="#Build_an_App_named_loopback-getting-started" class="headerlink" title="Build an App named loopback-getting-started"></a>Build an App named loopback-getting-started</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g strongloop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create app</span></span><br><span class="line">$ slc loopback</span><br><span class="line">     _-----_</span><br><span class="line">    |       |    .--------------------------.</span><br><span class="line">    |--(o)--|    |  Let<span class="string">'s create a LoopBack |</span><br><span class="line">   `---------´   |       application!       |</span><br><span class="line">    ( _´U`_ )    '</span>--------------------------<span class="string">'</span><br><span class="line">    /___A___\</span><br><span class="line">     |  ~  |</span><br><span class="line">   __'</span>.___.<span class="string">'__</span><br><span class="line"> ´   `  |° ´ Y `</span><br><span class="line">[?] What'</span>s the name of your application? loopback-getting-started</span><br><span class="line">[?] Enter name of the directory to contain the project: loopback-getting-started</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create model people</span></span><br><span class="line">$ <span class="built_in">cd</span> loopback-getting-started</span><br><span class="line">$ slc loopback:model</span><br><span class="line">[?] Enter the model name: people</span><br><span class="line">[?] Select the data-source to attach people to: db (memory)</span><br><span class="line">[?] Select model<span class="string">'s base class PersistedModel</span><br><span class="line">[?] Expose people via the REST API? Yes</span><br><span class="line">[?] Custom plural form (used to build REST URL):</span><br><span class="line">[?] Common model or server only? common</span><br><span class="line">Let'</span>s add some people properties now.</span><br><span class="line"></span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: firstname</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property <span class="built_in">type</span>: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let<span class="string">'s add another people property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: lastname</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property type: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let'</span>s add another people property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create another model CoffeeShop</span></span><br><span class="line">$ slc loopback:model</span><br><span class="line">[?] Enter the model name: CoffeeShop</span><br><span class="line">[?] Select the data-source to attach CoffeeShop to: db (memory)</span><br><span class="line">[?] Select model<span class="string">'s base class PersistedModel</span><br><span class="line">[?] Expose CoffeeShop via the REST API? Yes</span><br><span class="line">[?] Custom plural form (used to build REST URL):</span><br><span class="line">[?] Common model or server only? common</span><br><span class="line">Let'</span>s add some CoffeeShop properties now.</span><br><span class="line"></span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: name</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property <span class="built_in">type</span>: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let<span class="string">'s add another CoffeeShop property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: city</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property type: string</span><br><span class="line">v Required? Yes</span><br><span class="line"></span><br><span class="line">Let'</span>s add another CoffeeShop property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the application</span></span><br><span class="line">$ node .</span><br><span class="line">Web server listening at: http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">3000</span></span><br><span class="line">Browse your REST API at http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">3000</span>/explorer</span><br></pre></td></tr></table></figure>
-<p><a href="https://docs.strongloop.com/display/public/LB/Project+layout+reference" target="_blank" rel="external">project structure</a></p>
+        <p>— <strong><em>HDFS is a filesystem designed for storing very large files with streaming data access patterns, running on clusters of commodity hardware.</em></strong> —</p>
+<p>Filesystems that <strong>manage the storage across a network of machines</strong> are called <strong>distributed filesystems</strong>. One of the biggest challenges is making the distributed filesystem <strong>tolerate node failure without suffering data loss</strong>. The hadoop distributed filesystem is called <strong><a href="http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html" target="_blank" rel="external">HDFS</a></strong>, which stands for Hadoop Distributed Filesystem.<a id="more"></a> HDFS is a filesystem designed for <strong>storing very large files</strong> with <strong>streaming data access patterns</strong>, running on <strong>clusters of commodity hardware</strong>.</p>
+<p>HDFS is built around the idea that the most efficient data processing parttern is <strong>write-once, read-many-times pattern</strong>. Because the namenode holds filesystem metadata in memory, <strong>the limit to the number of files in a filesystem is governed by the amount of memory on the namenode</strong>. As a rule of thumb, each file, directory, and block takes about 150 bytes. So, for example, if you had one million files, each taking one block, you would need at least 300 MB of memory.</p>
+<h4 id="Blocks"><a href="#Blocks" class="headerlink" title="Blocks"></a>Blocks</h4><p>A disk has a block size, which is the minimum amount of data that it can read or write. Filesystems for a single disk build on this by dealing with data in blocks, which are an integral multiple of the disk block size. Filesystem blocks are typically a few kilobytes in size, whereas disk blocks are normally 512 bytes.</p>
+<p>Like in a filesystem for a single disk, files in HDFS are broken into block-sized chunks, which are stored as independent units. Unlike a filesystem for a single disk, a file in HDFS that is smaller than a single block does not occupy a full block’s worth of underlying storage.</p>
+<p>There’s nothing that requires the blocks from a file to be stored on the same disk, so they can take advantage of any of the disks in the cluster. In fact, it would be possible, if unusual, to store a single file on an HDFS cluster whose blocks filled all the disks in the cluster. </p>
+<p>Having a block abstraction for a distributed filesystem brings several benefits.</p>
 <ul>
-<li>server - Node application scripts and configuration files.</li>
-<li>common[server]/models sub-directory contains all model JSON and JavaScript files.</li>
-<li>client - Client JavaScript, HTML, and CSS files.</li>
-<li>common - Files common to client and server. </li>
+<li>A file can be larger than any single disk in the network.</li>
+<li>Making the unit of abstraction a block rather than a file simplifies the storage subsystem. So the storage subsystem only deals with blocks, simplifying storage management: blocks are a fixed size</li>
+<li>Furthermore, blocks fit well with replication for proiding fault tolerance and availability.</li>
 </ul>
-<p><img src="/media/Screen%20Shot%202016-01-14%20at%2015.49.45.png" alt="loopback project structure"></p>
-<h3 id="Use_API_Explorer"><a href="#Use_API_Explorer" class="headerlink" title="Use API Explorer"></a>Use API Explorer</h3><p>Goto <a href="http://0.0.0.0:3000" target="_blank" rel="external">http://0.0.0.0:3000</a>:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">started</span>":<span class="value"><span class="string">"2016-01-14T08:05:00.339Z"</span></span>,"<span class="attribute">uptime</span>":<span class="value"><span class="number">48.7</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<p>Goto <a href="http://0.0.0.0:3000/explorer" target="_blank" rel="external">http://0.0.0.0:3000/explorer</a>:</p>
-<p><img src="/media/Screen%20Shot%202016-01-14%20at%2016.09.32.png" alt="Loopback API Explorer"></p>
-<h4 id="Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source"><a href="#Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source" class="headerlink" title="Create a new instance of the model and persist it into the data source"></a>Create a new instance of the model and persist it into the data source</h4><p>API: POST  /CoffeeShops<br><img src="/media/14527611403060.jpg" alt="POST API"><br><img src="/media/14527612340194.jpg" alt="application&#39;s response after post data"></p>
-<h4 id="Retrieve_the_data_inside_datasource"><a href="#Retrieve_the_data_inside_datasource" class="headerlink" title="Retrieve the data inside datasource"></a>Retrieve the data inside datasource</h4><p>API: GET  /CoffeeShops<br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.49.38.png" alt="GET API"><br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.50.03.png" alt="get data"></p>
+<p>If a block becomes unavailable, a copy can be read from another location in a way that is transparent to the client. A block that is no longer available due to corruption or machine failure can be replicated from its alternative locations to other live machines to bring the replication factor back to the normal level. </p>
+<p>Some applications can choose to set a high replication factor for the blocks in a popular file to spread the read load on the cluster. </p>
+<p>To see list the blocks that make up each file in the filesystem.</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs fsck / -<span class="keyword">files</span> -blocks</span><br></pre></td></tr></table></figure>
+<h4 id="Namenodes_and_Datanodes"><a href="#Namenodes_and_Datanodes" class="headerlink" title="Namenodes and Datanodes"></a>Namenodes and Datanodes</h4><p>An HDFS cluster has two types of nodes: a namenode and a number of datanodes.<br>The namenode manages the filesystem namespace. It maintains the filesystem tree and the metadata for all the files and directories. This information is stored persistently on the local disk in the form of two files: the namespace image and the edit log. The namenode also knows the datanodes on which all the blocks for a given file are located; however, it does not store block locations persistently, which will be reconstructed from datanodes when the system starts.</p>
+<p>Datanodes are the workhorses of the filesystem. They will report back to the namenode periodically with lists of blocks that they are storing.</p>
+<p>If the namenode failed, all the files on the filesystem would be lost since there would be no way of knowing how to reconstruct the files from the blocks on the datanodes.</p>
+<p>Hadoop provides two mechanisms to make the namenode resilient to failure.:</p>
+<p><img src="/media/Screen%20Shot%202016-03-23%20at%2014.48.08.png" alt="Screen Shot 2016-03-23 at 14.48.08"></p>
+<p><img src="/media/Screen%20Shot%202016-03-23%20at%2014.48.31.png" alt="Screen Shot 2016-03-23 at 14.48.31"></p>
+<p>When there are multiple reducers, the map tasks partition their output, each creating one partition for each reduce task. There can be many keys (and their associated values) in each partition, but the records for any given key are all in a single partition. The partitioning can be controlled by a user-defined partitioning function, but normally the default partitioner - which buckets keys using a hash function - works very well.</p>
+<p><img src="/media/Screen%20Shot%202016-03-23%20at%2014.54.08.png" alt="Screen Shot 2016-03-23 at 14.54.08"></p>
+<p>‘sha1:e196b82d1c37:498aa7e6202cc7568fc4d3e88179dd6f30bcde74’</p>
+<p>echo ‘/dev/xvdf /storage ext3 rw,noatime 0 0’ &gt;&gt; /etc/fstab</p>
+<p> sudo mount  /dev/xvdf /storage</p>
+<p> dmesg</p>
 
       
     </div>
@@ -291,7 +298,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
       
         <div class="post-tags">
           
-            <a href="/tags/nodejs/" rel="tag">#nodejs</a>
+            <a href="/tags/hadoop/" rel="tag">#hadoop</a>
           
         </div>
       
@@ -300,17 +307,13 @@ ResourcesLoopback: http://loopback.io/Getting started">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/" rel="next" title="Spark Source Codes 01 Submit and Run Jobs">
-                <i class="fa fa-chevron-left"></i> Spark Source Codes 01 Submit and Run Jobs
+              <a href="/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/" rel="next" title="Hadoop Guide Chapter 1: Meet Hadoop">
+                <i class="fa fa-chevron-left"></i> Hadoop Guide Chapter 1: Meet Hadoop
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/15/Books-of-2016/" rel="prev" title="Books of 2016">
-                Books of 2016 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -325,10 +328,10 @@ ResourcesLoopback: http://loopback.io/Getting started">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/01/14/Loopback-API-Framework/"
-     data-title="Loopback API Framework"
+        <div class="ds-share flat" data-thread-key="2016/03/23/Hadoop-Guide-Chapter-3-HDFS/"
+     data-title="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem"
      data-content=""
-     data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/">
+     data-url="https://linbojin.github.io/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -355,8 +358,8 @@ ResourcesLoopback: http://loopback.io/Getting started">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/14/Loopback-API-Framework/"
-           data-title="Loopback API Framework" data-url="https://linbojin.github.io/2016/01/14/Loopback-API-Framework/">
+      <div class="ds-thread" data-thread-key="2016/03/23/Hadoop-Guide-Chapter-3-HDFS/"
+           data-title="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem" data-url="https://linbojin.github.io/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/">
       </div>
     
   </div>
@@ -477,7 +480,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resources"><span class="nav-number">1.</span> <span class="nav-text">Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build_an_App_named_loopback-getting-started"><span class="nav-number">2.</span> <span class="nav-text">Build an App named loopback-getting-started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use_API_Explorer"><span class="nav-number">3.</span> <span class="nav-text">Use API Explorer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source"><span class="nav-number">3.1.</span> <span class="nav-text">Create a new instance of the model and persist it into the data source</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Retrieve_the_data_inside_datasource"><span class="nav-number">3.2.</span> <span class="nav-text">Retrieve the data inside datasource</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Blocks"><span class="nav-number">1.</span> <span class="nav-text">Blocks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Namenodes_and_Datanodes"><span class="nav-number">2.</span> <span class="nav-text">Namenodes and Datanodes</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
