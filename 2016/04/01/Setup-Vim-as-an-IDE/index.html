@@ -57,20 +57,20 @@
 
 
 
-<meta name="description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor
+<meta name="description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor.
 Install spf13-vimspf13-vim is">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Setup Vim as an IDE">
 <meta property="og:url" content="https://linbojin.github.io/2016/04/01/Setup-Vim-as-an-IDE/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor
+<meta property="og:description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor.
 Install spf13-vimspf13-vim is">
 <meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-04-01%20at%2015.55.15.png">
 <meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-04-01%20at%2015.59.57.png">
-<meta property="og:updated_time" content="2016-04-01T08:14:58.000Z">
+<meta property="og:updated_time" content="2016-04-01T08:18:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Vim as an IDE">
-<meta name="twitter:description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor
+<meta name="twitter:description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor.
 Install spf13-vimspf13-vim is">
 
 
@@ -255,7 +255,7 @@ Install spf13-vimspf13-vim is">
       
 
       
-        <p>Simple steps to setup your Vim as an IDE for python, scala and so on.<br>If you are not fimiliar with Vim, you can read this blog first: <a href="http://linbojin.github.io/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/">Getting Started with Vim by Vimtutor</a></p>
+        <p>Simple steps to setup your Vim as an IDE for python, scala and so on.<br>If you are not fimiliar with Vim, you can read this blog first: <a href="http://linbojin.github.io/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/">Getting Started with Vim by Vimtutor</a>.</p>
 <h3 id="Install_spf13-vim"><a href="#Install_spf13-vim" class="headerlink" title="Install spf13-vim"></a>Install spf13-vim</h3><p><a href="http://vim.spf13.com/#install" target="_blank" rel="external">spf13-vim</a> is a distribution of vim plugins and resources for Vim, GVim and MacVim. We firstly install it as the basic IDE and then do some customizations:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum update</span><br><span class="line">$ sudo yum install git</span><br><span class="line">$ vim --version             <span class="comment"># checkout &gt;=7.4</span></span><br><span class="line">$ curl http://j.mp/spf13-vim3 -L -o - | sh</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -276,7 +276,7 @@ Install spf13-vimspf13-vim is">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim .vimrc.before.local    </span><br><span class="line"><span class="built_in">let</span> g:spf13_bundle_groups=[<span class="string">'general'</span>, <span class="string">'writing'</span>, <span class="string">'programming'</span>, <span class="string">'scala'</span>, <span class="string">'php'</span>, <span class="string">'ruby'</span>, <span class="string">'python'</span>, <span class="string">'javascript'</span>, <span class="string">'html'</span>, <span class="string">'misc'</span>]</span><br><span class="line"><span class="built_in">let</span> g:spf13_no_autochdir = <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>After configration, we need to run the following command inside vim:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim</span><br><span class="line">:BundleInstall</span><br></pre></td></tr></table></figure></p>
 <h3 id="Install_youcompleteme"><a href="#Install_youcompleteme" class="headerlink" title="Install youcompleteme"></a>Install youcompleteme</h3><p><a href="https://github.com/Valloric/YouCompleteMe#fedora-linux-x64" target="_blank" rel="external">YouCompleteMe</a> is a powerful code-completion engine for Vim:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install automake gcc gcc-c++ kernel-devel cmake</span><br><span class="line">$ sudo yum install python-devel python3-devel</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">$ ./install.py --clang-completer</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install automake gcc gcc-c++ kernel-devel cmake</span><br><span class="line">$ sudo yum install python-devel python3-devel</span><br><span class="line"></span><br><span class="line"><span class="comment"># Compiling YCM with semantic support for C-family languages</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">$ ./install.py --clang-completer</span><br></pre></td></tr></table></figure>
 <p>Modify .vimrc.before.local and bundle install:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ vim .vimrc.before.local    </span><br><span class="line"><span class="built_in">let</span> g:spf13_bundle_groups=[<span class="string">'general'</span>, <span class="string">'writing'</span>, <span class="string">'youcompleteme'</span>, <span class="string">'programming'</span>, <span class="string">'scala'</span>, <span class="string">'php'</span>, <span class="string">'ruby'</span>, <span class="string">'python'</span>, <span class="string">'javascript'</span>, <span class="string">'html'</span>, <span class="string">'misc'</span>]</span><br><span class="line"><span class="built_in">let</span> g:ycm_path_to_python_interpreter = <span class="string">'/usr/bin/python'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:BundleInstall</span><br></pre></td></tr></table></figure>
 <h3 id="ScreenShot"><a href="#ScreenShot" class="headerlink" title="ScreenShot"></a>ScreenShot</h3><p>For Scala<br><img src="/media/Screen%20Shot%202016-04-01%20at%2015.55.15.png" alt="Scala"></p>
