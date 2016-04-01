@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="spark," />
+  <meta name="keywords" content="vim," />
 
 
 
@@ -57,19 +57,21 @@
 
 
 
-<meta name="description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
+<meta name="description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor
+Install spf13-vimspf13-vim is">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hacking PySpark inside Jupyter Notebook">
-<meta property="og:url" content="https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/index.html">
+<meta property="og:title" content="Setup Vim as an IDE">
+<meta property="og:url" content="https://linbojin.github.io/2016/04/01/Setup-Vim-as-an-IDE/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2022.08.51.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2023.24.46.png">
-<meta property="og:updated_time" content="2016-01-27T15:40:05.000Z">
+<meta property="og:description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor
+Install spf13-vimspf13-vim is">
+<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-04-01%20at%2015.55.15.png">
+<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-04-01%20at%2015.59.57.png">
+<meta property="og:updated_time" content="2016-04-01T08:08:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hacking PySpark inside Jupyter Notebook">
-<meta name="twitter:description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
+<meta name="twitter:title" content="Setup Vim as an IDE">
+<meta name="twitter:description" content="Simple steps to setup your Vim as an IDE for python, scala and so on.If you are not fimiliar with Vim, you can read this blog first: Getting Started with Vim by Vimtutor
+Install spf13-vimspf13-vim is">
 
 
 
@@ -87,7 +89,7 @@
   };
 </script>
 
-  <title> Hacking PySpark inside Jupyter Notebook | AILab </title>
+  <title> Setup Vim as an IDE | AILab </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -207,7 +209,7 @@
             
             
               
-                Hacking PySpark inside Jupyter Notebook
+                Setup Vim as an IDE
               
             
           </h1>
@@ -219,8 +221,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-27T20:42:21+08:00" content="2016-01-27">
-              2016-01-27
+            <time itemprop="dateCreated" datetime="2016-04-01T14:33:01+08:00" content="2016-04-01">
+              2016-04-01
             </time>
           </span>
 
@@ -230,8 +232,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" itemprop="commentsCount"></span>
+                <a href="/2016/04/01/Setup-Vim-as-an-IDE/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/Setup-Vim-as-an-IDE/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -253,28 +255,32 @@
       
 
       
-        <p>Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside <a href="http://jupyter.org/" target="_blank" rel="external">Jupyter Notebook</a> (previous known as <a href="http://ipython.org/" target="_blank" rel="external">IPython</a>), because it allows us to create and share documents that contain live code, equations, visualizations and explanatory text. <a href="http://spark.apache.org/" target="_blank" rel="external">Apache Spark</a> is a fast and general engine for large-scale data processing. <a href="http://spark.apache.org/docs/latest/api/python/pyspark.html" target="_blank" rel="external">PySpark</a> is the Python API for Spark. So it’s a good start point to <strong>write PySpark codes inside jupyter</strong> if you are interested in data science:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:<span class="number">7077</span> --executor-memory <span class="number">7</span>g</span><br></pre></td></tr></table></figure>
-<p><img src="/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png" alt="Hacking PySpark inside Jupyter Notebook"><br><a id="more"></a></p>
-<h2 id="Install_Jupyter"><a href="#Install_Jupyter" class="headerlink" title="Install Jupyter"></a>Install Jupyter</h2><p>If you are a pythoner, I <strong>highly recommend</strong> installing <a href="https://www.continuum.io" target="_blank" rel="external">Anaconda</a>. Anaconda conveniently installs Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.<br>Go to <a href="https://www.continuum.io/downloads" target="_blank" rel="external">https://www.continuum.io/downloads</a>, find the instructions for downloading and installing Anaconda (jupyter will be included):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://&#123;somewhere&#125;/Anaconda2-<span class="number">2.4</span>.<span class="number">1</span>-MacOSX-x86_64.sh</span><br><span class="line">$ bash Anaconda2-<span class="number">2.4</span>.<span class="number">1</span>-MacOSX-x86_64.sh</span><br><span class="line">$ python</span><br><span class="line">Python <span class="number">2.7</span>.<span class="number">11</span> |Anaconda <span class="number">2.4</span>.<span class="number">1</span> (x86_64)| (default, Dec  <span class="number">6</span> <span class="number">2015</span>, <span class="number">18</span>:<span class="number">57</span>:<span class="number">58</span>)</span><br><span class="line">[GCC <span class="number">4.2</span>.<span class="number">1</span> (Apple Inc. build <span class="number">5577</span>)] on darwin</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">Anaconda is brought to you by Continuum Analytics.</span><br><span class="line">Please check out: http://continuum.io/thanks and https://anaconda.org</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
-<p>You can easily run Jupyter notebook:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jupyter notebook <span class="preprocessor"># Go to http:<span class="comment">//localhost:8888</span></span></span><br></pre></td></tr></table></figure>
-<p><img src="/media/Screen%20Shot%202016-01-27%20at%2022.08.51.png" alt="jupyter notebook"></p>
-<h2 id="Install_Spark"><a href="#Install_Spark" class="headerlink" title="Install Spark"></a>Install Spark</h2><p>If you are not familiar with spark, you can go to read spark offical documents: </p>
+        <p>Simple steps to setup your Vim as an IDE for python, scala and so on.<br>If you are not fimiliar with Vim, you can read this blog first: <a href="http://linbojin.github.io/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/">Getting Started with Vim by Vimtutor</a></p>
+<h3 id="Install_spf13-vim"><a href="#Install_spf13-vim" class="headerlink" title="Install spf13-vim"></a>Install spf13-vim</h3><p><a href="http://vim.spf13.com/#install" target="_blank" rel="external">spf13-vim</a> is a distribution of vim plugins and resources for Vim, GVim and MacVim. We firstly install it as the basic IDE and do some customizations:</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo yum update</span><br><span class="line"><span class="variable">$ </span>sudo yum install git</span><br><span class="line"><span class="variable">$ </span>vim --version             <span class="comment"># checkout &gt;=7.4</span></span><br><span class="line"><span class="variable">$ </span>curl <span class="symbol">http:</span>/<span class="regexp">/j.mp/spf</span>13-vim3 -<span class="constant">L</span> -o - | sh</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Useful shortcuts:</p>
 <ul>
-<li><a href="http://spark.apache.org/docs/latest/" target="_blank" rel="external">Spark Overview</a></li>
-<li><a href="http://spark.apache.org/docs/latest/programming-guide.html" target="_blank" rel="external">Spark Programming Guide</a></li>
+<li><code>ctrl + e</code>: open/close NERDTree left tool</li>
+<li><code>ctrl + p</code>: search and open files</li>
+<li><code>m</code> (inside NERDTree): Open NERDTree Menu<ul>
+<li><code>a</code>: add file or folder </li>
 </ul>
-<p>Here is a simply instruction for installing spark:</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MacOS</span></span><br><span class="line"><span class="variable">$ </span>brew install apache-spark</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux</span></span><br><span class="line"><span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/d3kbcqa49mib13.cloudfront.net/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>.tgz</span><br><span class="line"><span class="variable">$ </span>tar zxvf spark-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>.tgz</span><br><span class="line"><span class="variable">$ </span>vim .bashrc</span><br><span class="line"> export <span class="constant">PATH</span>=<span class="regexp">/&#123;your_path&#125;/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>/<span class="symbol">sbin:</span><span class="variable">$PATH</span></span><br><span class="line"> export <span class="constant">PATH</span>=<span class="regexp">/&#123;your_path&#125;/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>/<span class="symbol">bin:</span><span class="variable">$PATH</span></span><br><span class="line"><span class="variable">$ </span>source .bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run PySpark shell </span></span><br><span class="line"><span class="variable">$ </span>pyspark</span><br><span class="line"><span class="constant">Welcome</span> to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ <span class="regexp">/__</span><br><span class="line">    _\ \/ _ \/ _ `/</span> __/  <span class="string">'_/</span><br><span class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</span><br><span class="line">      /_/</span><br><span class="line">	</span><br><span class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</span><br><span class="line">SparkContext available as sc, HiveContext available as sqlContext.</span><br><span class="line">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Launch_PySpark_inside_IPython_28jupyter_29"><a href="#Launch_PySpark_inside_IPython_28jupyter_29" class="headerlink" title="Launch PySpark inside IPython(jupyter)"></a>Launch PySpark inside IPython(jupyter)</h2><p>Launch the PySpark shell in <strong>IPython</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ PYSPARK_DRIVER_PYTHON=ipython pyspark</span><br><span class="line">or </span><br><span class="line">$ IPYTHON=<span class="number">1</span> pyspark</span><br><span class="line"></span><br><span class="line"> Welcome to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ /__</span><br><span class="line">    _\ \/ _ \/ _ `/ __/  <span class="string">'_/</span><br><span class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</span><br><span class="line">      /_/</span><br><span class="line"></span><br><span class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</span><br><span class="line">SparkContext available as sc, HiveContext available as sqlContext.</span><br><span class="line"></span><br><span class="line">In [1]:</span></span><br></pre></td></tr></table></figure>
-<p>Launch the PySpark shell in <strong>IPython Notebook</strong>, <a href="http://localhost:8888" target="_blank" rel="external">http://localhost:8888</a>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS=<span class="string">"notebook"</span> pyspark</span><br><span class="line">or </span><br><span class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark</span><br><span class="line"></span><br><span class="line"><span class="comment"># You can also specify running memory </span></span><br><span class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --executor-memory <span class="number">7</span>g</span><br></pre></td></tr></table></figure>
-<h2 id="Run_PySpark_on_a_cluster_inside_IPython_28jupyter_29"><a href="#Run_PySpark_on_a_cluster_inside_IPython_28jupyter_29" class="headerlink" title="Run PySpark on a cluster inside IPython(jupyter)"></a>Run PySpark on a cluster inside IPython(jupyter)</h2><p>It’s assumed you deployed a spark cluster in standalone mode, and the master ip is <code>localhost</code>. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:<span class="number">7077</span> --executor-memory <span class="number">7</span>g</span><br><span class="line"></span><br><span class="line"><span class="comment"># you can add some python modules</span></span><br><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark  \</span><br><span class="line">--master spark://localhost:<span class="number">7077</span>  \</span><br><span class="line">--executor-memory <span class="number">7</span>g             \</span><br><span class="line">--py-files tensorflow-py2.<span class="number">7</span>.egg</span><br></pre></td></tr></table></figure>
-<p><img src="/media/Screen%20Shot%202016-01-27%20at%2023.24.46.png" alt="PySpark on cluster"></p>
+</li>
+</ul>
+<h3 id="Customization"><a href="#Customization" class="headerlink" title="Customization"></a>Customization</h3><p>For customization, we can create three files:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/<span class="class">.vimrc</span><span class="class">.local</span> </span><br><span class="line">~/<span class="class">.vimrc</span><span class="class">.before</span><span class="class">.local</span>  </span><br><span class="line">~/<span class="class">.vimrc</span><span class="class">.bundles</span><span class="class">.local</span></span><br></pre></td></tr></table></figure>
+<p>Make tab equal to 2 spaces</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ <span class="keyword">vim</span> .vimrc.local</span><br><span class="line"><span class="keyword">autocmd</span> FileType * <span class="keyword">setlocal</span> expandtab tabstop=<span class="number">2</span> <span class="built_in">shiftwidth</span>=<span class="number">2</span> softtabstop=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>Select the language you want to support</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">vim</span> .vimrc.before.local    </span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:spf13_bundle_groups</span>=[<span class="string">'general'</span>, <span class="string">'writing'</span>, <span class="string">'programming'</span>, <span class="string">'scala'</span>, <span class="string">'php'</span>, <span class="string">'ruby'</span>, <span class="string">'python'</span>, <span class="string">'javascript'</span>, <span class="string">'html'</span>, <span class="string">'misc'</span>]</span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:spf13_no_autochdir</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>After configration, we need to run the following command inside vim:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vim</span><br><span class="line"><span class="symbol">:BundleInstall</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Install_youcompleteme"><a href="#Install_youcompleteme" class="headerlink" title="Install youcompleteme"></a>Install youcompleteme</h3><p><a href="https://github.com/Valloric/YouCompleteMe#fedora-linux-x64" target="_blank" rel="external">YouCompleteMe</a> is a powerful code-completion engine for Vim</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo yum install automake gcc gcc-c++ kernel-devel cmake</span><br><span class="line"><span class="variable">$ </span>sudo yum install python-devel python3-devel</span><br><span class="line"></span><br><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/.vim/bundle</span><span class="regexp">/YouCompleteMe</span><br><span class="line">$ ./install</span>.py --clang-completer</span><br></pre></td></tr></table></figure>
+<p>Modify .vimrc.before.local and bundle install</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># <span class="operator"><span class="keyword">select</span> the <span class="keyword">language</span> you want <span class="keyword">to</span> support</span><br><span class="line">$ vim .vimrc.<span class="keyword">before</span>.<span class="keyword">local</span>    </span><br><span class="line">let <span class="keyword">g</span>:spf13_bundle_groups=[<span class="string">'general'</span>, <span class="string">'writing'</span>, <span class="string">'youcompleteme'</span>, <span class="string">'programming'</span>, <span class="string">'scala'</span>, <span class="string">'php'</span>, <span class="string">'ruby'</span>, <span class="string">'python'</span>, <span class="string">'javascript'</span>, <span class="string">'html'</span>, <span class="string">'misc'</span>]</span><br><span class="line">let <span class="keyword">g</span>:ycm_path_to_python_interpreter = <span class="string">'/usr/bin/python'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:BundleInstall</span></span><br></pre></td></tr></table></figure>
+<h3 id="ScreenShot"><a href="#ScreenShot" class="headerlink" title="ScreenShot"></a>ScreenShot</h3><p>For Scala<br><img src="/media/Screen%20Shot%202016-04-01%20at%2015.55.15.png" alt="Scala"></p>
+<p>For Python<br><img src="/media/Screen%20Shot%202016-04-01%20at%2015.59.57.png" alt="Python"></p>
 
       
     </div>
@@ -289,7 +295,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/spark/" rel="tag">#spark</a>
+            <a href="/tags/vim/" rel="tag">#vim</a>
           
         </div>
       
@@ -298,17 +304,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/17/NPM-Playbook/" rel="next" title="NPM Playbook">
-                <i class="fa fa-chevron-left"></i> NPM Playbook
+              <a href="/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/" rel="next" title="Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem">
+                <i class="fa fa-chevron-left"></i> Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/" rel="prev" title="Getting Started with Vim by Vimtutor">
-                Getting Started with Vim by Vimtutor <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -323,10 +325,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/"
-     data-title="Hacking PySpark inside Jupyter Notebook"
+        <div class="ds-share flat" data-thread-key="2016/04/01/Setup-Vim-as-an-IDE/"
+     data-title="Setup Vim as an IDE"
      data-content=""
-     data-url="https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">
+     data-url="https://linbojin.github.io/2016/04/01/Setup-Vim-as-an-IDE/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -353,8 +355,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/"
-           data-title="Hacking PySpark inside Jupyter Notebook" data-url="https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">
+      <div class="ds-thread" data-thread-key="2016/04/01/Setup-Vim-as-an-IDE/"
+           data-title="Setup Vim as an IDE" data-url="https://linbojin.github.io/2016/04/01/Setup-Vim-as-an-IDE/">
       </div>
     
   </div>
@@ -475,7 +477,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install_Jupyter"><span class="nav-number">1.</span> <span class="nav-text">Install Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install_Spark"><span class="nav-number">2.</span> <span class="nav-text">Install Spark</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Launch_PySpark_inside_IPython_28jupyter_29"><span class="nav-number">3.</span> <span class="nav-text">Launch PySpark inside IPython(jupyter)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run_PySpark_on_a_cluster_inside_IPython_28jupyter_29"><span class="nav-number">4.</span> <span class="nav-text">Run PySpark on a cluster inside IPython(jupyter)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install_spf13-vim"><span class="nav-number">1.</span> <span class="nav-text">Install spf13-vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Customization"><span class="nav-number">2.</span> <span class="nav-text">Customization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install_youcompleteme"><span class="nav-number">3.</span> <span class="nav-text">Install youcompleteme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ScreenShot"><span class="nav-number">4.</span> <span class="nav-text">ScreenShot</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
