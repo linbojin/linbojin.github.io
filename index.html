@@ -255,8 +255,7 @@
 
       
         
-          
-            <p>A Java program can be defined as a collection of objects that <strong>communicate via invoking each other’s methods</strong>.</p>
+          <p>A Java program can be defined as a collection of objects that <strong>communicate via invoking each other’s methods</strong>.</p>
 <ul>
 <li>Java is a Object-Oriented Language:<ul>
 <li>Polymorphism</li>
@@ -267,63 +266,12 @@
 <li>Objects: Objects have states and behaviors. </li>
 <li>Instance</li>
 <li>Method</li>
-<li>Message Parsing</li>
-</ul>
-</li>
-</ul>
-<h4 id="Inheritance_3A"><a href="#Inheritance_3A" class="headerlink" title="Inheritance:"></a>Inheritance:</h4><p>In Java, classes can be derived from classes. Basically if you need to create a new class and here is already a class that has some of the code you require, then it is possible to <strong>derive your new class from the already existing code</strong>.<br>This concept allows you to <strong>reuse the fields and methods of the existing class without having to rewrite the code</strong> in a new class. In this scenario the existing class is called the <strong>superclass</strong> and the derived class is called the <strong>subclass</strong>.</p>
-<h4 id="Interfaces_3A"><a href="#Interfaces_3A" class="headerlink" title="Interfaces:"></a>Interfaces:</h4><p>In Java language, an interface can be defined as a <strong>contract between objects on how to communicate with each other</strong>. Interfaces play a vital role when it comes to the concept of inheritance.<br>An interface defines the methods, a deriving class(subclass) should use. But <strong>the implementation of the methods is totally up to the subclass</strong>.</p>
-<h4 id="Variable_Types_inside_Classes_3A"><a href="#Variable_Types_inside_Classes_3A" class="headerlink" title="Variable Types inside Classes:"></a>Variable Types inside Classes:</h4><ul>
-<li><strong>Local variable</strong>: There is <strong>no default value</strong> for local variables so local variables should be declared and an initial value should be assigned before the first use. </li>
-<li><strong>instance variable</strong>: When a space is allocated for an object in the heap, a slot for each instance variable value is created. <strong>Within static methods, instance variable should be called using the fully qualified name: ObjectReference.VariableName.</strong></li>
-<li><strong>class variable</strong>(with the static keyword): There would <strong>only be one copy of each class variable per class</strong>, regardless of how many objects are created from it: <strong>ClassName.VariableName</strong></li>
-</ul>
-<h4 id="Java_Data_Types_3A"><a href="#Java_Data_Types_3A" class="headerlink" title="Java Data Types:"></a>Java Data Types:</h4><ul>
-<li>Primitive Data Types:<ul>
-<li>byte:  8-bit signed, -128(-2^7) ~ 127 (inclusive)(2^7 -1)</li>
-<li>short: 16-bit signed, -32,768(-2^15) ~ 32,767 (inclusive) (2^15 -1)</li>
-<li>int:   32-bit signed, -2,147,483,648(-2^31) ~ 2,147,483,647(inclusive)(2^31 -1)</li>
-<li>long:  64-bit signed, (-2^63) ~ (2^63-1)</li>
-<li>float:  single-precision 32-bit, </li>
-<li>double: double-precision 64-bit, the default data type for decimal values.</li>
-<li>boolean: one bit, true and false.</li>
-<li>char: single 16-bit Unicode character, Minimum value is ‘\u0000’ (or 0), Maximum value is ‘\uffff’ (or 65,535 inclusive).</li>
-</ul>
-</li>
-<li>Reference Data Types: Class</li>
-</ul>
-<h4 id="Java_Class_Types_3A"><a href="#Java_Class_Types_3A" class="headerlink" title="Java Class Types:"></a>Java Class Types:</h4><ul>
-<li>abstract classes</li>
-<li>final classes</li>
-<li>Inner classes</li>
-<li>Anonymous classes.</li>
-</ul>
-<h4 id="Java_Modifiers_3A"><a href="#Java_Modifiers_3A" class="headerlink" title="Java Modifiers:"></a>Java Modifiers:</h4><p>Like other languages, it is possible to modify classes, methods, etc., by using modifiers. There are two categories of modifiers:</p>
-<ul>
-<li>Access Modifiers:  <ul>
-<li><strong>default</strong>: <strong>Visible to the package</strong> </li>
-<li>public: Visible to the world </li>
-<li>protected: Visible to the package and all subclasses</li>
-<li>private: Visible to the class only</li>
-</ul>
-</li>
-<li>Non-access Modifiers:<ul>
-<li>The <strong>static</strong> modifier for creating class <strong>methods</strong> and <strong>variables</strong></li>
-<li>The <strong>final</strong> modifier for finalizing the implementations of <strong>classes</strong>, <strong>methods</strong>, and <strong>variables</strong>.</li>
-<li>The <strong>abstract</strong> modifier for creating abstract <strong>classes</strong> and <strong>methods</strong>.</li>
-<li>The <strong>synchronized</strong> and <strong>volatile</strong> modifiers, which are used for <strong>threads</strong>.</li>
-</ul>
-</li>
-</ul>
-<h4 id="Java_Basic_Operators"><a href="#Java_Basic_Operators" class="headerlink" title="Java Basic Operators"></a>Java Basic Operators</h4><p><a href="http://www.tutorialspoint.com/java/java_basic_operators.htm" target="_blank" rel="external">http://www.tutorialspoint.com/java/java_basic_operators.html</a><br>The Bitwise Operators:<br>works on bits and performs bit-by-bit operation.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> a = <span class="number">60</span>;	<span class="comment">/* 60 = 0011 1100 */</span>  </span><br><span class="line">     <span class="keyword">int</span> b = <span class="number">13</span>;	<span class="comment">/* 13 = 0000 1101 */</span></span><br><span class="line">     <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">     c = a &amp; b;       <span class="comment">/* 12 = 0000 1100 */</span> </span><br><span class="line">     System.out.println(<span class="string">"a &amp; b = "</span> + c );</span><br><span class="line"></span><br><span class="line">     c = a | b;       <span class="comment">/* 61 = 0011 1101 */</span></span><br><span class="line">     System.out.println(<span class="string">"a | b = "</span> + c );</span><br><span class="line"></span><br><span class="line">     c = a ^ b;       <span class="comment">/* 49 = 0011 0001 */</span></span><br><span class="line">     System.out.println(<span class="string">"a ^ b = "</span> + c );</span><br><span class="line"></span><br><span class="line">     c = ~a;          <span class="comment">/*-61 = 1100 0011 */</span></span><br><span class="line">     System.out.println(<span class="string">"~a = "</span> + c );</span><br><span class="line"></span><br><span class="line">     c = a &lt;&lt; <span class="number">2</span>;     <span class="comment">/* 240 = 1111 0000 */</span></span><br><span class="line">     System.out.println(<span class="string">"a &lt;&lt; 2 = "</span> + c );</span><br><span class="line"></span><br><span class="line">     c = a &gt;&gt; <span class="number">2</span>;     <span class="comment">/* 15 = 1111 */</span></span><br><span class="line">     System.out.println(<span class="string">"a &gt;&gt; 2  = "</span> + c );</span><br><span class="line"></span><br><span class="line">     c = a &gt;&gt;&gt; <span class="number">2</span>;     <span class="comment">/* 15 = 0000 1111 */</span></span><br><span class="line">     System.out.println(<span class="string">"a &gt;&gt;&gt; 2 = "</span> + c );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>The instance of Operator: </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> result = <span class="string">"str"</span> <span class="keyword">instanceof</span> String;</span><br></pre></td></tr></table></figure>
-<h4 id="Java_Loop_Control"><a href="#Java_Loop_Control" class="headerlink" title="Java Loop Control"></a>Java Loop Control</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (x &lt; <span class="number">10</span>)&#123;</span><br><span class="line">  do sth;</span><br><span class="line">  x++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">  do sth;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">do &#123;</span><br><span class="line">  sth;</span><br><span class="line">  x++;</span><br><span class="line">&#125; <span class="keyword">while</span> (x &lt; <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<p><strong>Advanced for loop</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [] numbers = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x : numbers )&#123;</span><br><span class="line">  System.out.print( x );</span><br><span class="line">  System.out.print(<span class="string">","</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="Java_Decision_Making"><a href="#Java_Decision_Making" class="headerlink" title="Java Decision Making"></a>Java Decision Making</h4><figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(x)&#123;</span><br><span class="line">	xxx</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> &#123;</span><br><span class="line">  xxx</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  xxx</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span>(expression)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">value</span> :</span><br><span class="line">       <span class="comment">//Statements</span></span><br><span class="line">       <span class="keyword">break</span>; <span class="comment">//optional</span></span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">value</span> :</span><br><span class="line">       <span class="comment">//Statements</span></span><br><span class="line">       <span class="keyword">break</span>; <span class="comment">//optional</span></span><br><span class="line">    <span class="comment">//You can have any number of case statements.</span></span><br><span class="line">    <span class="annotation">default</span> : <span class="comment">//Optional</span></span><br><span class="line">       <span class="comment">//Statements</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+<li>Message Parsing
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/13/Java-Basic-Knowledge/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
