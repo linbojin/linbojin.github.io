@@ -82,7 +82,9 @@ The design of HDFSFilesystems that manage the storage acr">
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -107,6 +109,8 @@ The design of HDFSFilesystems that manage the storage acr">
           <h1 class="header-author"><a href="/">linbojin</a></h1>
         </hgroup>
 
+        
+        <p class="header-subtitle">右手Scala, 左手Go</p>
         
 
         
@@ -160,13 +164,13 @@ The design of HDFSFilesystems that manage the storage acr">
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="/">home</a></li>
+                            <li><a href="/">主页</a></li>
                         
-                            <li><a href="/archives/">archives</a></li>
+                            <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/">tags</a></li>
+                            <li><a href="/tags/">标签云</a></li>
                         
-                            <li><a href="/about/">about</a></li>
+                            <li><a href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
@@ -224,16 +228,18 @@ The design of HDFSFilesystems that manage the storage acr">
               <h1 class="header-author"><a href="/" title="回到主页">linbojin</a></h1>
             </hgroup>
             
+            <p class="header-subtitle">右手Scala, 左手Go</p>
+            
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/">home</a></li>
+                    <li><a href="/">主页</a></li>
                 
-                    <li><a href="/archives/">archives</a></li>
+                    <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/">tags</a></li>
+                    <li><a href="/tags/">标签云</a></li>
                 
-                    <li><a href="/about/">about</a></li>
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -424,7 +430,7 @@ The design of HDFSFilesystems that manage the storage acr">
     <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"true"];
     </script>
 
 
@@ -539,6 +545,8 @@ The design of HDFSFilesystems that manage the storage acr">
 </footer>
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
 
@@ -575,7 +583,7 @@ MathJax.Hub.Queue(function() {
     // Open in New Window
     
         var oOpenInNew = {
-            
+             github: ".github-widget a", 
             
              post: ".article-entry a[href], .copyright a[href]", 
              tags: ".article-tag a", 

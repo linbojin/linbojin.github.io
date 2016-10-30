@@ -27,7 +27,7 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
 
 The Linux Command Line: http://linuxcommand.org/tlcl.php
 Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
-<meta property="og:updated_time" content="2016-10-04T07:09:15.000Z">
+<meta property="og:updated_time" content="2016-10-30T16:03:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2016 Reading List">
 <meta name="twitter:description" content="November
@@ -84,7 +84,9 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -109,6 +111,8 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
           <h1 class="header-author"><a href="/">linbojin</a></h1>
         </hgroup>
 
+        
+        <p class="header-subtitle">右手Scala, 左手Go</p>
         
 
         
@@ -162,13 +166,13 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="/">home</a></li>
+                            <li><a href="/">主页</a></li>
                         
-                            <li><a href="/archives/">archives</a></li>
+                            <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/">tags</a></li>
+                            <li><a href="/tags/">标签云</a></li>
                         
-                            <li><a href="/about/">about</a></li>
+                            <li><a href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
@@ -226,16 +230,18 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
               <h1 class="header-author"><a href="/" title="回到主页">linbojin</a></h1>
             </hgroup>
             
+            <p class="header-subtitle">右手Scala, 左手Go</p>
+            
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/">home</a></li>
+                    <li><a href="/">主页</a></li>
                 
-                    <li><a href="/archives/">archives</a></li>
+                    <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/">tags</a></li>
+                    <li><a href="/tags/">标签云</a></li>
                 
-                    <li><a href="/about/">about</a></li>
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -304,6 +310,8 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
 <li>The Linux Command Line: <a href="http://linuxcommand.org/tlcl.php" target="_blank" rel="external">http://linuxcommand.org/tlcl.php</a></li>
 <li>Scala by Example: <a href="http://www.scala-lang.org/docu/files/ScalaByExample.pdf" target="_blank" rel="external">http://www.scala-lang.org/docu/files/ScalaByExample.pdf</a></li>
 </ol>
+<div class="github-widget" data-repo="linbojin/linbojin.github.io"></div>
+
 
       
     </div>
@@ -315,7 +323,7 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
         <p><span>Title:</span><a href="/2016/10/04/2016-Reading-List/">2016 Reading List</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">linbojin</a></p>
         <p><span>Created:</span>2016-10-04, 14:56:25</p>
-        <p><span>Updated:</span>2016-10-04, 15:09:15</p>
+        <p><span>Updated:</span>2016-10-31, 00:03:42</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2016/10/04/2016-Reading-List/" title="2016 Reading List">https://linbojin.github.io/2016/10/04/2016-Reading-List/</a>
             <span class="copy-path" data-clipboard-text="From https://linbojin.github.io/2016/10/04/2016-Reading-List/　　By linbojin" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -362,7 +370,7 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
     <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"true"];
     </script>
 
 
@@ -475,6 +483,8 @@ Scala by Example: http://www.scala-lang.org/docu/files/ScalaByExample.pdf">
 </footer>
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
 
@@ -511,7 +521,7 @@ MathJax.Hub.Queue(function() {
     // Open in New Window
     
         var oOpenInNew = {
-            
+             github: ".github-widget a", 
             
              post: ".article-entry a[href], .copyright a[href]", 
              tags: ".article-tag a", 

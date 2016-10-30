@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://linbojin.github.io</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/10/04/2016-Reading-List/</loc>
+        <lastmod>2016-10-30T16:03:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/05/13/Java-Basic-Knowledge/</loc>
+        <lastmod>2016-05-13T12:15:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/04/16/Advanced-Spark-Learning-Resources/</loc>
+        <lastmod>2016-05-11T14:12:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/03/22/Hadoop-The-Definitive-Guide-Reading-Notes/</loc>
+        <lastmod>2016-04-03T14:29:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/04/03/Hadoop-Guide-Chapter-11-Administering-Hadoop/</loc>
+        <lastmod>2016-04-03T14:25:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/04/03/Hadoop-Guide-Chapter-10-Setting-Up-a-Hadoop-Cluster/</loc>
+        <lastmod>2016-04-03T14:25:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/15/Books-of-2016/</loc>
+        <lastmod>2016-04-03T14:12:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/04/01/Setup-Vim-as-an-IDE/</loc>
+        <lastmod>2016-04-01T08:34:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/</loc>
+        <lastmod>2016-04-01T08:07:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/03/16/Practical-Vim-Dot-Formula/</loc>
+        <lastmod>2016-04-01T07:31:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/</loc>
+        <lastmod>2016-04-01T07:30:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/</loc>
+        <lastmod>2016-04-01T07:30:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/</loc>
+        <lastmod>2016-03-07T03:24:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/</loc>
+        <lastmod>2016-01-27T15:40:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/17/NPM-Playbook/</loc>
+        <lastmod>2016-01-17T05:59:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/</loc>
+        <lastmod>2016-01-15T06:48:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1-Coding/</loc>
+        <lastmod>2016-01-14T14:12:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/09/Build-blog-by-Hexo-and-MWeb/</loc>
+        <lastmod>2016-01-14T14:11:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/</loc>
+        <lastmod>2016-01-14T14:09:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/14/Loopback-API-Framework/</loc>
+        <lastmod>2016-01-14T09:00:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/2016/01/09/Spark-Introduction-part-1/</loc>
+        <lastmod>2016-01-13T07:04:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->
