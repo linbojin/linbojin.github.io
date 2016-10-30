@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -27,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="nodejs," />
@@ -50,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/rainbow-icon-l.ico?v=0.5.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/rainbow-icon-l.ico?v=5.0.2" />
 
 
 
@@ -76,27 +103,32 @@ ResourcesLoopback: http://loopback.io/Getting started">
 <meta name="twitter:title" content="Loopback API Framework">
 <meta name="twitter:description" content="The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.
 ResourcesLoopback: http://loopback.io/Getting started">
+<meta name="twitter:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-14%20at%2015.49.45.png">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left"},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: 'Author'
     }
   };
 </script>
 
+
+
+
+
   <title> Loopback API Framework | AILab </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
 
   
 
@@ -117,7 +149,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
@@ -149,7 +181,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
           </a>
@@ -159,7 +191,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
           </a>
@@ -169,7 +201,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Tags
           </a>
@@ -202,7 +234,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -248,6 +280,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
           
           
 
+          
         </div>
       </header>
     
@@ -262,7 +295,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
         <p>The LoopBack framework is a set of Node.js modules that you can use independently or together to quickly build applications that expose REST APIs.</p>
 <h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>Loopback: <a href="http://loopback.io/" target="_blank" rel="external">http://loopback.io/</a><br>Getting started: <a href="http://loopback.io/getting-started/" target="_blank" rel="external">http://loopback.io/getting-started/</a><br>Create a simple API: <a href="https://docs.strongloop.com/display/public/LB/Create+a+simple+API" target="_blank" rel="external">https://docs.strongloop.com/display/public/LB/Create+a+simple+API</a><br>LoopBack core concepts: <a href="https://docs.strongloop.com/display/public/LB/LoopBack+core+concepts" target="_blank" rel="external">https://docs.strongloop.com/display/public/LB/LoopBack+core+concepts</a></p>
 <a id="more"></a>
-<h3 id="Build_an_App_named_loopback-getting-started"><a href="#Build_an_App_named_loopback-getting-started" class="headerlink" title="Build an App named loopback-getting-started"></a>Build an App named loopback-getting-started</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g strongloop</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create app</span></span><br><span class="line">$ slc loopback</span><br><span class="line">     _-----_</span><br><span class="line">    |       |    .--------------------------.</span><br><span class="line">    |--(o)--|    |  Let<span class="string">'s create a LoopBack |</span><br><span class="line">   `---------´   |       application!       |</span><br><span class="line">    ( _´U`_ )    '</span>--------------------------<span class="string">'</span><br><span class="line">    /___A___\</span><br><span class="line">     |  ~  |</span><br><span class="line">   __'</span>.___.<span class="string">'__</span><br><span class="line"> ´   `  |° ´ Y `</span><br><span class="line">[?] What'</span>s the name of your application? loopback-getting-started</span><br><span class="line">[?] Enter name of the directory to contain the project: loopback-getting-started</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create model people</span></span><br><span class="line">$ <span class="built_in">cd</span> loopback-getting-started</span><br><span class="line">$ slc loopback:model</span><br><span class="line">[?] Enter the model name: people</span><br><span class="line">[?] Select the data-source to attach people to: db (memory)</span><br><span class="line">[?] Select model<span class="string">'s base class PersistedModel</span><br><span class="line">[?] Expose people via the REST API? Yes</span><br><span class="line">[?] Custom plural form (used to build REST URL):</span><br><span class="line">[?] Common model or server only? common</span><br><span class="line">Let'</span>s add some people properties now.</span><br><span class="line"></span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: firstname</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property <span class="built_in">type</span>: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let<span class="string">'s add another people property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: lastname</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property type: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let'</span>s add another people property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create another model CoffeeShop</span></span><br><span class="line">$ slc loopback:model</span><br><span class="line">[?] Enter the model name: CoffeeShop</span><br><span class="line">[?] Select the data-source to attach CoffeeShop to: db (memory)</span><br><span class="line">[?] Select model<span class="string">'s base class PersistedModel</span><br><span class="line">[?] Expose CoffeeShop via the REST API? Yes</span><br><span class="line">[?] Custom plural form (used to build REST URL):</span><br><span class="line">[?] Common model or server only? common</span><br><span class="line">Let'</span>s add some CoffeeShop properties now.</span><br><span class="line"></span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: name</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property <span class="built_in">type</span>: string</span><br><span class="line">[?] Required? Yes</span><br><span class="line"></span><br><span class="line">Let<span class="string">'s add another CoffeeShop property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name: city</span><br><span class="line">   invoke   loopback:property</span><br><span class="line">[?] Property type: string</span><br><span class="line">v Required? Yes</span><br><span class="line"></span><br><span class="line">Let'</span>s add another CoffeeShop property.</span><br><span class="line">Enter an empty property name when done.</span><br><span class="line">[?] Property name:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the application</span></span><br><span class="line">$ node .</span><br><span class="line">Web server listening at: http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">3000</span></span><br><span class="line">Browse your REST API at http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">3000</span>/explorer</span><br></pre></td></tr></table></figure>
+<h3 id="Build-an-App-named-loopback-getting-started"><a href="#Build-an-App-named-loopback-getting-started" class="headerlink" title="Build an App named loopback-getting-started"></a>Build an App named loopback-getting-started</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line">$ npm install -g strongloop</div><div class="line"></div><div class="line"><span class="comment"># Create app</span></div><div class="line">$ slc loopback</div><div class="line">     _-----_</div><div class="line">    |       |    .--------------------------.</div><div class="line">    |--(o)--|    |  Let<span class="string">'s create a LoopBack |</span></div><div class="line">   `---------´   |       application!       |</div><div class="line">    ( _´U`_ )    '--------------------------<span class="string">'</span></div><div class="line">    /___A___\</div><div class="line">     |  ~  |</div><div class="line">   __'.___.<span class="string">'__</span></div><div class="line"> ´   `  |° ´ Y `</div><div class="line">[?] What's the name of your application? loopback-getting-started</div><div class="line">[?] Enter name of the directory to contain the project: loopback-getting-started</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Create model people</span></div><div class="line">$ <span class="built_in">cd</span> loopback-getting-started</div><div class="line">$ slc loopback:model</div><div class="line">[?] Enter the model name: people</div><div class="line">[?] Select the data-source to attach people to: db (memory)</div><div class="line">[?] Select model<span class="string">'s base class PersistedModel</span></div><div class="line">[?] Expose people via the REST API? Yes</div><div class="line">[?] Custom plural form (used to build REST URL):</div><div class="line">[?] Common model or server only? common</div><div class="line">Let's add some people properties now.</div><div class="line"></div><div class="line">Enter an empty property name when done.</div><div class="line">[?] Property name: firstname</div><div class="line">   invoke   loopback:property</div><div class="line">[?] Property <span class="built_in">type</span>: string</div><div class="line">[?] Required? Yes</div><div class="line"></div><div class="line">Let<span class="string">'s add another people property.</span></div><div class="line">Enter an empty property name when done.</div><div class="line">[?] Property name: lastname</div><div class="line">   invoke   loopback:property</div><div class="line">[?] Property type: string</div><div class="line">[?] Required? Yes</div><div class="line"></div><div class="line">Let's add another people property.</div><div class="line">Enter an empty property name when done.</div><div class="line"></div><div class="line"><span class="comment"># Create another model CoffeeShop</span></div><div class="line">$ slc loopback:model</div><div class="line">[?] Enter the model name: CoffeeShop</div><div class="line">[?] Select the data-source to attach CoffeeShop to: db (memory)</div><div class="line">[?] Select model<span class="string">'s base class PersistedModel</span></div><div class="line">[?] Expose CoffeeShop via the REST API? Yes</div><div class="line">[?] Custom plural form (used to build REST URL):</div><div class="line">[?] Common model or server only? common</div><div class="line">Let's add some CoffeeShop properties now.</div><div class="line"></div><div class="line">Enter an empty property name when done.</div><div class="line">[?] Property name: name</div><div class="line">   invoke   loopback:property</div><div class="line">[?] Property <span class="built_in">type</span>: string</div><div class="line">[?] Required? Yes</div><div class="line"></div><div class="line">Let<span class="string">'s add another CoffeeShop property.</span></div><div class="line">Enter an empty property name when done.</div><div class="line">[?] Property name: city</div><div class="line">   invoke   loopback:property</div><div class="line">[?] Property type: string</div><div class="line">v Required? Yes</div><div class="line"></div><div class="line">Let's add another CoffeeShop property.</div><div class="line">Enter an empty property name when done.</div><div class="line">[?] Property name:</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Run the application</span></div><div class="line">$ node .</div><div class="line">Web server listening at: http://0.0.0.0:3000</div><div class="line">Browse your REST API at http://0.0.0.0:3000/explorer</div></pre></td></tr></table></figure>
 <p><a href="https://docs.strongloop.com/display/public/LB/Project+layout+reference" target="_blank" rel="external">project structure</a></p>
 <ul>
 <li>server - Node application scripts and configuration files.</li>
@@ -271,12 +304,12 @@ ResourcesLoopback: http://loopback.io/Getting started">
 <li>common - Files common to client and server. </li>
 </ul>
 <p><img src="/media/Screen%20Shot%202016-01-14%20at%2015.49.45.png" alt="loopback project structure"></p>
-<h3 id="Use_API_Explorer"><a href="#Use_API_Explorer" class="headerlink" title="Use API Explorer"></a>Use API Explorer</h3><p>Goto <a href="http://0.0.0.0:3000" target="_blank" rel="external">http://0.0.0.0:3000</a>:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">started</span>":<span class="value"><span class="string">"2016-01-14T08:05:00.339Z"</span></span>,"<span class="attribute">uptime</span>":<span class="value"><span class="number">48.7</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Use-API-Explorer"><a href="#Use-API-Explorer" class="headerlink" title="Use API Explorer"></a>Use API Explorer</h3><p>Goto <a href="http://0.0.0.0:3000" target="_blank" rel="external">http://0.0.0.0:3000</a>:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"started"</span>:<span class="string">"2016-01-14T08:05:00.339Z"</span>,<span class="attr">"uptime"</span>:<span class="number">48.7</span>&#125;</div></pre></td></tr></table></figure>
 <p>Goto <a href="http://0.0.0.0:3000/explorer" target="_blank" rel="external">http://0.0.0.0:3000/explorer</a>:</p>
 <p><img src="/media/Screen%20Shot%202016-01-14%20at%2016.09.32.png" alt="Loopback API Explorer"></p>
-<h4 id="Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source"><a href="#Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source" class="headerlink" title="Create a new instance of the model and persist it into the data source"></a>Create a new instance of the model and persist it into the data source</h4><p>API: POST  /CoffeeShops<br><img src="/media/14527611403060.jpg" alt="POST API"><br><img src="/media/14527612340194.jpg" alt="application&#39;s response after post data"></p>
-<h4 id="Retrieve_the_data_inside_datasource"><a href="#Retrieve_the_data_inside_datasource" class="headerlink" title="Retrieve the data inside datasource"></a>Retrieve the data inside datasource</h4><p>API: GET  /CoffeeShops<br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.49.38.png" alt="GET API"><br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.50.03.png" alt="get data"></p>
+<h4 id="Create-a-new-instance-of-the-model-and-persist-it-into-the-data-source"><a href="#Create-a-new-instance-of-the-model-and-persist-it-into-the-data-source" class="headerlink" title="Create a new instance of the model and persist it into the data source"></a>Create a new instance of the model and persist it into the data source</h4><p>API: POST  /CoffeeShops<br><img src="/media/14527611403060.jpg" alt="POST API"><br><img src="/media/14527612340194.jpg" alt="application&#39;s response after post data"></p>
+<h4 id="Retrieve-the-data-inside-datasource"><a href="#Retrieve-the-data-inside-datasource" class="headerlink" title="Retrieve the data inside datasource"></a>Retrieve the data inside datasource</h4><p>API: GET  /CoffeeShops<br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.49.38.png" alt="GET API"><br><img src="/media/Screen%20Shot%202016-01-14%20at%2016.50.03.png" alt="get data"></p>
 
       
     </div>
@@ -284,6 +317,14 @@ ResourcesLoopback: http://loopback.io/Getting started">
     <div>
       
         
+
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -391,7 +432,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
       
 
       <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/5894707?v=3&s=460"
                alt="Linbo.me" />
@@ -405,7 +446,7 @@ ResourcesLoopback: http://loopback.io/Getting started">
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
-          
+
           
 
           
@@ -423,65 +464,39 @@ ResourcesLoopback: http://loopback.io/Getting started">
 
         <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/linbojin" target="_blank">
-                  
-                    <i class="fa fa-github"></i> GitHub
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/1882763701" target="_blank">
-                  
-                    <i class="fa fa-weibo"></i> Weibo
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://linkedin.com/in/linbojin" target="_blank">
-                  
-                    <i class="fa fa-linkedin-square"></i> LinkedIn
-                  
-                </a>
-              </span>
-            
-          
         </div>
 
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">Links</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://databricks.com/blog" target="_blank">Databricks Blog</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://databricks.com/blog" title="Databricks Blog" target="_blank">Databricks Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resources"><span class="nav-number">1.</span> <span class="nav-text">Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build_an_App_named_loopback-getting-started"><span class="nav-number">2.</span> <span class="nav-text">Build an App named loopback-getting-started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use_API_Explorer"><span class="nav-number">3.</span> <span class="nav-text">Use API Explorer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Create_a_new_instance_of_the_model_and_persist_it_into_the_data_source"><span class="nav-number">3.1.</span> <span class="nav-text">Create a new instance of the model and persist it into the data source</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Retrieve_the_data_inside_datasource"><span class="nav-number">3.2.</span> <span class="nav-text">Retrieve the data inside datasource</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Resources"><span class="nav-number">1.</span> <span class="nav-text">Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-an-App-named-loopback-getting-started"><span class="nav-number">2.</span> <span class="nav-text">Build an App named loopback-getting-started</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-API-Explorer"><span class="nav-number">3.</span> <span class="nav-text">Use API Explorer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-a-new-instance-of-the-model-and-persist-it-into-the-data-source"><span class="nav-number">3.1.</span> <span class="nav-text">Create a new instance of the model and persist it into the data source</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Retrieve-the-data-inside-datasource"><span class="nav-number">3.2.</span> <span class="nav-text">Retrieve the data inside datasource</span></a></li></ol></li></ol></div>
             
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
           </div>
         </section>
       
@@ -507,18 +522,19 @@ ResourcesLoopback: http://loopback.io/Getting started">
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
+        
 
-
+        
       </div>
     </footer>
 
@@ -529,12 +545,6 @@ ResourcesLoopback: http://loopback.io/Getting started">
 
   
 
-
-  
-
-
-
-
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
@@ -542,205 +552,58 @@ ResourcesLoopback: http://loopback.io/Getting started">
 </script>
 
 
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
+  
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
+  
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
 
   
   
-<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    NexT.motion.middleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-
-      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          NexT.utils.displaySidebar();
-        }
-      }
-    };
-  });
-</script>
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
 
 
@@ -765,14 +628,18 @@ ResourcesLoopback: http://loopback.io/Getting started">
 
   
     
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
 
+
   
   
+
   
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -792,11 +659,12 @@ ResourcesLoopback: http://loopback.io/Getting started">
       }
     });
   </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
 
+  
 
   
 

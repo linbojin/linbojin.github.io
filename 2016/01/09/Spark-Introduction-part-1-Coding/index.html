@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -27,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="spark," />
@@ -50,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/rainbow-icon-l.ico?v=0.5.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/rainbow-icon-l.ico?v=5.0.2" />
 
 
 
@@ -73,21 +100,25 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left"},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: 'Author'
     }
   };
 </script>
 
+
+
+
+
   <title> Spark Introduction part 1 Coding | AILab </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
 
   
 
@@ -108,7 +139,7 @@
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
@@ -140,7 +171,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
           </a>
@@ -150,7 +181,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
           </a>
@@ -160,7 +191,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Tags
           </a>
@@ -193,7 +224,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -239,6 +270,7 @@
           
           
 
+          
         </div>
       </header>
     
@@ -250,14 +282,14 @@
       
 
       
-        <h2 id="Basic_Functions"><a href="#Basic_Functions" class="headerlink" title="Basic Functions"></a>Basic Functions</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sc.parallelize(<span class="type">List</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)).map(_ * <span class="number">2</span>).filter(_ &gt; <span class="number">5</span>).collect()</span><br><span class="line">*** res: <span class="type">Array</span>[<span class="type">Int</span>] = <span class="type">Array</span>(<span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">12</span>) ***</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> rdd = sc.parallelize(<span class="type">List</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>))</span><br><span class="line">rdd.reduce(_+_)</span><br><span class="line">*** res: <span class="type">Int</span> = <span class="number">55</span> ***</span><br></pre></td></tr></table></figure>
+        <h2 id="Basic-Functions"><a href="#Basic-Functions" class="headerlink" title="Basic Functions"></a>Basic Functions</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sc.parallelize(<span class="type">List</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)).map(_ * <span class="number">2</span>).filter(_ &gt; <span class="number">5</span>).collect()</div><div class="line">*** res: <span class="type">Array</span>[<span class="type">Int</span>] = <span class="type">Array</span>(<span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">12</span>) ***</div><div class="line"></div><div class="line"><span class="keyword">val</span> rdd = sc.parallelize(<span class="type">List</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>))</div><div class="line">rdd.reduce(_+_)</div><div class="line">*** res: <span class="type">Int</span> = <span class="number">55</span> ***</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="union__26amp_3B_intersection__26amp_3B_join__26amp_3B_lookup"><a href="#union__26amp_3B_intersection__26amp_3B_join__26amp_3B_lookup" class="headerlink" title="union &amp; intersection &amp; join &amp; lookup"></a>union &amp; intersection &amp; join &amp; lookup</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> rdd1 = sc.parallelize(<span class="type">List</span>((<span class="string">"a"</span>, <span class="number">1</span>), (<span class="string">"a"</span>, <span class="number">2</span>), (<span class="string">"b"</span>, <span class="number">1</span>), (<span class="string">"b"</span>, <span class="number">3</span>)))</span><br><span class="line"><span class="keyword">val</span> rdd2 = sc.parallelize(<span class="type">List</span>((<span class="string">"a"</span>, <span class="number">3</span>), (<span class="string">"a"</span>, <span class="number">4</span>), (<span class="string">"b"</span>, <span class="number">1</span>), (<span class="string">"b"</span>, <span class="number">2</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> unionRDD = rdd1.union(rdd2)</span><br><span class="line">unionRDD.collect() </span><br><span class="line">*** res: <span class="type">Array</span>((a,<span class="number">1</span>), (a,<span class="number">2</span>), (b,<span class="number">1</span>), (b,<span class="number">3</span>), (a,<span class="number">3</span>), (a,<span class="number">4</span>), (b,<span class="number">1</span>), (b,<span class="number">2</span>)) ***</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> intersectionRDD = rdd1.intersection(rdd2)</span><br><span class="line">intersectionRDD.collect() </span><br><span class="line">*** res: <span class="type">Array</span>[(<span class="type">String</span>, <span class="type">Int</span>)] = <span class="type">Array</span>((b,<span class="number">1</span>)) ***</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> joinRDD = rdd1.join(rdd2)</span><br><span class="line">joinRDD.collect()</span><br><span class="line">*** res: <span class="type">Array</span>[(<span class="type">String</span>, (<span class="type">Int</span>, <span class="type">Int</span>))] = <span class="type">Array</span>((a,(<span class="number">1</span>,<span class="number">3</span>)), (a,(<span class="number">1</span>,<span class="number">4</span>)), (a,(<span class="number">2</span>,<span class="number">3</span>)), (a,(<span class="number">2</span>,<span class="number">4</span>)), (b,(<span class="number">1</span>,<span class="number">1</span>)), (b,(<span class="number">1</span>,<span class="number">2</span>)), (b,(<span class="number">3</span>,<span class="number">1</span>)), (b,(<span class="number">3</span>,<span class="number">2</span>))) ***</span><br><span class="line"></span><br><span class="line">rdd1.lookup(<span class="string">"a"</span>)</span><br><span class="line">*** res: <span class="type">Seq</span>[<span class="type">Int</span>] = <span class="type">WrappedArray</span>(<span class="number">1</span>, <span class="number">2</span>) *** </span><br><span class="line"></span><br><span class="line">unionRDD.lookup(<span class="string">"a"</span>)</span><br><span class="line">*** res: <span class="type">Seq</span>[<span class="type">Int</span>] = <span class="type">WrappedArray</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>) ***</span><br><span class="line"></span><br><span class="line">joinRDD.lookup(<span class="string">"a"</span>)</span><br><span class="line">*** res: <span class="type">Seq</span>[(<span class="type">Int</span>, <span class="type">Int</span>)] = <span class="type">ArrayBuffer</span>((<span class="number">1</span>,<span class="number">3</span>), (<span class="number">1</span>,<span class="number">4</span>), (<span class="number">2</span>,<span class="number">3</span>), (<span class="number">2</span>,<span class="number">4</span>)) ***</span><br></pre></td></tr></table></figure>
-<h3 id="chars_count_example"><a href="#chars_count_example" class="headerlink" title="chars count example"></a>chars count example</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> rdd = sc.textFile(<span class="string">"/Users/tony/spark/spark-xiaoxiang-v1/chapter-01/char.data"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> charCount = rdd.flatMap(_.split(<span class="string">" "</span>))</span><br><span class="line">                   .map(char =&gt; (char.toLowerCase, <span class="number">1</span>))</span><br><span class="line">                   .reduceByKey(_+_)</span><br><span class="line">charCount.collect()</span><br><span class="line"></span><br><span class="line">charCount.saveAsTextFile(<span class="string">"/Users/tony/spark/spark-xiaoxiang-v1/chapter-01/result"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> charCountSort = rdd.flatMap(_.split(<span class="string">" "</span>))</span><br><span class="line">                       .map(char =&gt; (char.toLowerCase, <span class="number">1</span>))</span><br><span class="line">                       .reduceByKey(_+_)</span><br><span class="line">                       .map( p =&gt; (p._2, p._1) )</span><br><span class="line">                       .sortByKey(<span class="literal">false</span>)</span><br><span class="line">                       .map( p =&gt; (p._2, p._1) )</span><br><span class="line">charCountSort.collect()</span><br></pre></td></tr></table></figure>
-<h2 id="Cluster_Programming"><a href="#Cluster_Programming" class="headerlink" title="Cluster Programming"></a>Cluster Programming</h2><p>/sbin: start or stop spark cluster<br>/bin:  start programs like spark-shell</p>
-<h3 id="Cluster_configuration"><a href="#Cluster_configuration" class="headerlink" title="Cluster configuration"></a>Cluster configuration</h3><p>==scp these same configurations to all the cluster nodes==</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">spark-env.sh</span><br><span class="line">-----------------<span class="built_in">export</span> JAVA_HOME=<span class="built_in">export</span> SPARK_MASTER_IP=localhost<span class="built_in">export</span> SPARK_WORKER_CORES=<span class="built_in">export</span> SPARK_WORKER_INSTANCES=<span class="built_in">export</span> SPARK_WORKER_MEMORY=<span class="built_in">export</span> SPARK_MASTER_PORT=<span class="built_in">export</span> SPARK_JAVA_OPTS=<span class="string">"-verbose:gc -XX:-PrintGCDetails”</span><br><span class="line"># if set up on server, uncomment the below line</span><br><span class="line"># export SPARK_PUBLIC_DNS=ec2-54-179-156-156.ap-southeast-1.compute.amazonaws.comslaves</span><br><span class="line">----------xx.xx.xx.2xx.xx.xx.3xx.xx.xx.4xx.xx.xx.5</span><br><span class="line"></span><br><span class="line">spark-defaults.conf </span><br><span class="line">--------------------</span><br><span class="line">spark.eventLog.enabled           true</span><br><span class="line">spark.eventLog.dir               /tmp/spark-events</span><br><span class="line">spark.history.fs.logDirectory    /tmp/spark-log-directory</span><br><span class="line"></span><br><span class="line">spark.master spark://server:7077 </span><br><span class="line">spark.local.dir /data/tmp_spark_dir/ </span><br><span class="line">spark.executor.memory 10g</span></span><br></pre></td></tr></table></figure>
-<h3 id="Run_spark-shell_on_cluster"><a href="#Run_spark-shell_on_cluster" class="headerlink" title="Run spark-shell on cluster"></a>Run spark-shell on cluster</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MASTER=<span class="built_in">local</span>[<span class="number">4</span>] ADD_JARS=code.jar ./spark-shell</span><br><span class="line"></span><br><span class="line">spark-shell --master spark://localhost:<span class="number">7077</span></span><br></pre></td></tr></table></figure>
+<h3 id="union-amp-intersection-amp-join-amp-lookup"><a href="#union-amp-intersection-amp-join-amp-lookup" class="headerlink" title="union &amp; intersection &amp; join &amp; lookup"></a>union &amp; intersection &amp; join &amp; lookup</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> rdd1 = sc.parallelize(<span class="type">List</span>((<span class="string">"a"</span>, <span class="number">1</span>), (<span class="string">"a"</span>, <span class="number">2</span>), (<span class="string">"b"</span>, <span class="number">1</span>), (<span class="string">"b"</span>, <span class="number">3</span>)))</div><div class="line"><span class="keyword">val</span> rdd2 = sc.parallelize(<span class="type">List</span>((<span class="string">"a"</span>, <span class="number">3</span>), (<span class="string">"a"</span>, <span class="number">4</span>), (<span class="string">"b"</span>, <span class="number">1</span>), (<span class="string">"b"</span>, <span class="number">2</span>)))</div><div class="line"></div><div class="line"><span class="keyword">val</span> unionRDD = rdd1.union(rdd2)</div><div class="line">unionRDD.collect() </div><div class="line">*** res: <span class="type">Array</span>((a,<span class="number">1</span>), (a,<span class="number">2</span>), (b,<span class="number">1</span>), (b,<span class="number">3</span>), (a,<span class="number">3</span>), (a,<span class="number">4</span>), (b,<span class="number">1</span>), (b,<span class="number">2</span>)) ***</div><div class="line"></div><div class="line"><span class="keyword">val</span> intersectionRDD = rdd1.intersection(rdd2)</div><div class="line">intersectionRDD.collect() </div><div class="line">*** res: <span class="type">Array</span>[(<span class="type">String</span>, <span class="type">Int</span>)] = <span class="type">Array</span>((b,<span class="number">1</span>)) ***</div><div class="line"></div><div class="line"><span class="keyword">val</span> joinRDD = rdd1.join(rdd2)</div><div class="line">joinRDD.collect()</div><div class="line">*** res: <span class="type">Array</span>[(<span class="type">String</span>, (<span class="type">Int</span>, <span class="type">Int</span>))] = <span class="type">Array</span>((a,(<span class="number">1</span>,<span class="number">3</span>)), (a,(<span class="number">1</span>,<span class="number">4</span>)), (a,(<span class="number">2</span>,<span class="number">3</span>)), (a,(<span class="number">2</span>,<span class="number">4</span>)), (b,(<span class="number">1</span>,<span class="number">1</span>)), (b,(<span class="number">1</span>,<span class="number">2</span>)), (b,(<span class="number">3</span>,<span class="number">1</span>)), (b,(<span class="number">3</span>,<span class="number">2</span>))) ***</div><div class="line"></div><div class="line">rdd1.lookup(<span class="string">"a"</span>)</div><div class="line">*** res: <span class="type">Seq</span>[<span class="type">Int</span>] = <span class="type">WrappedArray</span>(<span class="number">1</span>, <span class="number">2</span>) *** </div><div class="line"></div><div class="line">unionRDD.lookup(<span class="string">"a"</span>)</div><div class="line">*** res: <span class="type">Seq</span>[<span class="type">Int</span>] = <span class="type">WrappedArray</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>) ***</div><div class="line"></div><div class="line">joinRDD.lookup(<span class="string">"a"</span>)</div><div class="line">*** res: <span class="type">Seq</span>[(<span class="type">Int</span>, <span class="type">Int</span>)] = <span class="type">ArrayBuffer</span>((<span class="number">1</span>,<span class="number">3</span>), (<span class="number">1</span>,<span class="number">4</span>), (<span class="number">2</span>,<span class="number">3</span>), (<span class="number">2</span>,<span class="number">4</span>)) ***</div></pre></td></tr></table></figure>
+<h3 id="chars-count-example"><a href="#chars-count-example" class="headerlink" title="chars count example"></a>chars count example</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> rdd = sc.textFile(<span class="string">"/Users/tony/spark/spark-xiaoxiang-v1/chapter-01/char.data"</span>)</div><div class="line"></div><div class="line"><span class="keyword">val</span> charCount = rdd.flatMap(_.split(<span class="string">" "</span>))</div><div class="line">                   .map(char =&gt; (char.toLowerCase, <span class="number">1</span>))</div><div class="line">                   .reduceByKey(_+_)</div><div class="line">charCount.collect()</div><div class="line"></div><div class="line">charCount.saveAsTextFile(<span class="string">"/Users/tony/spark/spark-xiaoxiang-v1/chapter-01/result"</span>)</div><div class="line"></div><div class="line"><span class="keyword">val</span> charCountSort = rdd.flatMap(_.split(<span class="string">" "</span>))</div><div class="line">                       .map(char =&gt; (char.toLowerCase, <span class="number">1</span>))</div><div class="line">                       .reduceByKey(_+_)</div><div class="line">                       .map( p =&gt; (p._2, p._1) )</div><div class="line">                       .sortByKey(<span class="literal">false</span>)</div><div class="line">                       .map( p =&gt; (p._2, p._1) )</div><div class="line">charCountSort.collect()</div></pre></td></tr></table></figure>
+<h2 id="Cluster-Programming"><a href="#Cluster-Programming" class="headerlink" title="Cluster Programming"></a>Cluster Programming</h2><p>/sbin: start or stop spark cluster<br>/bin:  start programs like spark-shell</p>
+<h3 id="Cluster-configuration"><a href="#Cluster-configuration" class="headerlink" title="Cluster configuration"></a>Cluster configuration</h3><p>==scp these same configurations to all the cluster nodes==</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">spark-env.sh</div><div class="line">-----------------<span class="built_in">export</span> JAVA_HOME=<span class="built_in">export</span> SPARK_MASTER_IP=localhost<span class="built_in">export</span> SPARK_WORKER_CORES=<span class="built_in">export</span> SPARK_WORKER_INSTANCES=<span class="built_in">export</span> SPARK_WORKER_MEMORY=<span class="built_in">export</span> SPARK_MASTER_PORT=<span class="built_in">export</span> SPARK_JAVA_OPTS=<span class="string">"-verbose:gc -XX:-PrintGCDetails”</span></div><div class="line"># if set up on server, uncomment the below line</div><div class="line"># export SPARK_PUBLIC_DNS=ec2-54-179-156-156.ap-southeast-1.compute.amazonaws.comslaves</div><div class="line">----------xx.xx.xx.2xx.xx.xx.3xx.xx.xx.4xx.xx.xx.5</div><div class="line"></div><div class="line">spark-defaults.conf </div><div class="line">--------------------</div><div class="line">spark.eventLog.enabled           true</div><div class="line">spark.eventLog.dir               /tmp/spark-events</div><div class="line">spark.history.fs.logDirectory    /tmp/spark-log-directory</div><div class="line"></div><div class="line">spark.master spark://server:7077 </div><div class="line">spark.local.dir /data/tmp_spark_dir/ </div><div class="line">spark.executor.memory 10g</div></pre></td></tr></table></figure>
+<h3 id="Run-spark-shell-on-cluster"><a href="#Run-spark-shell-on-cluster" class="headerlink" title="Run spark-shell on cluster"></a>Run spark-shell on cluster</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MASTER=<span class="built_in">local</span>[4] ADD_JARS=code.jar ./spark-shell</div><div class="line"></div><div class="line">spark-shell --master spark://localhost:7077</div></pre></td></tr></table></figure>
 <p>SparkConf - Configuration for Spark Applications</p>
 <p>Setting up Properties, from the least important to the most important</p>
 <ul>
@@ -265,8 +297,8 @@
 <li><code>--conf</code> - the command line option used by <code>spark-shell</code> and <code>spark-submit</code></li>
 <li><code>SparkConf</code></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">$ spark-shell --conf spark.logConf=<span class="literal">true</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">13</span> <span class="number">14</span>:<span class="number">13</span>:<span class="number">07</span> INFO SparkContext: Running Spark version <span class="number">1.6</span>.<span class="number">0</span></span><br><span class="line"><span class="number">16</span>/<span class="number">01</span>/<span class="number">13</span> <span class="number">14</span>:<span class="number">13</span>:<span class="number">07</span> INFO SparkContext: Spark configuration:</span><br><span class="line">spark.app.name=Spark shell</span><br><span class="line">spark.eventLog.dir=/tmp/spark-events</span><br><span class="line">spark.eventLog.enabled=<span class="literal">true</span></span><br><span class="line">spark.history.fs.logDirectory=/tmp/spark-log-directory</span><br><span class="line">spark.jars=</span><br><span class="line">spark.logConf=<span class="literal">true</span></span><br><span class="line">spark.master=<span class="built_in">local</span>[*]</span><br><span class="line">spark.repl.class.uri=http://<span class="number">172.30</span>.<span class="number">64.148</span>:<span class="number">57710</span></span><br><span class="line">spark.submit.deployMode=client</span><br><span class="line"></span><br><span class="line">scala&gt; sc.getConf.toDebugString</span><br><span class="line">res0: String =</span><br><span class="line">spark.app.id=<span class="built_in">local</span>-<span class="number">1452665588896</span></span><br><span class="line">spark.app.name=Spark shell</span><br><span class="line">spark.driver.host=<span class="number">172.30</span>.<span class="number">64.148</span></span><br><span class="line">spark.driver.port=<span class="number">57711</span></span><br><span class="line">spark.eventLog.dir=/tmp/spark-events</span><br><span class="line">spark.eventLog.enabled=<span class="literal">true</span></span><br><span class="line">spark.executor.id=driver</span><br><span class="line">spark.externalBlockStore.folderName=spark<span class="operator">-e</span>0f9f7c6-<span class="number">2759</span>-<span class="number">44</span>e9-bc5e-<span class="number">423</span>fba7b16ad</span><br><span class="line">spark.history.fs.logDirectory=/tmp/spark-log-directory</span><br><span class="line">spark.jars=</span><br><span class="line">spark.logConf=<span class="literal">true</span></span><br><span class="line">spark.master=<span class="built_in">local</span>[*]</span><br><span class="line">spark.repl.class.uri=http://<span class="number">172.30</span>.<span class="number">64.148</span>:<span class="number">57710</span></span><br><span class="line">spark.submit.deployMode=client</span><br><span class="line"></span><br><span class="line">scala&gt; sc.getConf.getOption(<span class="string">"spark.local.dir"</span>)</span><br><span class="line">res1: Option[String] = None</span><br><span class="line"></span><br><span class="line">scala&gt; sc.getConf.getOption(<span class="string">"spark.app.name"</span>)</span><br><span class="line">res2: Option[String] = Some(Spark shell)</span><br><span class="line"></span><br><span class="line">scala&gt;  sc.getConf.get(<span class="string">"spark.master"</span>)</span><br><span class="line">res3: String = <span class="built_in">local</span>[*]</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hdfs dfs -getmerge /path result</span><br><span class="line">wc <span class="operator">-l</span> result</span><br><span class="line">head result</span><br><span class="line">tail result</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">$ spark-shell --conf spark.logConf=<span class="literal">true</span></div><div class="line">16/01/13 14:13:07 INFO SparkContext: Running Spark version 1.6.0</div><div class="line">16/01/13 14:13:07 INFO SparkContext: Spark configuration:</div><div class="line">spark.app.name=Spark shell</div><div class="line">spark.eventLog.dir=/tmp/spark-events</div><div class="line">spark.eventLog.enabled=<span class="literal">true</span></div><div class="line">spark.history.fs.logDirectory=/tmp/spark-log-directory</div><div class="line">spark.jars=</div><div class="line">spark.logConf=<span class="literal">true</span></div><div class="line">spark.master=<span class="built_in">local</span>[*]</div><div class="line">spark.repl.class.uri=http://172.30.64.148:57710</div><div class="line">spark.submit.deployMode=client</div><div class="line"></div><div class="line">scala&gt; sc.getConf.toDebugString</div><div class="line">res0: String =</div><div class="line">spark.app.id=<span class="built_in">local</span>-1452665588896</div><div class="line">spark.app.name=Spark shell</div><div class="line">spark.driver.host=172.30.64.148</div><div class="line">spark.driver.port=57711</div><div class="line">spark.eventLog.dir=/tmp/spark-events</div><div class="line">spark.eventLog.enabled=<span class="literal">true</span></div><div class="line">spark.executor.id=driver</div><div class="line">spark.externalBlockStore.folderName=spark<span class="_">-e</span>0f9f7c6-2759-44e9-bc5e-423fba7b16ad</div><div class="line">spark.history.fs.logDirectory=/tmp/spark-log-directory</div><div class="line">spark.jars=</div><div class="line">spark.logConf=<span class="literal">true</span></div><div class="line">spark.master=<span class="built_in">local</span>[*]</div><div class="line">spark.repl.class.uri=http://172.30.64.148:57710</div><div class="line">spark.submit.deployMode=client</div><div class="line"></div><div class="line">scala&gt; sc.getConf.getOption(<span class="string">"spark.local.dir"</span>)</div><div class="line">res1: Option[String] = None</div><div class="line"></div><div class="line">scala&gt; sc.getConf.getOption(<span class="string">"spark.app.name"</span>)</div><div class="line">res2: Option[String] = Some(Spark shell)</div><div class="line"></div><div class="line">scala&gt;  sc.getConf.get(<span class="string">"spark.master"</span>)</div><div class="line">res3: String = <span class="built_in">local</span>[*]</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hdfs dfs -getmerge /path result</div><div class="line">wc <span class="_">-l</span> result</div><div class="line">head result</div><div class="line">tail result</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -274,6 +306,14 @@
     <div>
       
         
+
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -381,7 +421,7 @@
       
 
       <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/5894707?v=3&s=460"
                alt="Linbo.me" />
@@ -395,7 +435,7 @@
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
-          
+
           
 
           
@@ -413,65 +453,39 @@
 
         <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/linbojin" target="_blank">
-                  
-                    <i class="fa fa-github"></i> GitHub
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/1882763701" target="_blank">
-                  
-                    <i class="fa fa-weibo"></i> Weibo
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://linkedin.com/in/linbojin" target="_blank">
-                  
-                    <i class="fa fa-linkedin-square"></i> LinkedIn
-                  
-                </a>
-              </span>
-            
-          
         </div>
 
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">Links</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://databricks.com/blog" target="_blank">Databricks Blog</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://databricks.com/blog" title="Databricks Blog" target="_blank">Databricks Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic_Functions"><span class="nav-number">1.</span> <span class="nav-text">Basic Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#union__26amp_3B_intersection__26amp_3B_join__26amp_3B_lookup"><span class="nav-number">1.1.</span> <span class="nav-text">union & intersection & join & lookup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chars_count_example"><span class="nav-number">1.2.</span> <span class="nav-text">chars count example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster_Programming"><span class="nav-number">2.</span> <span class="nav-text">Cluster Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cluster_configuration"><span class="nav-number">2.1.</span> <span class="nav-text">Cluster configuration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_spark-shell_on_cluster"><span class="nav-number">2.2.</span> <span class="nav-text">Run spark-shell on cluster</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Functions"><span class="nav-number">1.</span> <span class="nav-text">Basic Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#union-amp-intersection-amp-join-amp-lookup"><span class="nav-number">1.1.</span> <span class="nav-text">union & intersection & join & lookup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chars-count-example"><span class="nav-number">1.2.</span> <span class="nav-text">chars count example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster-Programming"><span class="nav-number">2.</span> <span class="nav-text">Cluster Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cluster-configuration"><span class="nav-number">2.1.</span> <span class="nav-text">Cluster configuration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-spark-shell-on-cluster"><span class="nav-number">2.2.</span> <span class="nav-text">Run spark-shell on cluster</span></a></li></ol></li></ol></div>
             
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
           </div>
         </section>
       
@@ -497,18 +511,19 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
+        
 
-
+        
       </div>
     </footer>
 
@@ -519,12 +534,6 @@
 
   
 
-
-  
-
-
-
-
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
@@ -532,205 +541,58 @@
 </script>
 
 
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
+  
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
+  
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
 
   
   
-<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    NexT.motion.middleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-
-      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          NexT.utils.displaySidebar();
-        }
-      }
-    };
-  });
-</script>
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
 
 
@@ -755,14 +617,18 @@
 
   
     
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
 
+
   
   
+
   
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -782,11 +648,12 @@
       }
     });
   </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
 
+  
 
   
 

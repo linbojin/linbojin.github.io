@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -27,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="spark," />
@@ -50,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/rainbow-icon-l.ico?v=0.5.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/rainbow-icon-l.ico?v=5.0.2" />
 
 
 
@@ -70,27 +97,32 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hacking PySpark inside Jupyter Notebook">
 <meta name="twitter:description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
+<meta name="twitter:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left"},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: 'Author'
     }
   };
 </script>
 
+
+
+
+
   <title> Hacking PySpark inside Jupyter Notebook | AILab </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
 
   
 
@@ -111,7 +143,7 @@
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
 
@@ -143,7 +175,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             Home
           </a>
@@ -153,7 +185,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             Archives
           </a>
@@ -163,7 +195,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Tags
           </a>
@@ -196,7 +228,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
       <header class="post-header">
@@ -242,6 +274,7 @@
           
           
 
+          
         </div>
       </header>
     
@@ -254,26 +287,26 @@
 
       
         <p>Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside <a href="http://jupyter.org/" target="_blank" rel="external">Jupyter Notebook</a> (previous known as <a href="http://ipython.org/" target="_blank" rel="external">IPython</a>), because it allows us to create and share documents that contain live code, equations, visualizations and explanatory text. <a href="http://spark.apache.org/" target="_blank" rel="external">Apache Spark</a> is a fast and general engine for large-scale data processing. <a href="http://spark.apache.org/docs/latest/api/python/pyspark.html" target="_blank" rel="external">PySpark</a> is the Python API for Spark. So it’s a good start point to <strong>write PySpark codes inside jupyter</strong> if you are interested in data science:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:<span class="number">7077</span> --executor-memory <span class="number">7</span>g</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:7077 --executor-memory 7g</div></pre></td></tr></table></figure>
 <p><img src="/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png" alt="Hacking PySpark inside Jupyter Notebook"><br><a id="more"></a></p>
-<h2 id="Install_Jupyter"><a href="#Install_Jupyter" class="headerlink" title="Install Jupyter"></a>Install Jupyter</h2><p>If you are a pythoner, I <strong>highly recommend</strong> installing <a href="https://www.continuum.io" target="_blank" rel="external">Anaconda</a>. Anaconda conveniently installs Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.<br>Go to <a href="https://www.continuum.io/downloads" target="_blank" rel="external">https://www.continuum.io/downloads</a>, find the instructions for downloading and installing Anaconda (jupyter will be included):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://&#123;somewhere&#125;/Anaconda2-<span class="number">2.4</span>.<span class="number">1</span>-MacOSX-x86_64.sh</span><br><span class="line">$ bash Anaconda2-<span class="number">2.4</span>.<span class="number">1</span>-MacOSX-x86_64.sh</span><br><span class="line">$ python</span><br><span class="line">Python <span class="number">2.7</span>.<span class="number">11</span> |Anaconda <span class="number">2.4</span>.<span class="number">1</span> (x86_64)| (default, Dec  <span class="number">6</span> <span class="number">2015</span>, <span class="number">18</span>:<span class="number">57</span>:<span class="number">58</span>)</span><br><span class="line">[GCC <span class="number">4.2</span>.<span class="number">1</span> (Apple Inc. build <span class="number">5577</span>)] on darwin</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line">Anaconda is brought to you by Continuum Analytics.</span><br><span class="line">Please check out: http://continuum.io/thanks and https://anaconda.org</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Install-Jupyter"><a href="#Install-Jupyter" class="headerlink" title="Install Jupyter"></a>Install Jupyter</h2><p>If you are a pythoner, I <strong>highly recommend</strong> installing <a href="https://www.continuum.io" target="_blank" rel="external">Anaconda</a>. Anaconda conveniently installs Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.<br>Go to <a href="https://www.continuum.io/downloads" target="_blank" rel="external">https://www.continuum.io/downloads</a>, find the instructions for downloading and installing Anaconda (jupyter will be included):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ wget https://&#123;somewhere&#125;/Anaconda2-2.4.1-MacOSX-x86_64.sh</div><div class="line">$ bash Anaconda2-2.4.1-MacOSX-x86_64.sh</div><div class="line">$ python</div><div class="line">Python 2.7.11 |Anaconda 2.4.1 (x86_64)| (default, Dec  6 2015, 18:57:58)</div><div class="line">[GCC 4.2.1 (Apple Inc. build 5577)] on darwin</div><div class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</div><div class="line">Anaconda is brought to you by Continuum Analytics.</div><div class="line">Please check out: http://continuum.io/thanks and https://anaconda.org</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
 <p>You can easily run Jupyter notebook:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jupyter notebook <span class="preprocessor"># Go to http:<span class="comment">//localhost:8888</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ jupyter notebook # Go <span class="keyword">to</span> http:<span class="comment">//localhost:8888</span></div></pre></td></tr></table></figure>
 <p><img src="/media/Screen%20Shot%202016-01-27%20at%2022.08.51.png" alt="jupyter notebook"></p>
-<h2 id="Install_Spark"><a href="#Install_Spark" class="headerlink" title="Install Spark"></a>Install Spark</h2><p>If you are not familiar with spark, you can go to read spark offical documents: </p>
+<h2 id="Install-Spark"><a href="#Install-Spark" class="headerlink" title="Install Spark"></a>Install Spark</h2><p>If you are not familiar with spark, you can go to read spark offical documents: </p>
 <ul>
 <li><a href="http://spark.apache.org/docs/latest/" target="_blank" rel="external">Spark Overview</a></li>
 <li><a href="http://spark.apache.org/docs/latest/programming-guide.html" target="_blank" rel="external">Spark Programming Guide</a></li>
 </ul>
 <p>Here is a simply instruction for installing spark:</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MacOS</span></span><br><span class="line"><span class="variable">$ </span>brew install apache-spark</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux</span></span><br><span class="line"><span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/d3kbcqa49mib13.cloudfront.net/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>.tgz</span><br><span class="line"><span class="variable">$ </span>tar zxvf spark-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>.tgz</span><br><span class="line"><span class="variable">$ </span>vim .bashrc</span><br><span class="line"> export <span class="constant">PATH</span>=<span class="regexp">/&#123;your_path&#125;/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>/<span class="symbol">sbin:</span><span class="variable">$PATH</span></span><br><span class="line"> export <span class="constant">PATH</span>=<span class="regexp">/&#123;your_path&#125;/spark</span>-<span class="number">1.6</span>.<span class="number">0</span>-bin-hadoop2.<span class="number">6</span>/<span class="symbol">bin:</span><span class="variable">$PATH</span></span><br><span class="line"><span class="variable">$ </span>source .bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run PySpark shell </span></span><br><span class="line"><span class="variable">$ </span>pyspark</span><br><span class="line"><span class="constant">Welcome</span> to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ <span class="regexp">/__</span><br><span class="line">    _\ \/ _ \/ _ `/</span> __/  <span class="string">'_/</span><br><span class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</span><br><span class="line">      /_/</span><br><span class="line">	</span><br><span class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</span><br><span class="line">SparkContext available as sc, HiveContext available as sqlContext.</span><br><span class="line">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Launch_PySpark_inside_IPython_28jupyter_29"><a href="#Launch_PySpark_inside_IPython_28jupyter_29" class="headerlink" title="Launch PySpark inside IPython(jupyter)"></a>Launch PySpark inside IPython(jupyter)</h2><p>Launch the PySpark shell in <strong>IPython</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ PYSPARK_DRIVER_PYTHON=ipython pyspark</span><br><span class="line">or </span><br><span class="line">$ IPYTHON=<span class="number">1</span> pyspark</span><br><span class="line"></span><br><span class="line"> Welcome to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ /__</span><br><span class="line">    _\ \/ _ \/ _ `/ __/  <span class="string">'_/</span><br><span class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</span><br><span class="line">      /_/</span><br><span class="line"></span><br><span class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</span><br><span class="line">SparkContext available as sc, HiveContext available as sqlContext.</span><br><span class="line"></span><br><span class="line">In [1]:</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"># MacOS</div><div class="line">$ brew install apache-spark</div><div class="line"></div><div class="line"># Linux</div><div class="line">$ wget http://d3kbcqa49mib13.cloudfront.net/spark-<span class="number">1.6</span>.0-bin-hadoop2.6.tgz</div><div class="line">$ tar zxvf spark-<span class="number">1.6</span>.0-bin-hadoop2.6.tgz</div><div class="line">$ vim .bashrc</div><div class="line"> export PATH=/&#123;your_path&#125;/spark-<span class="number">1.6</span>.0-bin-hadoop2.6/sbin:$PATH</div><div class="line"> export PATH=/&#123;your_path&#125;/spark-<span class="number">1.6</span>.0-bin-hadoop2.6/bin:$PATH</div><div class="line">$ source .bashrc</div><div class="line"></div><div class="line"># Run PySpark shell </div><div class="line">$ pyspark</div><div class="line">Welcome to</div><div class="line">      ____              <span class="symbol">__</span></div><div class="line">     / <span class="symbol">__</span>/<span class="symbol">__</span>  ___ _____/ /<span class="symbol">__</span></div><div class="line">    <span class="symbol">_</span>\ \/ <span class="symbol">_</span> \/ <span class="symbol">_</span> `/ <span class="symbol">__</span>/  '<span class="symbol">_</span>/</div><div class="line">   /<span class="symbol">__</span> / .<span class="symbol">__</span>/\<span class="symbol">_</span>,<span class="symbol">_</span>/<span class="symbol">_</span>/ /<span class="symbol">_</span>/\<span class="symbol">_</span>\   version <span class="number">1.6</span>.0</div><div class="line">      /<span class="symbol">_</span>/</div><div class="line">	</div><div class="line">Using Python version <span class="number">2.7</span>.11 (default, Dec  <span class="number">6</span> <span class="number">2015</span> <span class="number">18</span>:<span class="number">08</span>:<span class="number">32</span>)</div><div class="line">SparkContext available as sc, HiveContext available as sqlContext.</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
+<h2 id="Launch-PySpark-inside-IPython-jupyter"><a href="#Launch-PySpark-inside-IPython-jupyter" class="headerlink" title="Launch PySpark inside IPython(jupyter)"></a>Launch PySpark inside IPython(jupyter)</h2><p>Launch the PySpark shell in <strong>IPython</strong>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$ PYSPARK_DRIVER_PYTHON=ipython pyspark</div><div class="line">or </div><div class="line">$ IPYTHON=1 pyspark</div><div class="line"></div><div class="line"> Welcome to</div><div class="line">      ____              __</div><div class="line">     / __/__  ___ _____/ /__</div><div class="line">    _\ \/ _ \/ _ `/ __/  <span class="string">'_/</span></div><div class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</div><div class="line">      /_/</div><div class="line"></div><div class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</div><div class="line">SparkContext available as sc, HiveContext available as sqlContext.</div><div class="line"></div><div class="line">In [1]:</div></pre></td></tr></table></figure>
 <p>Launch the PySpark shell in <strong>IPython Notebook</strong>, <a href="http://localhost:8888" target="_blank" rel="external">http://localhost:8888</a>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS=<span class="string">"notebook"</span> pyspark</span><br><span class="line">or </span><br><span class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark</span><br><span class="line"></span><br><span class="line"><span class="comment"># You can also specify running memory </span></span><br><span class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --executor-memory <span class="number">7</span>g</span><br></pre></td></tr></table></figure>
-<h2 id="Run_PySpark_on_a_cluster_inside_IPython_28jupyter_29"><a href="#Run_PySpark_on_a_cluster_inside_IPython_28jupyter_29" class="headerlink" title="Run PySpark on a cluster inside IPython(jupyter)"></a>Run PySpark on a cluster inside IPython(jupyter)</h2><p>It’s assumed you deployed a spark cluster in standalone mode, and the master ip is <code>localhost</code>. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:<span class="number">7077</span> --executor-memory <span class="number">7</span>g</span><br><span class="line"></span><br><span class="line"><span class="comment"># you can add some python modules</span></span><br><span class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark  \</span><br><span class="line">--master spark://localhost:<span class="number">7077</span>  \</span><br><span class="line">--executor-memory <span class="number">7</span>g             \</span><br><span class="line">--py-files tensorflow-py2.<span class="number">7</span>.egg</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS=<span class="string">"notebook"</span> pyspark</div><div class="line">or </div><div class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark</div><div class="line"></div><div class="line"><span class="comment"># You can also specify running memory </span></div><div class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --executor-memory 7g</div></pre></td></tr></table></figure>
+<h2 id="Run-PySpark-on-a-cluster-inside-IPython-jupyter"><a href="#Run-PySpark-on-a-cluster-inside-IPython-jupyter" class="headerlink" title="Run PySpark on a cluster inside IPython(jupyter)"></a>Run PySpark on a cluster inside IPython(jupyter)</h2><p>It’s assumed you deployed a spark cluster in standalone mode, and the master ip is <code>localhost</code>. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:7077 --executor-memory 7g</div><div class="line"></div><div class="line"><span class="comment"># you can add some python modules</span></div><div class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark  \</div><div class="line">--master spark://localhost:7077  \</div><div class="line">--executor-memory 7g             \</div><div class="line">--py-files tensorflow-py2.7.egg</div></pre></td></tr></table></figure>
 <p><img src="/media/Screen%20Shot%202016-01-27%20at%2023.24.46.png" alt="PySpark on cluster"></p>
 
       
@@ -282,6 +315,14 @@
     <div>
       
         
+
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -389,7 +430,7 @@
       
 
       <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/5894707?v=3&s=460"
                alt="Linbo.me" />
@@ -403,7 +444,7 @@
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
-          
+
           
 
           
@@ -421,65 +462,39 @@
 
         <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/linbojin" target="_blank">
-                  
-                    <i class="fa fa-github"></i> GitHub
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/1882763701" target="_blank">
-                  
-                    <i class="fa fa-weibo"></i> Weibo
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://linkedin.com/in/linbojin" target="_blank">
-                  
-                    <i class="fa fa-linkedin-square"></i> LinkedIn
-                  
-                </a>
-              </span>
-            
-          
         </div>
 
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">Links</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://databricks.com/blog" target="_blank">Databricks Blog</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://databricks.com/blog" title="Databricks Blog" target="_blank">Databricks Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install_Jupyter"><span class="nav-number">1.</span> <span class="nav-text">Install Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install_Spark"><span class="nav-number">2.</span> <span class="nav-text">Install Spark</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Launch_PySpark_inside_IPython_28jupyter_29"><span class="nav-number">3.</span> <span class="nav-text">Launch PySpark inside IPython(jupyter)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run_PySpark_on_a_cluster_inside_IPython_28jupyter_29"><span class="nav-number">4.</span> <span class="nav-text">Run PySpark on a cluster inside IPython(jupyter)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Jupyter"><span class="nav-number">1.</span> <span class="nav-text">Install Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Spark"><span class="nav-number">2.</span> <span class="nav-text">Install Spark</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Launch-PySpark-inside-IPython-jupyter"><span class="nav-number">3.</span> <span class="nav-text">Launch PySpark inside IPython(jupyter)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-PySpark-on-a-cluster-inside-IPython-jupyter"><span class="nav-number">4.</span> <span class="nav-text">Run PySpark on a cluster inside IPython(jupyter)</span></a></li></ol></div>
             
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
           </div>
         </section>
       
@@ -505,18 +520,19 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
+        
 
-
+        
       </div>
     </footer>
 
@@ -527,12 +543,6 @@
 
   
 
-
-  
-
-
-
-
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
@@ -540,205 +550,58 @@
 </script>
 
 
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
+  
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
+  
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
 
   
   
-<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    NexT.motion.middleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-
-      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          NexT.utils.displaySidebar();
-        }
-      }
-    };
-  });
-</script>
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
 
 
@@ -763,14 +626,18 @@
 
   
     
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
 
+
   
   
+
   
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -790,11 +657,12 @@
       }
     });
   </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
 
+  
 
   
 
