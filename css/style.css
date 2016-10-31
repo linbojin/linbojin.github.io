@@ -671,7 +671,7 @@ a {
   line-height: 1.75rem;
   font-family: inherit;
   cursor: pointer;
-  text-transform: uppercase;
+  text-transform: none;
   float: none;
   min-height: 5.25rem;
   max-height: 8.75rem;
@@ -1101,19 +1101,6 @@ color
 }
 .article-entry .github-widget .github-box .download {
   font-size: 0.75rem;
-}
-.ui-tooltip {
-  padding: 6px;
-  max-width: 30em;
-  -webkit-box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
-  box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
-  color: #fff;
-  font-family: "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 0.9em;
-  background: rgba(0,0,0,0.65);
-}
-body .ui-tooltip {
-  border: 1px solid #fff;
 }
 .pace .pace-progress {
   background: #77b6ff;
