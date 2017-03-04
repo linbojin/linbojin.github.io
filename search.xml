@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title></title>
+      <title><![CDATA[TensorFlow学习笔记01-在EC2上安装]]></title>
       <url>https://linbojin.github.io/2017/03/04/tf01/</url>
-      <content type="html"><![CDATA[<h1 id="TensorFlow学习笔记-在EC2上安装"><a href="#TensorFlow学习笔记-在EC2上安装" class="headerlink" title="TensorFlow学习笔记-在EC2上安装"></a>TensorFlow学习笔记-在EC2上安装</h1><ul>
+      <content type="html"><![CDATA[<ul>
 <li>Essentials</li>
 <li>CUDA 8.0</li>
 <li>cuDNN v5.1, for CUDA 8.0</li>
