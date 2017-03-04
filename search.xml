@@ -12,8 +12,7 @@
 <li>cuDNN v5.1, for CUDA 8.0</li>
 <li>TensorFlow 1.0.0</li>
 </ul>
-<p>选择EC2 p2.xlarge: 1 GPU (Nvidia K80), 61G RAM, $0.900 hourly<br>AMI: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - ami-a58d0dc5</p>
-<p>此处略过如何启动ec2 instance，下面的操作直接在instance上进行。</p>
+<p>选择EC2 p2.xlarge: 1 GPU (Nvidia K80), 61G RAM, $0.900 hourly<br>AMI: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - ami-a58d0dc5<br><a id="more"></a><br>此处略过如何启动ec2 instance，下面的操作直接在instance上进行。</p>
 <h2 id="安装dependencies-amp-build-tools"><a href="#安装dependencies-amp-build-tools" class="headerlink" title="安装dependencies &amp; build tools"></a>安装dependencies &amp; build tools</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">update</span> &amp;&amp; sudo apt-<span class="keyword">get</span> -y <span class="keyword">upgrade</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y <span class="keyword">build</span>-essential git swig <span class="keyword">default</span>-jdk zip zlib1g-dev</div><div class="line"></div><div class="line"># 确定gcc已经安装</div><div class="line">gcc <span class="comment">--version</span></div><div class="line"></div><div class="line"># 判断是否有NVIDIA GPU</div><div class="line">lspci | grep -i nvidia</div></pre></td></tr></table></figure>
 <p>p2.xlarge GPU 如下：<br><img src="/media/14886258446603.jpg" alt=""></p>
 <p>We need to blacklist Nouveau which has a conflict with the nvidia driver.</p>
