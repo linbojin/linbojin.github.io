@@ -15,16 +15,40 @@
 
 
 
-<meta name="description" content="NPM (node package manager) is a package management tool for Node.js.Node.js is an open source JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O">
+<meta name="description" content="TensorFlow学习笔记-在EC2上安装
+Essentials
+CUDA 8.0
+cuDNN v5.1, for CUDA 8.0
+TensorFlow 1.0.0
+
+选择EC2 p2.xlarge: 1 GPU (Nvidia K80), 61G RAM, $0.900 hourlyAMI: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NPM Playbook">
-<meta property="og:url" content="https://linbojin.github.io/2016/01/17/NPM-Playbook/index.html">
+<meta property="og:title" content="AILab">
+<meta property="og:url" content="https://linbojin.github.io/2017/03/04/tf01/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="NPM (node package manager) is a package management tool for Node.js.Node.js is an open source JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O">
-<meta property="og:updated_time" content="2016-01-17T05:59:05.000Z">
+<meta property="og:description" content="TensorFlow学习笔记-在EC2上安装
+Essentials
+CUDA 8.0
+cuDNN v5.1, for CUDA 8.0
+TensorFlow 1.0.0
+
+选择EC2 p2.xlarge: 1 GPU (Nvidia K80), 61G RAM, $0.900 hourlyAMI: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - a">
+<meta property="og:image" content="https://linbojin.github.io/media/14886258446603.jpg">
+<meta property="og:image" content="https://linbojin.github.io/media/14886272410398.jpg">
+<meta property="og:image" content="https://linbojin.github.io/media/14886272706287.jpg">
+<meta property="og:image" content="https://linbojin.github.io/media/14886278898974.jpg">
+<meta property="og:image" content="https://linbojin.github.io/media/14886284271425.jpg">
+<meta property="og:updated_time" content="2017-03-04T12:48:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NPM Playbook">
-<meta name="twitter:description" content="NPM (node package manager) is a package management tool for Node.js.Node.js is an open source JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O">
+<meta name="twitter:title" content="AILab">
+<meta name="twitter:description" content="TensorFlow学习笔记-在EC2上安装
+Essentials
+CUDA 8.0
+cuDNN v5.1, for CUDA 8.0
+TensorFlow 1.0.0
+
+选择EC2 p2.xlarge: 1 GPU (Nvidia K80), 61G RAM, $0.900 hourlyAMI: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - a">
+<meta name="twitter:image" content="https://linbojin.github.io/media/14886258446603.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +78,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>NPM Playbook | AILab</title>
+<title>AILab</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -254,11 +278,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-NPM-Playbook" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-tf01" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/17/NPM-Playbook/" class="article-date">
-      <time datetime="2016-01-17T04:11:52.000Z" itemprop="datePublished">2016-01-17</time>
+      <a href="/2017/03/04/tf01/" class="article-date">
+      <time datetime="2017-03-04T10:28:34.000Z" itemprop="datePublished">2017-03-04</time>
 </a>
 
 
@@ -269,74 +293,36 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      NPM Playbook
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://www.npmjs.com/" target="_blank" rel="external">NPM</a> (node package manager) is a package management tool for <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>.<br><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> is an <a href="https://github.com/nodejs/node" target="_blank" rel="external">open source</a> JavaScript runtime built on <strong>Chrome’s V8 JavaScript engine</strong>. Node.js uses an <strong>event-driven</strong>, <strong>non-blocking I/O model</strong> that makes it lightweight and efficient. Note that Node.js is a <strong>server side runtime environment rather than a language</strong>. </p>
-<h2 id="Initial-project"><a href="#Initial-project" class="headerlink" title="Initial project"></a>Initial project</h2><p><a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="external"><strong>package.json</strong></a> will be firstly created by <code>npm init</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm init  <span class="comment"># create package.json</span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<ul>
-<li><p>package.json     includes four main parts: <strong>basic module info</strong>, <strong>dependencies</strong>, <strong>devDependencies</strong>, <strong>scripts</strong>: </p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// package.json</div><div class="line">	</div><div class="line">&#123;</div><div class="line">  <span class="string">"name"</span>: <span class="string">"nodexpress"</span>,</div><div class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="string">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="string">"main"</span>: <span class="string">"app.js"</span>,</div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,</div><div class="line">    <span class="string">"start"</span>: <span class="string">"node app.js"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"author"</span>: <span class="string">"tony"</span>,</div><div class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</div><div class="line">  <span class="string">"dependencies"</span>: &#123;</div><div class="line">    <span class="string">"express"</span>: <span class="string">"^4.13.3"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"devDependencies"</span>: &#123;</div><div class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.9.0"</span>,</div><div class="line">    <span class="string">"gulp-inject"</span>: <span class="string">"^1.5.0"</span>,</div><div class="line">    <span class="string">"gulp-jscs"</span>: <span class="string">"^2.0.0"</span>,</div><div class="line">    <span class="string">"gulp-jshint"</span>: <span class="string">"^1.11.2"</span>,</div><div class="line">    <span class="string">"gulp-nodemon"</span>: <span class="string">"^2.0.6"</span>,</div><div class="line">    <span class="string">"jshint-stylish"</span>: <span class="string">"^2.1.0"</span>,</div><div class="line">    <span class="string">"wiredep"</span>: <span class="string">"^3.0.0"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+        <h1 id="TensorFlow学习笔记-在EC2上安装"><a href="#TensorFlow学习笔记-在EC2上安装" class="headerlink" title="TensorFlow学习笔记-在EC2上安装"></a>TensorFlow学习笔记-在EC2上安装</h1><ul>
+<li>Essentials</li>
+<li>CUDA 8.0</li>
+<li>cuDNN v5.1, for CUDA 8.0</li>
+<li>TensorFlow 1.0.0</li>
 </ul>
-<ul>
-<li><p>scripts inside <code>packages.json</code> to run shell commands</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ npm start will run $ node xx.js</div><div class="line">$ npm run xxx <span class="keyword">for</span> custom commands</div><div class="line"></div><div class="line">// packages.json</div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,</div><div class="line">    <span class="string">"start"</span>: <span class="string">"node app.js"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>versioning packages</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"express"</span>: <span class="string">"^4.13.3"</span> =&gt; will install the latest <span class="string">"4.XX.X"</span> verison</div><div class="line"><span class="string">"express"</span>: <span class="string">"~4.13.3"</span> =&gt; will install the latest <span class="string">"4.13.X"</span> verison</div><div class="line"><span class="string">"express"</span>: <span class="string">"4.13.3"</span>  =&gt; will keep this version</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>default settings for package.json</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="built_in">set</span> init-author-name <span class="string">'Tony'</span></div><div class="line">$ npm get init-author-name</div><div class="line">Tony</div><div class="line">$ npm config delete init-author-name</div><div class="line">$ cat ~/.npmrc   <span class="comment"># all the default settings will be saved inside this file.</span></div><div class="line">init-author-name=Tony</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Install-and-uninstall-packages"><a href="#Install-and-uninstall-packages" class="headerlink" title="Install and uninstall packages"></a>Install and uninstall packages</h2><p>Search nodejs packages: <a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></p>
-<ul>
-<li><p>Project with <code>packages.json</code> can install(update) modules easily:</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install  <span class="comment"># automatically install dependencies inside packages.json</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Install single module, for shorhands: <a href="https://docs.npmjs.com/misc/config" target="_blank" rel="external">https://docs.npmjs.com/misc/config</a></p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ npm install express --save       <span class="comment"># save dependency into package.json</span></div><div class="line">$ npm install gulp --save-dev      <span class="comment"># save devDependency into package.json</span></div><div class="line">$ npm install bower -g      <span class="comment"># install global, so can call bower inside terminal</span></div><div class="line"></div><div class="line">$ npm install express@<span class="string">"4.2.x"</span> --save     <span class="comment"># install specific version</span></div><div class="line">$ npm install underscore@<span class="string">"&gt;=1.1.0 &lt;1.4.0"</span> --save</div><div class="line"></div><div class="line">$ npm i express -S    <span class="comment"># Shorthands for --save</span></div><div class="line">$ npm i gulp -D      <span class="comment"># for --save-dev</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Remove</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm uninstall [-g] underscore --save  <span class="comment"># remove dependency from pkg.json</span></div><div class="line">$ npm prune                             <span class="comment"># add extraneous pkg into pkg.json</span></div><div class="line">$ npm prune --production                <span class="comment"># rm dev dependencies from pkg.json</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>Upgrade npm</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i npm@latest -g</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="List-installed-packages"><a href="#List-installed-packages" class="headerlink" title="List installed packages"></a>List installed packages</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">$ npm list --depth 0 </div><div class="line">nodexpress@1.0.0 /Users/tony/Hacker/nodexpress</div><div class="line">├── express@4.13.3</div><div class="line">├── gulp@3.9.0</div><div class="line">├── gulp-inject@1.5.0</div><div class="line">├── gulp-jscs@2.0.0</div><div class="line">├── gulp-jshint@1.12.0</div><div class="line">├── gulp-nodemon@2.0.6</div><div class="line">├── jshint-stylish@2.1.0</div><div class="line">└── wiredep@3.0.0</div><div class="line"></div><div class="line">$ npm list --depth 0 --prod <span class="literal">true</span>    <span class="comment"># production dependencies packages only</span></div><div class="line">nodexpress@1.0.0 /Users/tony/Hacker/nodexpress</div><div class="line">└── express@4.13.3</div><div class="line">  </div><div class="line">$ npm list --depth 0 --dev <span class="literal">true</span>     <span class="comment"># devDependencies packages only</span></div><div class="line">nodexpress@1.0.0 /Users/tony/Hacker/nodexpress</div><div class="line">├── gulp@3.9.0</div><div class="line">├── gulp-inject@1.5.0</div><div class="line">├── gulp-jscs@2.0.0</div><div class="line">├── gulp-jshint@1.12.0</div><div class="line">├── gulp-nodemon@2.0.6</div><div class="line">├── jshint-stylish@2.1.0</div><div class="line">└── wiredep@3.0.0</div><div class="line"></div><div class="line">$ npm list --global <span class="literal">true</span> --depth 0  <span class="comment"># global packages</span></div><div class="line">/usr/<span class="built_in">local</span>/lib</div><div class="line">├── bower@1.7.2</div><div class="line">├── gulp@3.9.0</div><div class="line">├── hexo-cli@0.2.0</div><div class="line">└── npm@3.3.12</div><div class="line"></div><div class="line">$ npm list --depth 0 --long <span class="literal">true</span>   <span class="comment"># detail info</span></div><div class="line">$ npm list --depth 0 --json <span class="literal">true</span>   <span class="comment"># detail info with json format</span></div></pre></td></tr></table></figure>
-<h2 id="Package-official-github-repo"><a href="#Package-official-github-repo" class="headerlink" title="Package official github repo"></a>Package official github repo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm repo underscore   <span class="comment"># Jump to browser and open github repo</span></div></pre></td></tr></table></figure>
+<p>选择EC2 p2.xlarge: 1 GPU (Nvidia K80), 61G RAM, $0.900 hourly<br>AMI: Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - ami-a58d0dc5</p>
+<p>此处略过如何启动ec2 instance，下面的操作直接在instance上进行。</p>
+<h2 id="安装dependencies-amp-build-tools"><a href="#安装dependencies-amp-build-tools" class="headerlink" title="安装dependencies &amp; build tools"></a>安装dependencies &amp; build tools</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">update</span> &amp;&amp; sudo apt-<span class="keyword">get</span> -y <span class="keyword">upgrade</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y <span class="keyword">build</span>-essential git swig <span class="keyword">default</span>-jdk zip zlib1g-dev</div><div class="line"></div><div class="line"># 确定gcc已经安装</div><div class="line">gcc <span class="comment">--version</span></div><div class="line"></div><div class="line"># 判断是否有NVIDIA GPU</div><div class="line">lspci | grep -i nvidia</div></pre></td></tr></table></figure>
+<p>p2.xlarge GPU 如下：<br><img src="/media/14886258446603.jpg" alt=""></p>
+<p>We need to blacklist Nouveau which has a conflict with the nvidia driver.</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">echo -e <span class="string">"blacklist nouveau<span class="subst">\n</span>blacklist lbm-nouveau<span class="subst">\n</span>options nouveau modeset=0<span class="subst">\n</span>alias nouveau off<span class="subst">\n</span>alias lbm-nouveau off<span class="subst">\n</span>"</span> | sudo tee /etc/modprobe.d/blacklist-nouveau.conf echo options nouveau modeset=<span class="number">0</span> | sudo tee -a /etc/modprobe.d/nouveau-kms.conf</div><div class="line">sudo update-initramfs -u</div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
+<p>安装Kenel headers</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> -y linux-image-extra-<span class="keyword">virtual</span></div><div class="line">sudo reboot</div><div class="line"></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y linux-<span class="keyword">source</span> linux-headers-<span class="string">`uname -r`</span></div></pre></td></tr></table></figure>
+<h2 id="安装Cuda-8-0"><a href="#安装Cuda-8-0" class="headerlink" title="安装Cuda 8.0"></a>安装Cuda 8.0</h2><figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604<span class="string">-8</span><span class="string">-0</span>-local-ga2_8.0.61<span class="string">-1</span>_amd64-deb</div><div class="line"></div><div class="line">sudo dpkg -i cuda-repo-ubuntu1604<span class="string">-8</span><span class="string">-0</span>-local-ga2_8.0.61<span class="string">-1</span>_amd64-deb</div><div class="line">rm cuda-repo-ubuntu1604<span class="string">-8</span><span class="string">-0</span>-local-ga2_8.0.61<span class="string">-1</span>_amd64-deb</div><div class="line"></div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y cuda</div></pre></td></tr></table></figure>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vim ~/.profile</div><div class="line"></div><div class="line"><span class="built_in">export</span> CUDA_HOME=/usr/<span class="built_in">local</span>/cuda</div><div class="line"><span class="built_in">export</span> CUDA_ROOT=/usr/<span class="built_in">local</span>/cuda</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$CUDA_ROOT</span>/bin</div><div class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span>:<span class="variable">$CUDA_ROOT</span>/lib64</div><div class="line"></div><div class="line">sudo reboot</div></pre></td></tr></table></figure>
+<h3 id="验证Cuda安装成功"><a href="#验证Cuda安装成功" class="headerlink" title="验证Cuda安装成功"></a>验证Cuda安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">nvcc --version</div><div class="line"></div><div class="line"><span class="comment"># verify the driver is installed</span></div><div class="line">nvidia-smi</div><div class="line"></div><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/cuda/</div><div class="line"><span class="built_in">cd</span> samples</div><div class="line">sudo make</div><div class="line"></div><div class="line"><span class="built_in">cd</span> ./1_Utilities/deviceQuery</div><div class="line">./deviceQuery</div></pre></td></tr></table></figure>
+<p><img src="/media/14886272410398.jpg" alt=""><br><br><img src="/media/14886272706287.jpg" alt=""><br><br><img src="/media/14886278898974.jpg" alt=""><br></p>
+<h2 id="安装cuDNN-v5-1"><a href="#安装cuDNN-v5-1" class="headerlink" title="安装cuDNN v5.1"></a>安装cuDNN v5.1</h2><p><a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="external">https://developer.nvidia.com/rdp/cudnn-download</a><br>cuDNN v5.1 Runtime Library for Ubuntu14.04 (Deb)<br>cuDNN v5.1 Developer Library for Ubuntu14.04 (Deb)</p>
+<p>需要先加入Accelerated Computing Developer Program，然后下载到本地，再上传到ec2，然后安装</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">libcudnn5_5</span><span class="selector-class">.1</span><span class="selector-class">.5-1</span>+<span class="selector-tag">cuda8</span><span class="selector-class">.0_amd64</span><span class="selector-class">.deb</span></div><div class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">libcudnn5-dev_5</span><span class="selector-class">.1</span><span class="selector-class">.5-1</span>+<span class="selector-tag">cuda8</span><span class="selector-class">.0_amd64</span><span class="selector-class">.deb</span></div></pre></td></tr></table></figure>
+<p>The libcupti-dev library, which is the NVIDIA CUDA Profile Tools Interface. This library provides advanced profiling support.</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install libcupti-<span class="built_in">dev</span></div></pre></td></tr></table></figure>
+<h2 id="安装Tensorflow"><a href="#安装Tensorflow" class="headerlink" title="安装Tensorflow"></a>安装Tensorflow</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//repo.continuum.io/archive/Anaconda2-<span class="number">4.3</span>.<span class="number">0</span>-Linux-x86_64.<span class="keyword">sh</span></div><div class="line">bash Anaconda2-<span class="number">4.3</span>.<span class="number">0</span>-Linux-x86_64.<span class="keyword">sh</span></div><div class="line"></div><div class="line">conda create -n tensorflow</div><div class="line"><span class="keyword">source</span> activate tensorflow</div><div class="line">pip install --ignore-installed --upgrade http<span class="variable">s:</span>//storage.googleapis.<span class="keyword">com</span>/tensorflow/linux/gpu/tensorflow_gpu-<span class="number">1.0</span>.<span class="number">0</span>-cp27-none-linux_x86_64.whl</div></pre></td></tr></table></figure>
+<p>运行成功，Tensorflow + GPU</p>
+<p><img src="/media/14886284271425.jpg" alt=""></p>
+<p>Ref:<br><a href="https://www.tensorflow.org/install/install_linux" target="_blank" rel="external">https://www.tensorflow.org/install/install_linux</a><br><a href="http://expressionflow.com/2016/10/09/installing-tensorflow-on-an-aws-ec2-p2-gpu-instance/" target="_blank" rel="external">http://expressionflow.com/2016/10/09/installing-tensorflow-on-an-aws-ec2-p2-gpu-instance/</a><br><a href="https://medium.com/@giltamari/tensorflow-getting-started-gpu-installation-on-ec2-9b9915d95d6f#.ef96jc7a4" target="_blank" rel="external">https://medium.com/@giltamari/tensorflow-getting-started-gpu-installation-on-ec2-9b9915d95d6f#.ef96jc7a4</a><br><a href="https://eatcodeplay.com/installing-tensorflow-with-python-3-on-ec2-gpu-instances-f9fa199eb3cc#.142acv4zq" target="_blank" rel="external">https://eatcodeplay.com/installing-tensorflow-with-python-3-on-ec2-gpu-instances-f9fa199eb3cc#.142acv4zq</a></p>
 
       
     </div>
@@ -345,13 +331,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/01/17/NPM-Playbook/">NPM Playbook</a></p>
+        <p><span>Title:</span><a href="/2017/03/04/tf01/"></a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">linbojin</a></p>
-        <p><span>Created:</span>2016-01-17, 12:11:52</p>
-        <p><span>Updated:</span>2016-01-17, 13:59:05</p>
+        <p><span>Created:</span>2017-03-04, 18:28:34</p>
+        <p><span>Updated:</span>2017-03-04, 20:48:47</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/01/17/NPM-Playbook/" title="NPM Playbook">https://linbojin.github.io/2016/01/17/NPM-Playbook/</a>
-            <span class="copy-path" data-clipboard-text="From https://linbojin.github.io/2016/01/17/NPM-Playbook/　　By linbojin" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/03/04/tf01/" title="">https://linbojin.github.io/2017/03/04/tf01/</a>
+            <span class="copy-path" data-clipboard-text="From https://linbojin.github.io/2017/03/04/tf01/　　By linbojin" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -363,16 +349,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">
-                    Hacking PySpark inside Jupyter Notebook
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/15/Books-of-2016/">
-                    Books of 2016
+                <a href="/2016/10/04/2016-Reading-List/">
+                    2016 Reading List
                 </a>
             </div>
         
@@ -384,7 +364,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Initial-project"><span class="toc-number">1.</span> <span class="toc-text">Initial project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-and-uninstall-packages"><span class="toc-number">2.</span> <span class="toc-text">Install and uninstall packages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#List-installed-packages"><span class="toc-number">3.</span> <span class="toc-text">List installed packages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Package-official-github-repo"><span class="toc-number">4.</span> <span class="toc-text">Package official github repo</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TensorFlow学习笔记-在EC2上安装"><span class="toc-number">1.</span> <span class="toc-text">TensorFlow学习笔记-在EC2上安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装dependencies-amp-build-tools"><span class="toc-number">1.1.</span> <span class="toc-text">安装dependencies & build tools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Cuda-8-0"><span class="toc-number">1.2.</span> <span class="toc-text">安装Cuda 8.0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置环境变量"><span class="toc-number">1.2.1.</span> <span class="toc-text">配置环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证Cuda安装成功"><span class="toc-number">1.2.2.</span> <span class="toc-text">验证Cuda安装成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装cuDNN-v5-1"><span class="toc-number">1.3.</span> <span class="toc-text">安装cuDNN v5.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Tensorflow"><span class="toc-number">1.4.</span> <span class="toc-text">安装Tensorflow</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -420,7 +400,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"NPM Playbook　| AILab　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"　| AILab　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -436,7 +416,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/01/17/NPM-Playbook/" data-title="NPM Playbook" data-url="https://linbojin.github.io/2016/01/17/NPM-Playbook/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/04/tf01/" data-title="" data-url="https://linbojin.github.io/2017/03/04/tf01/"></div>
     <script>
         var duoshuoQuery = {short_name:"ailab"};
         var loadComment = function(){
@@ -459,15 +439,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" title="Pre: Hacking PySpark inside Jupyter Notebook">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/15/Books-of-2016/" title="Next: Books of 2016">
+            <a href="/2016/10/04/2016-Reading-List/" title="Next: 2016 Reading List">
                 <i class="fa fa-angle-right"></i>
             </a>
         
