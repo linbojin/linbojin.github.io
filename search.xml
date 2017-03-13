@@ -4,6 +4,22 @@
   
     
     <entry>
+      <title><![CDATA[2017 Study Tasks]]></title>
+      <url>https://linbojin.github.io/2017/03/13/2017-03-04/</url>
+      <content type="html"><![CDATA[<h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><ul>
+<li>[ ] 201703 <a href="http://www.chinahadoop.cn/classroom/41/introduction" target="_blank" rel="external">机器学习 (小象 邹博)</a></li>
+<li>[ ] 201704 <a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="external">Machine Learning (Andrew Ng)</a></li>
+<li>[ ] 201705 <a href="https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009" target="_blank" rel="external">Machine Learning Engineer Nanodegree (Udacity)</a></li>
+</ul>
+<h3 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h3><ul>
+<li>[ ] 201706 <a href="https://www.coursera.org/specializations/data-structures-algorithms" target="_blank" rel="external">Data Structures and Algorithms Specialization (UC, San Diego)</a></li>
+<li>[ ] 201710 <a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="external">Algorithms Specialization (Stanford University)</a></li>
+</ul>
+<h3 id="Books"><a href="#Books" class="headerlink" title="Books"></a>Books</h3><p>CleanCodeHandbook.pdf<br>CtCl-6th.pdf</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[TensorFlow学习笔记01-在EC2上安装]]></title>
       <url>https://linbojin.github.io/2017/03/04/tf01/</url>
       <content type="html"><![CDATA[<ul>
@@ -31,7 +47,7 @@
 <h2 id="安装Tensorflow"><a href="#安装Tensorflow" class="headerlink" title="安装Tensorflow"></a>安装Tensorflow</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">wget https://repo.continuum.io/archive/Anaconda2-4.3.0-Linux-x86_64.sh</div><div class="line">bash Anaconda2-4.3.0-Linux-x86_64.sh</div><div class="line"></div><div class="line">conda create -n tensorflow</div><div class="line"><span class="built_in">source</span> activate tensorflow</div><div class="line">pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0-cp27-none-linux_x86_64.whl</div></pre></td></tr></table></figure>
 <p>运行成功，Tensorflow + GPU</p>
 <p><img src="/media/14886284271425.jpg" alt=""></p>
-<p>Ref:<br><a href="https://www.tensorflow.org/install/install_linux" target="_blank" rel="external">https://www.tensorflow.org/install/install_linux</a><br><a href="http://expressionflow.com/2016/10/09/installing-tensorflow-on-an-aws-ec2-p2-gpu-instance/" target="_blank" rel="external">http://expressionflow.com/2016/10/09/installing-tensorflow-on-an-aws-ec2-p2-gpu-instance/</a><br><a href="https://medium.com/@giltamari/tensorflow-getting-started-gpu-installation-on-ec2-9b9915d95d6f#.ef96jc7a4" target="_blank" rel="external">https://medium.com/@giltamari/tensorflow-getting-started-gpu-installation-on-ec2-9b9915d95d6f#.ef96jc7a4</a><br><a href="https://eatcodeplay.com/installing-tensorflow-with-python-3-on-ec2-gpu-instances-f9fa199eb3cc#.142acv4zq" target="_blank" rel="external">https://eatcodeplay.com/installing-tensorflow-with-python-3-on-ec2-gpu-instances-f9fa199eb3cc#.142acv4zq</a></p>
+<p>Ref:<br><a href="https://www.tensorflow.org/install/install_linux" target="_blank" rel="external">https://www.tensorflow.org/install/install_linux</a><br><a href="https://gist.github.com/erikbern/78ba519b97b440e10640" target="_blank" rel="external">https://gist.github.com/erikbern/78ba519b97b440e10640</a><br><a href="http://expressionflow.com/2016/10/09/installing-tensorflow-on-an-aws-ec2-p2-gpu-instance/" target="_blank" rel="external">http://expressionflow.com/2016/10/09/installing-tensorflow-on-an-aws-ec2-p2-gpu-instance/</a><br><a href="https://medium.com/@giltamari/tensorflow-getting-started-gpu-installation-on-ec2-9b9915d95d6f#.ef96jc7a4" target="_blank" rel="external">https://medium.com/@giltamari/tensorflow-getting-started-gpu-installation-on-ec2-9b9915d95d6f#.ef96jc7a4</a><br><a href="https://eatcodeplay.com/installing-tensorflow-with-python-3-on-ec2-gpu-instances-f9fa199eb3cc#.142acv4zq" target="_blank" rel="external">https://eatcodeplay.com/installing-tensorflow-with-python-3-on-ec2-gpu-instances-f9fa199eb3cc#.142acv4zq</a></p>
 ]]></content>
     </entry>
     

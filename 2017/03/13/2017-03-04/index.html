@@ -15,20 +15,34 @@
 
 
 
-<meta name="description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
+<meta name="description" content="Machine Learning
+[ ] 201703 机器学习 (小象 邹博)
+[ ] 201704 Machine Learning (Andrew Ng)
+[ ] 201705 Machine Learning Engineer Nanodegree (Udacity)
+
+Algorithms
+[ ] 201706 Data Structures and Algorithms Special">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hacking PySpark inside Jupyter Notebook">
-<meta property="og:url" content="https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/index.html">
+<meta property="og:title" content="2017 Study Tasks">
+<meta property="og:url" content="https://linbojin.github.io/2017/03/13/2017-03-04/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2022.08.51.png">
-<meta property="og:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2023.24.46.png">
-<meta property="og:updated_time" content="2016-01-27T15:40:05.000Z">
+<meta property="og:description" content="Machine Learning
+[ ] 201703 机器学习 (小象 邹博)
+[ ] 201704 Machine Learning (Andrew Ng)
+[ ] 201705 Machine Learning Engineer Nanodegree (Udacity)
+
+Algorithms
+[ ] 201706 Data Structures and Algorithms Special">
+<meta property="og:updated_time" content="2017-03-13T01:15:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hacking PySpark inside Jupyter Notebook">
-<meta name="twitter:description" content="Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside Jupyter Notebook (previous known as IPython), because it allows us to create and share do">
-<meta name="twitter:image" content="https://linbojin.github.io/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png">
+<meta name="twitter:title" content="2017 Study Tasks">
+<meta name="twitter:description" content="Machine Learning
+[ ] 201703 机器学习 (小象 邹博)
+[ ] 201704 Machine Learning (Andrew Ng)
+[ ] 201705 Machine Learning Engineer Nanodegree (Udacity)
+
+Algorithms
+[ ] 201706 Data Structures and Algorithms Special">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +72,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hacking PySpark inside Jupyter Notebook | AILab</title>
+<title>2017 Study Tasks | AILab</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -258,11 +272,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-Hacking-pyspark-in-Jupyter-Notebook" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2017-03-04" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" class="article-date">
-      <time datetime="2016-01-27T12:42:21.000Z" itemprop="datePublished">2016-01-27</time>
+      <a href="/2017/03/13/2017-03-04/" class="article-date">
+      <time datetime="2017-03-13T01:00:00.000Z" itemprop="datePublished">2017-03-13</time>
 </a>
 
 
@@ -277,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hacking PySpark inside Jupyter Notebook
+      2017 Study Tasks
     </h1>
   
 
@@ -288,7 +302,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self-improvement/">self-improvement</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -298,28 +312,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Python is a wonderful programming language for data analytics. Normally, I prefer to write python codes inside <a href="http://jupyter.org/" target="_blank" rel="external">Jupyter Notebook</a> (previous known as <a href="http://ipython.org/" target="_blank" rel="external">IPython</a>), because it allows us to create and share documents that contain live code, equations, visualizations and explanatory text. <a href="http://spark.apache.org/" target="_blank" rel="external">Apache Spark</a> is a fast and general engine for large-scale data processing. <a href="http://spark.apache.org/docs/latest/api/python/pyspark.html" target="_blank" rel="external">PySpark</a> is the Python API for Spark. So it’s a good start point to <strong>write PySpark codes inside jupyter</strong> if you are interested in data science:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:7077 --executor-memory 7g</div></pre></td></tr></table></figure>
-<p><img src="/media/Screen%20Shot%202016-01-27%20at%2021.44.39.png" alt="Hacking PySpark inside Jupyter Notebook"><br><a id="more"></a></p>
-<h2 id="Install-Jupyter"><a href="#Install-Jupyter" class="headerlink" title="Install Jupyter"></a>Install Jupyter</h2><p>If you are a pythoner, I <strong>highly recommend</strong> installing <a href="https://www.continuum.io" target="_blank" rel="external">Anaconda</a>. Anaconda conveniently installs Python, the Jupyter Notebook, and other commonly used packages for scientific computing and data science.<br>Go to <a href="https://www.continuum.io/downloads" target="_blank" rel="external">https://www.continuum.io/downloads</a>, find the instructions for downloading and installing Anaconda (jupyter will be included):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ wget https://&#123;somewhere&#125;/Anaconda2-2.4.1-MacOSX-x86_64.sh</div><div class="line">$ bash Anaconda2-2.4.1-MacOSX-x86_64.sh</div><div class="line">$ python</div><div class="line">Python 2.7.11 |Anaconda 2.4.1 (x86_64)| (default, Dec  6 2015, 18:57:58)</div><div class="line">[GCC 4.2.1 (Apple Inc. build 5577)] on darwin</div><div class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> or <span class="string">"license"</span> <span class="keyword">for</span> more information.</div><div class="line">Anaconda is brought to you by Continuum Analytics.</div><div class="line">Please check out: http://continuum.io/thanks and https://anaconda.org</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
-<p>You can easily run Jupyter notebook:</p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ jupyter notebook # Go <span class="keyword">to</span> http:<span class="comment">//localhost:8888</span></div></pre></td></tr></table></figure>
-<p><img src="/media/Screen%20Shot%202016-01-27%20at%2022.08.51.png" alt="jupyter notebook"></p>
-<h2 id="Install-Spark"><a href="#Install-Spark" class="headerlink" title="Install Spark"></a>Install Spark</h2><p>If you are not familiar with spark, you can go to read spark offical documents: </p>
-<ul>
-<li><a href="http://spark.apache.org/docs/latest/" target="_blank" rel="external">Spark Overview</a></li>
-<li><a href="http://spark.apache.org/docs/latest/programming-guide.html" target="_blank" rel="external">Spark Programming Guide</a></li>
+        <h3 id="Machine-Learning"><a href="#Machine-Learning" class="headerlink" title="Machine Learning"></a>Machine Learning</h3><ul>
+<li>[ ] 201703 <a href="http://www.chinahadoop.cn/classroom/41/introduction" target="_blank" rel="external">机器学习 (小象 邹博)</a></li>
+<li>[ ] 201704 <a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="external">Machine Learning (Andrew Ng)</a></li>
+<li>[ ] 201705 <a href="https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009" target="_blank" rel="external">Machine Learning Engineer Nanodegree (Udacity)</a></li>
 </ul>
-<p>Here is a simply instruction for installing spark:</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"># MacOS</div><div class="line">$ brew install apache-spark</div><div class="line"></div><div class="line"># Linux</div><div class="line">$ wget http://d3kbcqa49mib13.cloudfront.net/spark-<span class="number">1.6</span>.0-bin-hadoop2.6.tgz</div><div class="line">$ tar zxvf spark-<span class="number">1.6</span>.0-bin-hadoop2.6.tgz</div><div class="line">$ vim .bashrc</div><div class="line"> export PATH=/&#123;your_path&#125;/spark-<span class="number">1.6</span>.0-bin-hadoop2.6/sbin:$PATH</div><div class="line"> export PATH=/&#123;your_path&#125;/spark-<span class="number">1.6</span>.0-bin-hadoop2.6/bin:$PATH</div><div class="line">$ source .bashrc</div><div class="line"></div><div class="line"># Run PySpark shell </div><div class="line">$ pyspark</div><div class="line">Welcome to</div><div class="line">      ____              <span class="symbol">__</span></div><div class="line">     / <span class="symbol">__</span>/<span class="symbol">__</span>  ___ _____/ /<span class="symbol">__</span></div><div class="line">    <span class="symbol">_</span>\ \/ <span class="symbol">_</span> \/ <span class="symbol">_</span> `/ <span class="symbol">__</span>/  '<span class="symbol">_</span>/</div><div class="line">   /<span class="symbol">__</span> / .<span class="symbol">__</span>/\<span class="symbol">_</span>,<span class="symbol">_</span>/<span class="symbol">_</span>/ /<span class="symbol">_</span>/\<span class="symbol">_</span>\   version <span class="number">1.6</span>.0</div><div class="line">      /<span class="symbol">_</span>/</div><div class="line">	</div><div class="line">Using Python version <span class="number">2.7</span>.11 (default, Dec  <span class="number">6</span> <span class="number">2015</span> <span class="number">18</span>:<span class="number">08</span>:<span class="number">32</span>)</div><div class="line">SparkContext available as sc, HiveContext available as sqlContext.</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure>
-<h2 id="Launch-PySpark-inside-IPython-jupyter"><a href="#Launch-PySpark-inside-IPython-jupyter" class="headerlink" title="Launch PySpark inside IPython(jupyter)"></a>Launch PySpark inside IPython(jupyter)</h2><p>Launch the PySpark shell in <strong>IPython</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$ PYSPARK_DRIVER_PYTHON=ipython pyspark</div><div class="line">or </div><div class="line">$ IPYTHON=1 pyspark</div><div class="line"></div><div class="line"> Welcome to</div><div class="line">      ____              __</div><div class="line">     / __/__  ___ _____/ /__</div><div class="line">    _\ \/ _ \/ _ `/ __/  <span class="string">'_/</span></div><div class="line">   /__ / .__/\_,_/_/ /_/\_\   version 1.6.0</div><div class="line">      /_/</div><div class="line"></div><div class="line">Using Python version 2.7.11 (default, Dec  6 2015 18:08:32)</div><div class="line">SparkContext available as sc, HiveContext available as sqlContext.</div><div class="line"></div><div class="line">In [1]:</div></pre></td></tr></table></figure>
-<p>Launch the PySpark shell in <strong>IPython Notebook</strong>, <a href="http://localhost:8888" target="_blank" rel="external">http://localhost:8888</a>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS=<span class="string">"notebook"</span> pyspark</div><div class="line">or </div><div class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark</div><div class="line"></div><div class="line"><span class="comment"># You can also specify running memory </span></div><div class="line">$ IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --executor-memory 7g</div></pre></td></tr></table></figure>
-<h2 id="Run-PySpark-on-a-cluster-inside-IPython-jupyter"><a href="#Run-PySpark-on-a-cluster-inside-IPython-jupyter" class="headerlink" title="Run PySpark on a cluster inside IPython(jupyter)"></a>Run PySpark on a cluster inside IPython(jupyter)</h2><p>It’s assumed you deployed a spark cluster in standalone mode, and the master ip is <code>localhost</code>. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark --master spark://localhost:7077 --executor-memory 7g</div><div class="line"></div><div class="line"><span class="comment"># you can add some python modules</span></div><div class="line">IPYTHON_OPTS=<span class="string">"notebook"</span> pyspark  \</div><div class="line">--master spark://localhost:7077  \</div><div class="line">--executor-memory 7g             \</div><div class="line">--py-files tensorflow-py2.7.egg</div></pre></td></tr></table></figure>
-<p><img src="/media/Screen%20Shot%202016-01-27%20at%2023.24.46.png" alt="PySpark on cluster"></p>
+<h3 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h3><ul>
+<li>[ ] 201706 <a href="https://www.coursera.org/specializations/data-structures-algorithms" target="_blank" rel="external">Data Structures and Algorithms Specialization (UC, San Diego)</a></li>
+<li>[ ] 201710 <a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="external">Algorithms Specialization (Stanford University)</a></li>
+</ul>
+<h3 id="Books"><a href="#Books" class="headerlink" title="Books"></a>Books</h3><p>CleanCodeHandbook.pdf<br>CtCl-6th.pdf</p>
 
       
     </div>
@@ -328,13 +330,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">Hacking PySpark inside Jupyter Notebook</a></p>
+        <p><span>Title:</span><a href="/2017/03/13/2017-03-04/">2017 Study Tasks</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">linbojin</a></p>
-        <p><span>Created:</span>2016-01-27, 20:42:21</p>
-        <p><span>Updated:</span>2016-01-27, 23:40:05</p>
+        <p><span>Created:</span>2017-03-13, 09:00:00</p>
+        <p><span>Updated:</span>2017-03-13, 09:15:39</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" title="Hacking PySpark inside Jupyter Notebook">https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/</a>
-            <span class="copy-path" data-clipboard-text="From https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/　　By linbojin" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/03/13/2017-03-04/" title="2017 Study Tasks">https://linbojin.github.io/2017/03/13/2017-03-04/</a>
+            <span class="copy-path" data-clipboard-text="From https://linbojin.github.io/2017/03/13/2017-03-04/　　By linbojin" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -346,16 +348,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/">
-                    Getting Started with Vim by Vimtutor
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/17/NPM-Playbook/">
-                    NPM Playbook
+                <a href="/2017/03/04/tf01/">
+                    TensorFlow学习笔记01-在EC2上安装
                 </a>
             </div>
         
@@ -367,7 +363,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Jupyter"><span class="toc-number">1.</span> <span class="toc-text">Install Jupyter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Spark"><span class="toc-number">2.</span> <span class="toc-text">Install Spark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Launch-PySpark-inside-IPython-jupyter"><span class="toc-number">3.</span> <span class="toc-text">Launch PySpark inside IPython(jupyter)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Run-PySpark-on-a-cluster-inside-IPython-jupyter"><span class="toc-number">4.</span> <span class="toc-text">Run PySpark on a cluster inside IPython(jupyter)</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Machine-Learning"><span class="toc-number">1.</span> <span class="toc-text">Machine Learning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Algorithms"><span class="toc-number">2.</span> <span class="toc-text">Algorithms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Books"><span class="toc-number">3.</span> <span class="toc-text">Books</span></a></li></ol>
         
     </div>
     <style>
@@ -403,7 +399,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hacking PySpark inside Jupyter Notebook　| AILab　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"2017 Study Tasks　| AILab　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -419,7 +415,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/" data-title="Hacking PySpark inside Jupyter Notebook" data-url="https://linbojin.github.io/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/03/13/2017-03-04/" data-title="2017 Study Tasks" data-url="https://linbojin.github.io/2017/03/13/2017-03-04/"></div>
     <script>
         var duoshuoQuery = {short_name:"ailab"};
         var loadComment = function(){
@@ -442,15 +438,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/" title="Pre: Getting Started with Vim by Vimtutor">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/17/NPM-Playbook/" title="Next: NPM Playbook">
+            <a href="/2017/03/04/tf01/" title="Next: TensorFlow学习笔记01-在EC2上安装">
                 <i class="fa fa-angle-right"></i>
             </a>
         

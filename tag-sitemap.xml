@@ -59,7 +59,14 @@
 
     <url>
         <loc>https://linbojin.github.io/tags/tensorflow/</loc>
-        <lastmod>2017-03-04T13:07:05.000Z</lastmod>
+        <lastmod>2017-03-04T13:10:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://linbojin.github.io/tags/self-improvement/</loc>
+        <lastmod>2017-03-13T01:15:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
