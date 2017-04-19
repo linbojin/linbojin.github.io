@@ -15,19 +15,15 @@
 
 
 
-<meta name="description" content="It’s very easy to install and manage multiple active node.js versions by Node Version Manager(NVM).
-Install or update nvmFirst you’ll need to make sure your system has a c++ compiler. For OSX, XCode w">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Install and Manage Node Versions with NVM">
-<meta property="og:url" content="https://linbojin.github.io/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/index.html">
+<meta name="description" content="Linbo&apos;s Blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AILab">
+<meta property="og:url" content="https://linbojin.github.io/archives/2017/04/index.html">
 <meta property="og:site_name" content="AILab">
-<meta property="og:description" content="It’s very easy to install and manage multiple active node.js versions by Node Version Manager(NVM).
-Install or update nvmFirst you’ll need to make sure your system has a c++ compiler. For OSX, XCode w">
-<meta property="og:updated_time" content="2016-03-07T03:24:14.000Z">
+<meta property="og:description" content="Linbo&apos;s Blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Install and Manage Node Versions with NVM">
-<meta name="twitter:description" content="It’s very easy to install and manage multiple active node.js versions by Node Version Manager(NVM).
-Install or update nvmFirst you’ll need to make sure your system has a c++ compiler. For OSX, XCode w">
+<meta name="twitter:title" content="AILab">
+<meta name="twitter:description" content="Linbo&apos;s Blog">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +53,7 @@ Install or update nvmFirst you’ll need to make sure your system has a c++ comp
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Install and Manage Node Versions with NVM | AILab</title>
+<title>Archives: 2017/4 | AILab</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +63,8 @@ Install or update nvmFirst you’ll need to make sure your system has a c++ comp
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -257,202 +253,56 @@ Install or update nvmFirst you’ll need to make sure your system has a c++ comp
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-Install-and-Manage-Node-Versions-with-NVM" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/" class="article-date">
-      <time datetime="2016-03-07T02:57:41.000Z" itemprop="datePublished">2016-03-07</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2017/04/18/2017-Study-Tasks/" class="archive-article-date">
+      <time datetime="2017-04-18T01:00:00.000Z" itemprop="datePublished">04-18</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Install and Manage Node Versions with NVM
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/18/2017-Study-Tasks/">2017 Deep Learning Study Task</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p>It’s very easy to install and manage multiple active node.js versions by <a href="https://github.com/creationix/nvm" target="_blank" rel="external">Node Version Manager(NVM)</a>.</p>
-<h3 id="Install-or-update-nvm"><a href="#Install-or-update-nvm" class="headerlink" title="Install or update nvm"></a>Install or update nvm</h3><p>First you’ll need to make sure your system has a c++ compiler. For OSX, XCode will work. And then install or update nvm by the following command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The script clones the nvm repository to ~/.nvm and adds the source line to your profile (~/.bash_profile, ~/.zshrc or ~/.profile).</span></div><div class="line"></div><div class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Manage-node-versions"><a href="#Manage-node-versions" class="headerlink" title="Manage node versions"></a>Manage node versions</h3><p>To download, compile, and install the latest v5.7.x release of node, do this:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm install 5.7</div></pre></td></tr></table></figure>
-<p>And then in any new shell just use the installed version:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm use 5.7</div></pre></td></tr></table></figure>
-<p>You can also get the path to the executable to where it was installed:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nvm <span class="built_in">which</span> 5.7</div></pre></td></tr></table></figure>
-<p>You can see what versions are installed:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  nvm ls</div></pre></td></tr></table></figure>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>Title:</span><a href="/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/">Install and Manage Node Versions with NVM</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">linbojin</a></p>
-        <p><span>Created:</span>2016-03-07, 10:57:41</p>
-        <p><span>Updated:</span>2016-03-07, 11:24:14</p>
-        <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/" title="Install and Manage Node Versions with NVM">https://linbojin.github.io/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/</a>
-            <span class="copy-path" data-clipboard-text="From https://linbojin.github.io/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/　　By linbojin" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
-        </p>
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/self-improvement/">self-improvement</a></li></ul>
     </div>
 
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/16/Practical-Vim-Dot-Formula/">
-                    Practical Vim: Dot Formula
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/">
-                    Getting Started with Vim by Vimtutor
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-or-update-nvm"><span class="toc-number">1.</span> <span class="toc-text">Install or update nvm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Manage-node-versions"><span class="toc-number">2.</span> <span class="toc-text">Manage node versions</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
-
-    <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"true"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Install and Manage Node Versions with NVM　| AILab　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
-</div>
 
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/03/07/Install-and-Manage-Node-Versions-with-NVM/" data-title="Install and Manage Node Versions with NVM" data-url="https://linbojin.github.io/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"ailab"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2016/03/16/Practical-Vim-Dot-Formula/" title="Pre: Practical Vim: Dot Formula">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/" title="Next: Getting Started with Vim by Vimtutor">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/2017-Study-Tasks/">2017 Deep Learning Study Task</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/04/tf01/">TensorFlow学习笔记01-在EC2上安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/04/2016-Reading-List/">2016 Reading List</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/13/Java-Basic-Knowledge/">Java Basic Knowledge</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/16/Advanced-Spark-Learning-Resources/">Advanced Spark Learning Resources</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/03/Hadoop-Guide-Chapter-11-Administering-Hadoop/">Hadoop Guide Chapter 11 Administering Hadoop</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/03/Hadoop-Guide-Chapter-10-Setting-Up-a-Hadoop-Cluster/">Hadoop Guide Chapter 10 Setting Up a Hadoop Cluster</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/Setup-Vim-as-an-IDE/">Setup Vim as an IDE</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/Hadoop-Guide-Chapter-3-HDFS/">Hadoop Guide Chapter 3: The Hadoop Distributed Filesystem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/Hadoop-Guide-Chapter-1-Meet-Hadoop/">Hadoop Guide Chapter 1: Meet Hadoop</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/Hadoop-The-Definitive-Guide-Reading-Notes/">Hadoop The Definitive Guide Reading Notes</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/16/Practical-Vim-Dot-Formula/">Practical Vim: Dot Formula</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Install-and-Manage-Node-Versions-with-NVM/">Install and Manage Node Versions with NVM</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/04/Getting-Started-with-Vim-by-Vimtutor/">Getting Started with Vim by Vimtutor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/Hacking-pyspark-in-Jupyter-Notebook/">Hacking PySpark inside Jupyter Notebook</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/17/NPM-Playbook/">NPM Playbook</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/15/Books-of-2016/">Books of 2016</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/14/Loopback-API-Framework/">Loopback API Framework</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/10/Spark-Source-Codes-01-Submit-and-Run-Jobs/">Spark Source Codes 01 Submit and Run Jobs</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/Reading-Spark-Souce-Code-in-IntelliJ-IDEA/">Reading Spark Souce Code in IntelliJ IDEA</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/Build-blog-by-Hexo-and-MWeb/">Build blog with Hexo and MWeb</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/Spark-Introduction-part-1-Coding/">Spark Introduction part 1 Coding</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/09/Spark-Introduction-part-1/">Spark Introduction part 1</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
